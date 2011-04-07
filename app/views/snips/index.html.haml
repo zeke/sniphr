@@ -1,0 +1,17 @@
+%h1= t('.title')
+%p= link_to t('.new_snip'), new_snip_path
+
+%table
+  %thead
+    %tr
+      %th= Snip.human_attribute_name :url
+      %th= Snip.human_attribute_name :content
+      %th= Snip.human_attribute_name :user
+      %th{:colspan => 3}= t 'actions'
+  
+  %tbody
+    - for snip in @snips
+      %tr{ :class => cycle(:odd, :even) }
+        %td= snip.url
+        %td= snip.content
+        %td= snip.user
