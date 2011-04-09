@@ -1,0 +1,71 @@
+// Sass doesn't really like variables to be in a partial, so they're here..
+$main_color: #CC3300
+$column_width: 600px
+
+@import "compass/reset"
+@import "compass/css3"
+@import "formtastic_defaults"
+
+@mixin fonty_bold
+	font-family: "Helvetica Neue", Helvetica, Arial
+	font-weight: bold
+
+@mixin fonty
+	font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial
+
+body
+	@include fonty
+	padding: 15px
+	
+h1, h2, h3, h4, h5, h6
+	@include fonty_bold
+	margin: 0
+	padding: 0
+	
+h1
+	font-size: 2em
+	padding: 0 0 15px 0
+	span.q
+		color: $main_color
+		
+p.big
+	width: $column_width
+	font-size: 1.3em
+	line-height: 1.2em
+	@include fonty_bold
+	color: #999
+	padding: 0 0 15px 0
+	
+p.samples
+	a
+		color: #999
+		
+a
+	color: $main_color
+		
+	
+ul.snips
+	width: $column_width
+	margin: 0
+	padding: 0
+	list-style: none
+	
+	li.snip
+		padding: 0 0 10px 0
+		margin: 10px 0 0 0
+		border-bottom: 1px solid #CCC
+		p
+			color: black
+			line-height: 1.3em
+			padding: 0 0 4px 0
+			&.content
+				span.q
+					color: $main_color
+			&.source
+				font-size: .9em
+				padding: 0
+				a
+					color: #999
+					text-decoration: none
+					span.domain
+						color: $main_color

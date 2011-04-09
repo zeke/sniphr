@@ -1,0 +1,17 @@
+%h1 Sniphr
+
+%p.big
+	Up in your chromes, sniffin' yr snips!
+	
+%p.big
+	Sniphr is a Google Chrome extension that tracks the text you select as you browse the web.
+	Each time you select a piece of text, Sniphr saves it. Think of it as a casual form of bookmarking.
+	
+%p.big
+	= link_to("Install Sniphr", "#")
+
+%p.samples
+	= link_to("View sniphs matching 'google.com'", snips_path(:q => 'google.com'))
+
+%p.samples	
+	= link_to("View sniphs matching 'cenotes'", snips_path(:q => 'cenotes'))

@@ -1,16 +1,13 @@
-%h1 Snips
+= sniph_heading
 
-%table
-  %thead
-    %tr
-      %th= Snip.human_attribute_name :url
-      %th= Snip.human_attribute_name :content
-      %th= Snip.human_attribute_name :user
-      %th{:colspan => 3}= t 'actions'
-  
-  %tbody
-    - for snip in @snips
-      %tr{ :class => cycle(:odd, :even) }
-        %td= snip.url
-        %td= snip.content
-        %td= snip.user
+%ul.snips
+	- @snips.each do |snip|
+		- url = snip.url.remove_http_and_www
+		%li.snip
+			%p.content
+				- if params[:q].present?
+					= snip.content.gsub(/(#{params[:q]})/i, "<span class='q'>#{params[:q]}</span>").html_safe
+				- else
+					= snip.content
+			%p.source
+				= link_to(url.sub(url.domain_without_www, "<span class='domain'>#{url.domain_without_www}</span>").html_safe, snip.url)

@@ -1,0 +1,5 @@
+# See also config/config_environment_specific.yml
+
+javascripts:
+  # - 'https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js'
+  - 'application' # This should be last
