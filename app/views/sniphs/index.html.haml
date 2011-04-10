@@ -1,0 +1,13 @@
+= sniph_heading
+
+%ul.sniphs
+	- @sniphs.each do |sniph|
+		- url = sniph.url.remove_http_and_www
+		%li.sniph
+			%p.content
+				- if params[:q].present?
+					= sniph.content.gsub(/(#{params[:q]})/i, "<span class='q'>#{params[:q]}</span>").html_safe
+				- else
+					= sniph.content
+			%p.source
+				= link_to(url.sub(url.domain_without_www, "<span class='domain'>#{url.domain_without_www}</span>").html_safe, sniph.url)

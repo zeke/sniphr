@@ -1,9 +1,9 @@
-= form_for(@snip) do |f|
-  - if @snip.errors.any?
+= form_for(@sniph) do |f|
+  - if @sniph.errors.any?
     #errorExplanation
-      %h2= "#{pluralize(@snip.errors.count, 'error')} prohibited this user from being saved:"
+      %h2= "#{pluralize(@sniph.errors.count, 'error')} prohibited this user from being saved:"
       %ul
-      - @snip.errors.full_messages.each do |msg|
+      - @sniph.errors.full_messages.each do |msg|
         %li= msg
   
   .field

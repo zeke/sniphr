@@ -12,12 +12,15 @@
 
 ActiveRecord::Schema.define(:version => 20110406211628) do
 
-  create_table "snips", :force => true do |t|
+  create_table "sniphs", :force => true do |t|
     t.string   "url"
     t.text     "content"
     t.string   "user"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "sniphs", ["url"], :name => "index_sniphs_on_url"
+  add_index "sniphs", ["user"], :name => "index_sniphs_on_user"
 
 end

@@ -1,4 +1,4 @@
-module SnipsHelper
+module SniphsHelper
 
   def sniph_heading
     out = ["Sniphs"]

@@ -1,5 +1,5 @@
-Sniph::Application.routes.draw do
-  resources :snips, :only => [:index, :show] do
+Sniphr::Application.routes.draw do
+  resources :sniphs, :only => [:index, :show] do
     collection do
       get 'save'
     end

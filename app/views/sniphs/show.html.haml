@@ -1,0 +1,12 @@
+%h1= t '.title'
+%p
+  = link_to t('back'), sniphs_path
+  = link_to t('edit'), edit_sniph_path(@sniph)
+
+%dl
+  %dt= Sniph.human_attribute_name :url
+  %dd= @sniphh.url
+  %dt= Sniph.human_attribute_name :content
+  %dd= @sniphh.content
+  %dt= Sniph.human_attribute_name :user
+  %dd= @sniphh.user
