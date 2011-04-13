@@ -9,6 +9,8 @@ gem 'wordnik_ruby_helpers', '0.0.8'
 gem 'headjs-rails', '0.3.0'
 gem 'formtastic', '1.2.3'
 # gem 'wordnik', '0.4.3'
+# gem 'pg'
+# gem 'pg_search'
 
 group :development, :test do
   gem 'rspec', '2.5.0'

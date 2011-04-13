@@ -33,7 +33,8 @@ class SniphsController < ApplicationController
     @sniph = Sniph.new(params[:sniph])
     respond_to do |format|
       if @sniph.save
-        format.json { render :json => {:msg => 'Success', :id => @sniph.id}.to_json, :callback => params[:callback] }
+        # format.json { render :json => {:msg => 'Success', :id => @sniph.id}.to_json, :callback => params[:callback] }
+        format.json { render :json => {:msg => 'Success', :id => @sniph.id}.to_json }
       else
         format.json { render :json => {:msg => 'Error'}.to_json, :callback => params[:callback] }
       end
