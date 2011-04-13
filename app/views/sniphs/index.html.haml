@@ -11,3 +11,5 @@
 					= sniph.content
 			%p.source
 				= link_to(url.sub(url.domain_without_www, "<span class='domain'>#{url.domain_without_www}</span>").html_safe, sniph.url)
+				by 
+				= sniph.user
