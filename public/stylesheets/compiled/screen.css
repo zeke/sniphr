@@ -364,20 +364,16 @@ div.extension_options {
   width: 500px;
 }
 /* line 82, ../../../app/stylesheets/screen.sass */
-div.extension_options h2 {
-  padding-left: 10px;
-}
-/* line 85, ../../../app/stylesheets/screen.sass */
 div.extension_options form {
-  margin: 10px 0;
+  margin: 10px 0 0 0;
 }
-/* line 87, ../../../app/stylesheets/screen.sass */
+/* line 84, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-/* line 91, ../../../app/stylesheets/screen.sass */
+/* line 88, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs > li {
   margin: 10px 0;
   padding: 10px 10px;
@@ -385,25 +381,25 @@ div.extension_options form ul.inputs > li {
   clear: both;
   overflow: hidden;
 }
-/* line 97, ../../../app/stylesheets/screen.sass */
+/* line 94, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs > li.even {
   background-color: #f0f0f0;
 }
-/* line 99, ../../../app/stylesheets/screen.sass */
+/* line 96, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs > li label {
   padding: 6px 0 0 0;
   font-size: 1em;
   display: block;
   float: left;
 }
-/* line 104, ../../../app/stylesheets/screen.sass */
+/* line 101, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs > li input.text {
   display: block;
   float: right;
   font-size: 1em;
   padding: 2px;
 }
-/* line 110, ../../../app/stylesheets/screen.sass */
+/* line 107, ../../../app/stylesheets/screen.sass */
 div.extension_options div#status {
   margin: 20px 0;
   padding: 10px;
