@@ -10,6 +10,10 @@
 				- else
 					= sniph.content
 			%p.source
-				= link_to(url.sub(url.domain_without_www, "<span class='domain'>#{url.domain_without_www}</span>").html_safe, sniph.url)
-				by 
-				= sniph.user
+				=# link_to(url.sub(url.domain_without_www, "<span class='domain'>#{url.domain_without_www}</span>").html_safe, sniph.url)
+				= link_to(url.domain_without_www.html_safe, sniph.url) + " / "
+				- unless sniph.user.blank?
+					= link_to(sniph.user, sniphs_path(:user => sniph.user)) + " / "
+				= time_ago_in_words_or_date(sniph.created_at)
+				
+				

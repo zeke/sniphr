@@ -9,12 +9,9 @@ class SniphsController < ApplicationController
   end
 
   def index
-
-    if params[:q]
-      @sniphs = Sniph.where("sniphs.url LIKE ? OR sniphs.content LIKE ?", "%#{params[:q]}%", "%#{params[:q]}%").order('sniphs.created_at ASC')
-    else
-      @sniphs = Sniph.all
-    end
+    @sniphs = Sniph.order('created_at DESC')
+    @sniphs = @sniphs.where("url LIKE ? OR content LIKE ?", "%#{params[:q]}%", "%#{params[:q]}%") if params[:q]
+    @sniphs = @sniphs.where(:user => params[:user]) if params[:user]
 
     respond_to do |format|
       format.html

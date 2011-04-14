@@ -1,5 +1,7 @@
 // Sass doesn't really like variables to be in a partial, so they're here..
 $main_color: #CC3300
+$status_color: #FDEBAB
+
 $column_width: 600px
 
 @import "compass/reset"
@@ -21,12 +23,17 @@ h1, h2, h3, h4, h5, h6
 	@include fonty_bold
 	margin: 0
 	padding: 0
+	span.weak
+		color: #999
 	
 h1
 	font-size: 2em
 	padding: 0 0 15px 0
-	span.q
+	span.q, span.user
 		color: $main_color
+
+h2
+	font-size: 1.4em
 		
 p.big
 	width: $column_width
@@ -64,8 +71,47 @@ ul.sniphs
 			&.source
 				font-size: .9em
 				padding: 0
+				color: #999
 				a
-					color: #999
+					color: $main_color
 					text-decoration: none
-					span.domain
-						color: $main_color
+
+div.extension_options
+	width: 500px
+	
+	h2
+		padding-left: 10px
+	
+	form
+		margin: 10px 0
+		ul.inputs
+			margin: 0
+			padding: 0
+			list-style: none
+			> li
+				margin: 10px 0
+				padding: 10px 10px
+				display: block
+				clear: both
+				overflow: hidden
+				&.even
+					background-color: #F0F0F0
+				label
+					padding: 6px 0 0 0
+					font-size: 1em
+					display: block
+					float: left
+				input.text
+					display: block
+					float: right
+					font-size: 1em
+					padding: 2px
+	
+	div#status
+		margin: 20px 0
+		padding: 10px
+		background-color: $status_color
+		
+		
+
+
