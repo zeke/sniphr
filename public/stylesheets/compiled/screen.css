@@ -358,22 +358,36 @@ ul.sniphs li.sniph p.source a {
   color: #cc3300;
   text-decoration: none;
 }
+/* line 78, ../../../app/stylesheets/screen.sass */
+ul.sniphs li.sniph p.metadata {
+  padding: 3px 0 3px 0;
+  font-size: 0.7em;
+  color: #aaaaaa;
+}
+/* line 82, ../../../app/stylesheets/screen.sass */
+ul.sniphs li.sniph p.metadata a {
+  color: #aaaaaa;
+}
+/* line 84, ../../../app/stylesheets/screen.sass */
+ul.sniphs li.sniph p.metadata a:hover {
+  color: #999999;
+}
 
-/* line 79, ../../../app/stylesheets/screen.sass */
+/* line 88, ../../../app/stylesheets/screen.sass */
 div.extension_options {
   width: 500px;
 }
-/* line 82, ../../../app/stylesheets/screen.sass */
+/* line 91, ../../../app/stylesheets/screen.sass */
 div.extension_options form {
   margin: 10px 0 0 0;
 }
-/* line 84, ../../../app/stylesheets/screen.sass */
+/* line 93, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-/* line 88, ../../../app/stylesheets/screen.sass */
+/* line 97, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs > li {
   margin: 10px 0;
   padding: 10px 10px;
@@ -381,25 +395,25 @@ div.extension_options form ul.inputs > li {
   clear: both;
   overflow: hidden;
 }
-/* line 94, ../../../app/stylesheets/screen.sass */
+/* line 103, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs > li.even {
   background-color: #f0f0f0;
 }
-/* line 96, ../../../app/stylesheets/screen.sass */
+/* line 105, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs > li label {
   padding: 6px 0 0 0;
   font-size: 1em;
   display: block;
   float: left;
 }
-/* line 101, ../../../app/stylesheets/screen.sass */
+/* line 110, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs > li input.text {
   display: block;
   float: right;
   font-size: 1em;
   padding: 2px;
 }
-/* line 107, ../../../app/stylesheets/screen.sass */
+/* line 116, ../../../app/stylesheets/screen.sass */
 div.extension_options div#status {
   margin: 20px 0;
   padding: 10px;

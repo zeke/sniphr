@@ -5,15 +5,10 @@
 		- url = sniph.url.remove_http_and_www
 		%li.sniph
 			%p.content
-				- if params[:q].present?
-					= sniph.content.gsub(/(#{params[:q]})/i, "<span class='q'>#{params[:q]}</span>").html_safe
-				- else
-					= sniph.content
+				= sniph_content sniph
 			%p.source
-				=# link_to(url.sub(url.domain_without_www, "<span class='domain'>#{url.domain_without_www}</span>").html_safe, sniph.url)
-				= link_to(url.domain_without_www.html_safe, sniph.url) + " / "
-				- unless sniph.user.blank?
-					= link_to(sniph.user, sniphs_path(:user => sniph.user)) + " / "
-				= time_ago_in_words_or_date(sniph.created_at)
+				= sniph_source sniph
+			%p.metadata
+				= sniph_metadata sniph
 				
 				

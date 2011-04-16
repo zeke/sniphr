@@ -13,8 +13,32 @@ module SniphsHelper
       out << "matching"
       out << content_tag(:span, "&lsquo;#{params[:q]}&rsquo;".html_safe, :class => 'q')
     end
-
     content_tag(:h1, out.join(' ').html_safe)
+  end
+
+  def sniph_content(sniph)
+    content = sniph.content.dup
+    content.gsub!(/(#{params[:q]})/i, "<span class='q'>#{params[:q]}</span>") if params[:q].present?
+    content.html_safe
+  end
+
+  # Generates a link to the sniph using page title and URL domain
+  def sniph_source(sniph)
+    label = [sniph.url.domain_without_www]
+    label << sniph.title unless sniph.title.blank?
+    link_to(label.join(": ").html_safe, sniph.url)
+  end
+
+  # e.g. "Saved about five minutes ago by joe_sniffington"
+  def sniph_metadata(sniph)
+    out = []
+    out << "Saved"
+    out << time_ago_in_words_or_date(sniph.created_at)
+    if sniph.user.present?
+		  out << "by"
+			out << link_to(sniph.user, sniphs_path(:user => sniph.user))
+		end
+		out.join(" ").html_safe
   end
 
 end
