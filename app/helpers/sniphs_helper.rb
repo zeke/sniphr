@@ -22,11 +22,16 @@ module SniphsHelper
     content.html_safe
   end
 
-  # Generates a link to the sniph using page title and URL domain
+  # Generates a link to the sniph using page title and domain
   def sniph_source(sniph)
-    label = [sniph.url.domain_without_www]
-    label << sniph.title unless sniph.title.blank?
-    link_to(label.join(": ").html_safe, sniph.url)
+    label = []
+    if sniph.title.present?
+      label << sniph.title
+      label << content_tag(:span, "(#{sniph.url.domain_without_www})", :class => 'domain')
+    else
+      label << sniph.url.remove_http_and_www
+    end
+    link_to(label.join(" ").html_safe, sniph.url)
   end
 
   # e.g. "Saved about five minutes ago by joe_sniffington"
