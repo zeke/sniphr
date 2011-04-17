@@ -17,7 +17,7 @@ module SniphsHelper
   end
 
   def sniph_content(sniph)
-    content = sniph.content.dup
+    content = sniph.content.dup.strip_tags
     content.gsub!(/(#{params[:q]})/i, "<span class='q'>#{params[:q]}</span>") if params[:q].present?
     content.html_safe
   end
@@ -29,7 +29,7 @@ module SniphsHelper
       label << sniph.title
       label << content_tag(:span, "(#{sniph.url.domain_without_www})", :class => 'domain')
     else
-      label << sniph.url.remove_http_and_www
+      label << truncate(sniph.url.remove_http_and_www, :length => 70)
     end
     link_to(label.join(" ").html_safe, sniph.url)
   end

@@ -4,6 +4,9 @@ $status_color: #FDEBAB
 
 $column_width: 600px
 
+$extension_options_width = 350px
+$extension_options_input_width = 120px
+
 @import "compass/reset"
 @import "compass/css3"
 @import "formtastic_defaults"
@@ -76,8 +79,8 @@ ul.sniphs
 					color: $main_color
 					text-decoration: none
 					span.domain
-						color: #CCC
-						font-size: .8em
+						color: #AAA
+						font-size: .9em
 						
 			&.metadata
 				padding: 3px 0 3px 0
@@ -90,7 +93,7 @@ ul.sniphs
 
 
 div.extension_options
-	width: 500px
+	width: $extension_options_width
 	
 	form
 		margin: 10px 0 0 0
@@ -100,22 +103,42 @@ div.extension_options
 			list-style: none
 			> li
 				margin: 10px 0
-				padding: 10px 10px
+				padding: 6px 0
 				display: block
 				clear: both
 				overflow: hidden
-				&.even
-					background-color: #F0F0F0
+				border-bottom: 1px solid #CCC
+				&:first-child
+					border-top: 1px solid #CCC
+				&:last-child
+					border-bottom: none
 				label
 					padding: 6px 0 0 0
-					font-size: 1em
+					font-size: .9em
 					display: block
 					float: left
 				input.text
 					display: block
 					float: right
-					font-size: 1em
-					padding: 2px
+					font-size: .9em
+					padding: 1px
+					width: $extension_options_input_width
+				select
+					display: block
+					float: right
+					font-size: .9em
+					width: $extension_options_input_width
+				a#save_options
+					@include fonty_bold
+					@include border-radius(4px)
+					color: white
+					background-color: $main_color
+					padding: 4px 8px
+					font-size: .8em
+					text-decoration: none
+					&:hover
+						background-color: darken($main_color, 10%)
+						
 	
 	div#status
 		margin: 20px 0
