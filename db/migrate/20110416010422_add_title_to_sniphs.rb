@@ -6,5 +6,6 @@ class AddTitleToSniphs < ActiveRecord::Migration
 
   def self.down
     remove_column :sniphs, :title
+    remove_index :sniphs, :title
   end
 end

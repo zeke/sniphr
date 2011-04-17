@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110416010422) do
+ActiveRecord::Schema.define(:version => 20110417022928) do
 
   create_table "sniphs", :force => true do |t|
     t.string   "url"
@@ -19,8 +19,10 @@ ActiveRecord::Schema.define(:version => 20110416010422) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "title"
+    t.boolean  "publique",   :default => true
   end
 
+  add_index "sniphs", ["publique"], :name => "index_sniphs_on_publique"
   add_index "sniphs", ["title"], :name => "index_sniphs_on_title"
   add_index "sniphs", ["url"], :name => "index_sniphs_on_url"
   add_index "sniphs", ["user"], :name => "index_sniphs_on_user"

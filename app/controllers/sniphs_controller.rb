@@ -10,6 +10,7 @@ class SniphsController < ApplicationController
 
   def index
     @sniphs = Sniph.order('created_at DESC')
+    @sniphs = @sniphs.where(:publique => true) unless params[:private].present?
     @sniphs = @sniphs.where("url LIKE ? OR content LIKE ?", "%#{params[:q]}%", "%#{params[:q]}%") if params[:q]
     @sniphs = @sniphs.where(:user => params[:user]) if params[:user]
 
