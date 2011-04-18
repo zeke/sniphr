@@ -1,4 +1,7 @@
 Sniphr::Application.routes.draw do
+  
+  resources :queries, :only => [:index]
+    
   resources :sniphs, :only => [:index, :show] do
     collection do
       get 'save'
