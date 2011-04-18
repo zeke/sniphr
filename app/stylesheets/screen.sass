@@ -18,6 +18,9 @@ $extension_options_input_width = 120px
 @mixin fonty
 	font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial
 
+@mixin code_font
+	font-family: "Anonymous Pro", "Menlo", "Consolas", "Bitstream Vera Sans Mono", "Courier New", monospace
+
 body
 	@include fonty
 	padding: 15px
@@ -42,26 +45,33 @@ h1
 h2
 	font-size: 1.4em
 		
-p.big
-	width: $column_width
-	font-size: 1.3em
-	line-height: 1.2em
-	@include fonty_bold
-	color: #999
-	padding: 0 0 15px 0
-
-ul.samples
-	margin: 0
-	padding: 0
-	list-style: none
-	li
-		padding: 5px 0
-		a
-			color: #999
-		
 a
 	color: $main_color
 		
+p
+	&.big
+		width: $column_width
+		font-size: 1.3em
+		line-height: 1.2em
+		@include fonty_bold
+		color: #999
+		padding: 0 0 15px 0	
+	&.empty
+		color: #999
+		padding: 0 0 15px 0
+			
+ul.samples
+	margin: 50px 0 0 0
+	padding: 0
+	list-style: none
+	li
+		@include code_font
+		font-size: .9em
+		padding: 5px 0
+		a
+			color: #666
+			&:hover
+				color: $main_color
 	
 ul.sniphs
 	width: $column_width
