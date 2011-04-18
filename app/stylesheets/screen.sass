@@ -1,5 +1,5 @@
 // Sass doesn't really like variables to be in a partial, so they're here..
-$main_color: #CC3300
+$main_color: #4B9900
 $status_color: #FDEBAB
 
 $column_width: 600px
@@ -28,7 +28,11 @@ h1, h2, h3, h4, h5, h6
 	padding: 0
 	span.weak
 		color: #999
-	
+	a.rogue
+		color: black
+		&:hover
+			color: $main_color
+
 h1
 	font-size: 2em
 	padding: 0 0 15px 0
@@ -45,10 +49,15 @@ p.big
 	@include fonty_bold
 	color: #999
 	padding: 0 0 15px 0
-	
-p.samples
-	a
-		color: #999
+
+ul.samples
+	margin: 0
+	padding: 0
+	list-style: none
+	li
+		padding: 5px 0
+		a
+			color: #999
 		
 a
 	color: $main_color

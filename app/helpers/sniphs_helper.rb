@@ -1,17 +1,29 @@
 module SniphsHelper
+  
+  def sample_sniph_queries
+    paths = [
+      sniphs_path(:q => 'en.wikipedia.org'),
+      sniphs_path(:q => 'google.com', :user => "zeke")
+    ]
+    links = paths.map do |path|
+      link_to(path, path)
+    end
+  	content_tag(:ul, convert_to_list_items(links), :class => 'samples')
+  end
+
 
   def sniph_heading
     out = []
-    out << "Sniphs"
+    out << link_to("Sniphs", root_path, :class => "rogue")
 
     if params[:user].present?
-      out << "from"
+      out << "sniph&rsquo;d by"
       out << content_tag(:span, "#{params[:user]}".html_safe, :class => 'user')
     end
 
     if params[:q].present?
       out << "matching"
-      out << content_tag(:span, "&lsquo;#{params[:q]}&rsquo;".html_safe, :class => 'q')
+      out << content_tag(:span, "#{params[:q]}".html_safe, :class => 'q')
     end
     content_tag(:h1, out.join(' ').html_safe)
   end
