@@ -1,0 +1,10 @@
+%h1 Queries
+
+%p
+	%b
+		= @query_count
+		queries to date.	
+%p
+	This view hasn't been built yet. In the interim, hit
+	= link_to(queries_path(:format => 'json'), queries_path(:format => 'json')) + ","
+	which is limited to the last 50 queries.

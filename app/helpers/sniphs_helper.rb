@@ -1,17 +1,37 @@
 module SniphsHelper
+  
+  def sample_sniph_queries
+    paths = [
+      sniphs_path(:q => 'nytimes.com'),
+      sniphs_path(:q => 'economist.com', :format => 'json'),
+      sniphs_path(:q => 'en.wikipedia.org'),
+      sniphs_path(:q => 'google.com', :user => "zeke"),
+      sniphs_path(:q => 'economist.com/node/18530079'),
+      sniphs_path(:format => 'json'),
+    ]
+    links = paths.map do |path|
+      link_to(path, path)
+    end
+    
+    links = links.unshift("Example queries")
+  	content_tag(:ul, convert_to_list_items(links), :class => 'samples')
+  end
 
-  def sniph_heading
+
+  def sniph_heading(sniphs=nil)
     out = []
-    out << "Sniphs"
+
+    # 0 Sniphs, 1 Sniph, 234 Sniphs
+    out << link_to(pluralize(sniphs.size, "Sniph"), root_path, :class => "rogue")
 
     if params[:user].present?
-      out << "from"
+      out << "sniph&rsquo;d by"
       out << content_tag(:span, "#{params[:user]}".html_safe, :class => 'user')
     end
 
     if params[:q].present?
       out << "matching"
-      out << content_tag(:span, "&lsquo;#{params[:q]}&rsquo;".html_safe, :class => 'q')
+      out << content_tag(:span, "#{params[:q]}".html_safe, :class => 'q')
     end
     content_tag(:h1, out.join(' ').html_safe)
   end

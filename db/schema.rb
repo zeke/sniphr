@@ -10,7 +10,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110417022928) do
+ActiveRecord::Schema.define(:version => 20110418015853) do
+
+  create_table "queries", :force => true do |t|
+    t.string   "q"
+    t.string   "user"
+    t.string   "from_user"
+    t.string   "ip"
+    t.string   "all_params"
+    t.integer  "num_results"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "queries", ["all_params"], :name => "index_queries_on_all_params"
+  add_index "queries", ["from_user"], :name => "index_queries_on_from_user"
+  add_index "queries", ["ip"], :name => "index_queries_on_ip"
+  add_index "queries", ["num_results"], :name => "index_queries_on_num_results"
+  add_index "queries", ["q"], :name => "index_queries_on_q"
+  add_index "queries", ["user"], :name => "index_queries_on_user"
 
   create_table "sniphs", :force => true do |t|
     t.string   "url"
