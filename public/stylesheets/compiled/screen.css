@@ -308,19 +308,20 @@ h1 span.q, h1 span.user {
 
 /* line 45, ../../../app/stylesheets/screen.sass */
 h2 {
+  padding: 15px 0 5px 0;
   font-size: 1.4em;
 }
 
-/* line 48, ../../../app/stylesheets/screen.sass */
+/* line 49, ../../../app/stylesheets/screen.sass */
 a {
   color: #4b9900;
 }
 
-/* line 51, ../../../app/stylesheets/screen.sass */
+/* line 52, ../../../app/stylesheets/screen.sass */
 p {
-  padding: 0 0 10px 0;
+  padding: 10px 0 10px 0;
 }
-/* line 53, ../../../app/stylesheets/screen.sass */
+/* line 54, ../../../app/stylesheets/screen.sass */
 p.big {
   width: 600px;
   font-size: 1.3em;
@@ -330,102 +331,166 @@ p.big {
   color: #999999;
   padding: 0 0 15px 0;
 }
-/* line 60, ../../../app/stylesheets/screen.sass */
+/* line 61, ../../../app/stylesheets/screen.sass */
 p.empty {
   color: #999999;
   padding: 0 0 15px 0;
 }
 
-/* line 64, ../../../app/stylesheets/screen.sass */
+/* line 65, ../../../app/stylesheets/screen.sass */
+.weak {
+  color: #cccccc;
+}
+
+/* line 68, ../../../app/stylesheets/screen.sass */
 ul.samples {
   margin: 50px 0 0 0;
   padding: 0;
   list-style: none;
 }
-/* line 68, ../../../app/stylesheets/screen.sass */
+/* line 72, ../../../app/stylesheets/screen.sass */
 ul.samples li {
   font-family: "Anonymous Pro", "Menlo", "Consolas", "Bitstream Vera Sans Mono", "Courier New", monospace;
   font-size: 0.9em;
   padding: 5px 0;
 }
-/* line 72, ../../../app/stylesheets/screen.sass */
+/* line 76, ../../../app/stylesheets/screen.sass */
 ul.samples li a {
   color: #666666;
 }
-/* line 74, ../../../app/stylesheets/screen.sass */
+/* line 78, ../../../app/stylesheets/screen.sass */
 ul.samples li a:hover {
   color: #4b9900;
 }
 
-/* line 77, ../../../app/stylesheets/screen.sass */
+/* line 81, ../../../app/stylesheets/screen.sass */
 ul.sniphs {
   width: 600px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
-/* line 83, ../../../app/stylesheets/screen.sass */
+/* line 87, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph {
   padding: 0 0 10px 0;
   margin: 10px 0 0 0;
   border-bottom: 1px solid #cccccc;
 }
-/* line 87, ../../../app/stylesheets/screen.sass */
+/* line 91, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph p {
   color: black;
   line-height: 1.3em;
   padding: 0 0 4px 0;
 }
-/* line 92, ../../../app/stylesheets/screen.sass */
+/* line 96, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph p.content span.q {
   color: #4b9900;
 }
-/* line 94, ../../../app/stylesheets/screen.sass */
+/* line 98, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph p.source {
   font-size: 0.9em;
   padding: 0;
   color: #999999;
 }
-/* line 98, ../../../app/stylesheets/screen.sass */
+/* line 102, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph p.source a {
   color: #4b9900;
   text-decoration: none;
 }
-/* line 101, ../../../app/stylesheets/screen.sass */
+/* line 105, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph p.source a span.domain {
   color: #aaaaaa;
   font-size: 0.9em;
 }
-/* line 105, ../../../app/stylesheets/screen.sass */
+/* line 109, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph p.metadata {
   padding: 3px 0 3px 0;
   font-size: 0.7em;
   color: #aaaaaa;
 }
-/* line 109, ../../../app/stylesheets/screen.sass */
+/* line 113, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph p.metadata a {
   color: #aaaaaa;
 }
-/* line 111, ../../../app/stylesheets/screen.sass */
+/* line 115, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph p.metadata a:hover {
   color: #999999;
 }
 
-/* line 115, ../../../app/stylesheets/screen.sass */
+/* line 118, ../../../app/stylesheets/screen.sass */
+table.queries {
+  width: 100%;
+  font-size: 0.9em;
+}
+/* line 124, ../../../app/stylesheets/screen.sass */
+table.queries thead tr th {
+  padding: 3px;
+  color: #999999;
+}
+/* line 129, ../../../app/stylesheets/screen.sass */
+table.queries tbody tr td {
+  padding: 6px;
+  border-top: 1px solid #cccccc;
+  font-family: "Anonymous Pro", "Menlo", "Consolas", "Bitstream Vera Sans Mono", "Courier New", monospace;
+}
+/* line 133, ../../../app/stylesheets/screen.sass */
+table.queries tbody tr:hover {
+  background-color: #333333;
+}
+/* line 135, ../../../app/stylesheets/screen.sass */
+table.queries tbody tr:hover td {
+  color: white;
+}
+/* line 137, ../../../app/stylesheets/screen.sass */
+table.queries tbody tr:hover td a {
+  color: white;
+}
+
+/* line 140, ../../../app/stylesheets/screen.sass */
+div.pagination {
+  margin: 20px 0 20px 0;
+}
+/* line 142, ../../../app/stylesheets/screen.sass */
+div.pagination a, div.pagination em {
+  padding: 4px 8px;
+  background-color: #cccccc;
+  color: white;
+  text-decoration: none;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+}
+/* line 148, ../../../app/stylesheets/screen.sass */
+div.pagination em {
+  background-color: #333333;
+}
+/* line 150, ../../../app/stylesheets/screen.sass */
+div.pagination a:hover {
+  background-color: #4b9900;
+}
+/* line 152, ../../../app/stylesheets/screen.sass */
+div.pagination span.gap {
+  color: #cccccc;
+}
+
+/* line 156, ../../../app/stylesheets/screen.sass */
 div.extension_options {
   width: 350px;
 }
-/* line 118, ../../../app/stylesheets/screen.sass */
+/* line 159, ../../../app/stylesheets/screen.sass */
 div.extension_options form {
   margin: 10px 0 0 0;
 }
-/* line 120, ../../../app/stylesheets/screen.sass */
+/* line 161, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-/* line 124, ../../../app/stylesheets/screen.sass */
+/* line 165, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs > li {
   margin: 10px 0;
   padding: 6px 0;
@@ -434,22 +499,22 @@ div.extension_options form ul.inputs > li {
   overflow: hidden;
   border-bottom: 1px solid #cccccc;
 }
-/* line 131, ../../../app/stylesheets/screen.sass */
+/* line 172, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs > li:first-child {
   border-top: 1px solid #cccccc;
 }
-/* line 133, ../../../app/stylesheets/screen.sass */
+/* line 174, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs > li:last-child {
   border-bottom: none;
 }
-/* line 135, ../../../app/stylesheets/screen.sass */
+/* line 176, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs > li label {
   padding: 6px 0 0 0;
   font-size: 0.9em;
   display: block;
   float: left;
 }
-/* line 140, ../../../app/stylesheets/screen.sass */
+/* line 181, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs > li input.text {
   display: block;
   float: right;
@@ -457,14 +522,14 @@ div.extension_options form ul.inputs > li input.text {
   padding: 1px;
   width: 120px;
 }
-/* line 146, ../../../app/stylesheets/screen.sass */
+/* line 187, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs > li select {
   display: block;
   float: right;
   font-size: 0.9em;
   width: 120px;
 }
-/* line 151, ../../../app/stylesheets/screen.sass */
+/* line 192, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs > li a#save_options {
   font-family: "Helvetica Neue", Helvetica, Arial;
   font-weight: bold;
@@ -480,11 +545,11 @@ div.extension_options form ul.inputs > li a#save_options {
   font-size: 0.8em;
   text-decoration: none;
 }
-/* line 159, ../../../app/stylesheets/screen.sass */
+/* line 200, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs > li a#save_options:hover {
   background-color: #326600;
 }
-/* line 163, ../../../app/stylesheets/screen.sass */
+/* line 204, ../../../app/stylesheets/screen.sass */
 div.extension_options div#status {
   margin: 20px 0;
   padding: 10px;

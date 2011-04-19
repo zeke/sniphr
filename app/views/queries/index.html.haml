@@ -1,10 +1,27 @@
-%h1 Queries
+= query_heading(@queries)
 
-%p
-	%b
-		= @query_count
-		queries to date.	
-%p
-	This view hasn't been built yet. In the interim, hit
-	= link_to(queries_path(:format => 'json'), queries_path(:format => 'json')) + ","
-	which is limited to the last 50 queries.
+= will_paginate @queries
+
+- if @queries.present?
+	
+	%table.queries
+		%thead
+			%tr
+				%th Query
+				%th User
+				%th From User
+				%th Results
+				
+		%tbody
+			- @queries.each do |query|
+				%tr
+					%td= query_q(query)
+					%td= query.user
+					%td= query.from_user unless query.from_user == 'undefined'
+					%td= weak_if_zero(query.num_results)
+	
+= will_paginate @queries
+
+%h2 Users
+
+%p= @user_names.map {|u| link_to(u, queries_path(:from_user => u)) }.join(", ").html_safe

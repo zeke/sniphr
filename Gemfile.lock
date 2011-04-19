@@ -133,7 +133,7 @@ GEM
       rack (>= 1.0)
       rack-test (>= 0.5.3)
     will_paginate (3.0.pre2)
-    wordnik_ruby_helpers (0.0.8)
+    wordnik_ruby_helpers (0.1.0)
       RedCloth (>= 4.2.3)
       rails
     yamler (0.1.0)
@@ -160,4 +160,4 @@ DEPENDENCIES
   webmock (= 1.6.2)
   webrat (= 0.7.3)
   will_paginate (~> 3.0.pre2)
-  wordnik_ruby_helpers (= 0.0.8)
+  wordnik_ruby_helpers (= 0.1.0)

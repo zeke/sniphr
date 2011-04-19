@@ -43,13 +43,14 @@ h1
 		color: $main_color
 
 h2
+	padding: 15px 0 5px 0
 	font-size: 1.4em
 		
 a
 	color: $main_color
 		
 p
-	padding: 0 0 10px 0
+	padding: 10px 0 10px 0
 	&.big
 		width: $column_width
 		font-size: 1.3em
@@ -60,7 +61,10 @@ p
 	&.empty
 		color: #999
 		padding: 0 0 15px 0
-			
+
+.weak
+	color: #CCC
+
 ul.samples
 	margin: 50px 0 0 0
 	padding: 0
@@ -110,6 +114,43 @@ ul.sniphs
 					color: #AAA
 					&:hover
 						color: #999
+						
+table.queries
+	width: 100%
+	font-size: .9em
+	
+	thead
+		tr
+			th
+				padding: 3px
+				color: #999
+	tbody
+		tr
+			td
+				padding: 6px
+				border-top: 1px solid #CCC
+				@include code_font
+			&:hover
+				background-color: #333
+				td
+					color: white
+					a
+						color: white
+						
+div.pagination
+	margin: 20px 0 20px 0
+	a, em
+		padding: 4px 8px
+		background-color: #CCC
+		color: white
+		text-decoration: none
+		@include border-radius(2px)		
+	em
+		background-color: #333
+	a:hover
+		background-color: $main_color
+	span.gap
+		color: #CCC
 
 
 div.extension_options

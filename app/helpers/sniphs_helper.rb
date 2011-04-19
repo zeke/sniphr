@@ -1,21 +1,4 @@
 module SniphsHelper
-  
-  def sample_sniph_queries
-    paths = [
-      sniphs_path(:q => 'nytimes.com'),
-      sniphs_path(:q => 'economist.com', :format => 'json'),
-      sniphs_path(:q => 'en.wikipedia.org'),
-      sniphs_path(:q => 'google.com', :user => "zeke"),
-      sniphs_path(:q => 'economist.com/node/18530079'),
-      sniphs_path(:format => 'json'),
-    ]
-    links = paths.map do |path|
-      link_to(path, path)
-    end
-    
-    links = links.unshift("Example queries")
-  	content_tag(:ul, convert_to_list_items(links), :class => 'samples')
-  end
 
 
   def sniph_heading(sniphs=nil)
@@ -65,5 +48,23 @@ module SniphsHelper
 		end
 		out.join(" ").html_safe
   end
+
+  def sample_sniph_queries
+    paths = [
+      sniphs_path(:q => 'nytimes.com'),
+      sniphs_path(:q => 'economist.com', :format => 'json'),
+      sniphs_path(:q => 'en.wikipedia.org'),
+      sniphs_path(:q => 'google.com', :user => "zeke"),
+      sniphs_path(:q => 'economist.com/node/18530079'),
+      sniphs_path(:format => 'json'),
+    ]
+    links = paths.map do |path|
+      link_to(path, path)
+    end
+
+    links = links.unshift("Example queries")
+  	content_tag(:ul, convert_to_list_items(links), :class => 'samples')
+  end
+
 
 end
