@@ -12,200 +12,226 @@ $extension_options_input_width = 120px
 @import "formtastic_defaults"
 
 @mixin fonty_bold
-	font-family: "Helvetica Neue", Helvetica, Arial
-	font-weight: bold
+  font-family: "Helvetica Neue", Helvetica, Arial
+  font-weight: bold
 
 @mixin fonty
-	font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial
+  font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial
 
 @mixin code_font
-	font-family: "Anonymous Pro", "Menlo", "Consolas", "Bitstream Vera Sans Mono", "Courier New", monospace
+  font-family: "Anonymous Pro", "Menlo", "Consolas", "Bitstream Vera Sans Mono", "Courier New", monospace
 
 body
-	@include fonty
-	padding: 15px
-	
+  @include fonty
+  padding: 15px
+  
 h1, h2, h3, h4, h5, h6
-	@include fonty_bold
-	margin: 0
-	padding: 0
-	span.weak
-		color: #999
-	a.rogue
-		color: black
-		&:hover
-			color: $main_color
+  @include fonty_bold
+  margin: 0
+  padding: 0
+  span.weak
+    color: #999
+  a.rogue
+    color: black
+    &:hover
+      color: $main_color
 
 h1
-	font-size: 2em
-	padding: 0 0 15px 0
-	span.q, span.user
-		color: $main_color
+  font-size: 2em
+  padding: 0 0 15px 0
+  span.q, span.user
+    color: $main_color
 
 h2
-	padding: 15px 0 5px 0
-	font-size: 1.4em
-		
+  padding: 15px 0 5px 0
+  font-size: 1.4em
+    
 a
-	color: $main_color
-		
+  color: $main_color
+    
 p
-	padding: 10px 0 10px 0
-	&.big
-		width: $column_width
-		font-size: 1.3em
-		line-height: 1.2em
-		@include fonty_bold
-		color: #999
-		padding: 0 0 15px 0	
-	&.empty
-		color: #999
-		padding: 0 0 15px 0
+  padding: 10px 0 10px 0
+  &.big
+    width: $column_width
+    font-size: 1.3em
+    line-height: 1.2em
+    @include fonty_bold
+    color: #999
+    padding: 0 0 15px 0  
+  &.empty
+    color: #999
+    padding: 0 0 15px 0
 
 .weak
-	color: #CCC
+  color: #CCC
+  
+ul#user_nav
+  display: block
+  position: absolute
+  top: 0
+  right: 20px
+  z-index: 2
+  margin: 0
+  padding: 0
+  background-color: #DDD
+  list-style: none
+  float: none
+  clear: both
+  overflow: hidden
+  @include border-bottom-radius(5px)
+  li
+    float: left
+    color: #999
+    font-size: .9em
+    a
+      display: block
+      color: #666
+      text-decoration: none
+      padding: 10px 10px 8px 10px
+      &:hover
+        color: black
 
 ul.samples
-	margin: 50px 0 0 0
-	padding: 0
-	list-style: none
-	li
-		@include code_font
-		font-size: .9em
-		padding: 5px 0
-		a
-			color: #666
-			&:hover
-				color: $main_color
-	
+  margin: 50px 0 0 0
+  padding: 0
+  list-style: none
+  li
+    @include code_font
+    font-size: .9em
+    padding: 5px 0
+    a
+      color: #666
+      &:hover
+        color: $main_color
+  
 ul.sniphs
-	width: $column_width
-	margin: 0
-	padding: 0
-	list-style: none
-	
-	li.sniph
-		padding: 0 0 10px 0
-		margin: 10px 0 0 0
-		border-bottom: 1px solid #CCC
-		p
-			color: black
-			line-height: 1.3em
-			padding: 0 0 4px 0
-			&.content
-				span.q
-					color: $main_color
-			&.source
-				font-size: .9em
-				padding: 0
-				color: #999
-				a
-					color: $main_color
-					text-decoration: none
-					span.domain
-						color: #AAA
-						font-size: .9em
-						
-			&.metadata
-				padding: 3px 0 3px 0
-				font-size: .7em
-				color: #AAA
-				a
-					color: #AAA
-					&:hover
-						color: #999
-						
+  width: $column_width
+  margin: 0
+  padding: 0
+  list-style: none
+  
+  li.sniph
+    padding: 0 0 10px 0
+    margin: 10px 0 0 0
+    border-bottom: 1px solid #CCC
+    p
+      color: black
+      line-height: 1.3em
+      padding: 0 0 4px 0
+      &.content
+        span.q
+          color: $main_color
+      &.source
+        font-size: .9em
+        padding: 0
+        color: #999
+        a
+          color: $main_color
+          text-decoration: none
+          span.domain
+            color: #AAA
+            font-size: .9em
+            
+      &.metadata
+        padding: 3px 0 3px 0
+        font-size: .7em
+        color: #AAA
+        a
+          color: #AAA
+          &:hover
+            color: #999
+            
 table.queries
-	width: 100%
-	font-size: .9em
-	
-	thead
-		tr
-			th
-				padding: 3px
-				color: #999
-	tbody
-		tr
-			td
-				padding: 6px
-				border-top: 1px solid #CCC
-				@include code_font
-			&:hover
-				background-color: #333
-				td
-					color: white
-					a
-						color: white
-						
+  width: 100%
+  font-size: .9em
+  
+  thead
+    tr
+      th
+        padding: 3px
+        color: #999
+  tbody
+    tr
+      td
+        padding: 6px
+        border-top: 1px solid #CCC
+        @include code_font
+      &:hover
+        background-color: #333
+        td
+          color: white
+          a
+            color: white
+            
 div.pagination
-	margin: 20px 0 20px 0
-	a, em
-		padding: 4px 8px
-		background-color: #CCC
-		color: white
-		text-decoration: none
-		@include border-radius(2px)		
-	em
-		background-color: #333
-	a:hover
-		background-color: $main_color
-	span.gap
-		color: #CCC
+  margin: 20px 0 20px 0
+  a, em
+    padding: 4px 8px
+    background-color: #CCC
+    color: white
+    text-decoration: none
+    @include border-radius(2px)    
+  em
+    background-color: #333
+  a:hover
+    background-color: $main_color
+  span.gap
+    color: #CCC
 
 
 div.extension_options
-	width: $extension_options_width
-	
-	form
-		margin: 10px 0 0 0
-		ul.inputs
-			margin: 0
-			padding: 0
-			list-style: none
-			> li
-				margin: 10px 0
-				padding: 6px 0
-				display: block
-				clear: both
-				overflow: hidden
-				border-bottom: 1px solid #CCC
-				&:first-child
-					border-top: 1px solid #CCC
-				&:last-child
-					border-bottom: none
-				label
-					padding: 6px 0 0 0
-					font-size: .9em
-					display: block
-					float: left
-				input.text
-					display: block
-					float: right
-					font-size: .9em
-					padding: 1px
-					width: $extension_options_input_width
-				select
-					display: block
-					float: right
-					font-size: .9em
-					width: $extension_options_input_width
-				a#save_options
-					@include fonty_bold
-					@include border-radius(4px)
-					color: white
-					background-color: $main_color
-					padding: 4px 8px
-					font-size: .8em
-					text-decoration: none
-					&:hover
-						background-color: darken($main_color, 10%)
-						
-	
-	div#status
-		margin: 20px 0
-		padding: 10px
-		background-color: $status_color
-		
-		
+  width: $extension_options_width
+  
+  form
+    margin: 10px 0 0 0
+    ul.inputs
+      margin: 0
+      padding: 0
+      list-style: none
+      > li
+        margin: 10px 0
+        padding: 6px 0
+        display: block
+        clear: both
+        overflow: hidden
+        border-bottom: 1px solid #CCC
+        &:first-child
+          border-top: 1px solid #CCC
+        &:last-child
+          border-bottom: none
+        label
+          padding: 6px 0 0 0
+          font-size: .9em
+          display: block
+          float: left
+        input.text
+          display: block
+          float: right
+          font-size: .9em
+          padding: 1px
+          width: $extension_options_input_width
+        select
+          display: block
+          float: right
+          font-size: .9em
+          width: $extension_options_input_width
+        a#save_options
+          @include fonty_bold
+          @include border-radius(4px)
+          color: white
+          background-color: $main_color
+          padding: 4px 8px
+          font-size: .8em
+          text-decoration: none
+          &:hover
+            background-color: darken($main_color, 10%)
+            
+  
+  div#status
+    margin: 20px 0
+    padding: 10px
+    background-color: $status_color
+    
+    
 
 
