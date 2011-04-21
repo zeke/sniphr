@@ -7,8 +7,9 @@ module ApplicationHelper
 
   def user_nav
     items = []
+    items << link("Home", root_path)
     if logged_in?
-      items << current_user.nickname
+      items << ("Logged in as " + link_to(current_user.nickname, "/sniphs/mine")).html_safe
       items << link_to("Sign Out", signout_path)
     else
       items << link_to("Sign in with Twitter", "/auth/twitter")

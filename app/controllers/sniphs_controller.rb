@@ -9,39 +9,30 @@ class SniphsController < ApplicationController
   end
 
   def index
-    @sniphs = Sniph.order('created_at DESC')
-    @sniphs = @sniphs.where(:publique => true) unless params[:private].present?
+    if logged_in? && params[:whose]
+      @sniphs = current_user.sniphs.order('created_at DESC')
+    else
+      @sniphs = Sniph.order('created_at DESC').where(:publique => true)
+    end
+
     @sniphs = @sniphs.where("url LIKE ? OR content LIKE ? OR title LIKE ?", "%#{params[:q]}%", "%#{params[:q]}%", "%#{params[:q]}%") if params[:q]
-    @sniphs = @sniphs.where(:user => params[:user]) if params[:user]
+    @sniphs = @sniphs.paginate(:page => params[:page], :per_page => 200)
 
-    # Save this query if searching for a term or a user
-    if params[:q].present? || params[:user].present?
-
-      # There are a few params we're not interested in..
-      all_params = params.dup
-      all_params.delete(:action)
-      all_params.delete(:controller)
-
+    # Save this query if searching for a term
+    if params[:q].present?
       @query = Query.create(
         :q => params[:q],
-        :user => params[:user],
-        :from_user => params[:from_user],
         :ip => request.remote_ip,
-        :all_params => all_params,
         :num_results => @sniphs.size
       )
+
+      # Associate this query with the logged-in user
+      current_user.queries << @query if logged_in?
     end
 
     respond_to do |format|
       format.html
       format.json { render :json => @sniphs.to_json, :callback => params[:callback] }
-    end
-  end
-
-  def show
-    @sniph = Sniph.find(params[:id])
-    respond_to do |format|
-      format.json { render :json => @sniph.to_json, :callback => params[:callback] }
     end
   end
 

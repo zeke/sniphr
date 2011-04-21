@@ -72,7 +72,6 @@ ul#user_nav
   right: 20px
   z-index: 2
   margin: 0
-  padding: 0
   background-color: #DDD
   list-style: none
   float: none
@@ -82,12 +81,14 @@ ul#user_nav
   li
     float: left
     color: #999
-    font-size: .9em
+    font-size: .8em
+    padding: 10px 10px
+    border-right: 1px solid #CCC
+    &:last-child, &.last
+      border: none
     a
-      display: block
       color: #666
       text-decoration: none
-      padding: 10px 10px 8px 10px
       &:hover
         color: black
 

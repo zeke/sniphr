@@ -5,7 +5,9 @@ module SniphsHelper
     out = []
 
     # 0 Sniphs, 1 Sniph, 234 Sniphs
-    out << link_to(pluralize(sniphs.size, "Sniph"), root_path, :class => "rogue")
+    out << "Your" if params[:whose]
+
+    out << link_to(pluralize(sniphs.total_entries, "Sniph"), root_path, :class => "rogue")
 
     if params[:user].present?
       out << "sniph&rsquo;d by"
@@ -42,15 +44,16 @@ module SniphsHelper
     out = []
     out << "Saved"
     out << time_ago_in_words_or_date(sniph.created_at)
-    if sniph.user.present?
+    if sniph.user == current_user
 		  out << "by"
-			out << link_to(sniph.user, sniphs_path(:user => sniph.user))
+      out << link_to('You', "/sniphs/mine")
 		end
 		out.join(" ").html_safe
   end
 
   def sample_sniph_queries
     paths = [
+      sniphs_path,
       sniphs_path(:q => 'nytimes.com'),
       sniphs_path(:q => 'economist.com', :format => 'json'),
       sniphs_path(:q => 'en.wikipedia.org'),
