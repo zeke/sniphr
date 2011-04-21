@@ -21,4 +21,8 @@ class User < ActiveRecord::Base
     self.whitelist.downcase.include? url.domain_without_www
   end
 
+  def public_mode?
+    self.mode == 'public'
+  end
+
 end

@@ -43,6 +43,7 @@ class SniphsController < ApplicationController
       response_object = {:msg => "This URL's domain is not in your whitelist." }
     else
       @sniph = current_user.sniphs.new(params[:sniph])
+      @sniph.publique = current_user.public_mode?
       response_object = @sniph.save ? {:msg => 'Success', :id => @sniph.id} : {:msg => @sniph.errors}
     end
 
