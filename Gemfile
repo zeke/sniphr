@@ -12,6 +12,8 @@ gem 'formtastic', '1.2.3'
 # gem 'pg'
 # gem 'pg_search'
 gem "will_paginate", "~> 3.0.pre2"
+gem "omniauth"
+gem "slideshow"
 
 group :development, :test do
   gem 'rspec', '2.5.0'
@@ -23,5 +25,5 @@ group :development, :test do
   gem 'linecache19', '0.5.11' # Used by ruby-debug
   gem 'colored', '1.2' # for colorful console.debug output
   gem 'vcr', '1.5.1'
-  gem 'webmock', '1.6.2'
+  # gem 'webmock', '1.6.2'
 end

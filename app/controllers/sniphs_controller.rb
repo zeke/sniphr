@@ -16,12 +16,12 @@ class SniphsController < ApplicationController
 
     # Save this query if searching for a term or a user
     if params[:q].present? || params[:user].present?
-      
+
       # There are a few params we're not interested in..
       all_params = params.dup
       all_params.delete(:action)
       all_params.delete(:controller)
-      
+
       @query = Query.create(
         :q => params[:q],
         :user => params[:user],
@@ -46,14 +46,15 @@ class SniphsController < ApplicationController
   end
 
   def save
-    @sniph = Sniph.new(params[:sniph])
+    if !logged_in?
+      response_object = {:msg => 'You are not logged in.'}
+    else
+      @sniph = current_user.sniphs.new(params[:sniph])
+      response_object = @sniph.save ? {:msg => 'Success', :id => @sniph.id} : {:msg => @sniph.errors}
+    end
+
     respond_to do |format|
-      if @sniph.save
-        # format.json { render :json => {:msg => 'Success', :id => @sniph.id}.to_json, :callback => params[:callback] }
-        format.json { render :json => {:msg => 'Success', :id => @sniph.id}.to_json }
-      else
-        format.json { render :json => {:msg => 'Error'}.to_json, :callback => params[:callback] }
-      end
+      format.json { render :json => response_object.to_json }
     end
   end
 

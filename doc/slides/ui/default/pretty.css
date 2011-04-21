@@ -1,0 +1,12 @@
+body {
+  color: #666666;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+h1 {
+  color: black; }
+
+#currentSlide {
+  font-size: 10px; }
+
+code {
+  color: #6b8e23; }

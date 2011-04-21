@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110418015853) do
+ActiveRecord::Schema.define(:version => 20110420213628) do
 
   create_table "queries", :force => true do |t|
     t.string   "q"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(:version => 20110418015853) do
     t.integer  "num_results"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
   add_index "queries", ["all_params"], :name => "index_queries_on_all_params"
@@ -29,6 +30,7 @@ ActiveRecord::Schema.define(:version => 20110418015853) do
   add_index "queries", ["num_results"], :name => "index_queries_on_num_results"
   add_index "queries", ["q"], :name => "index_queries_on_q"
   add_index "queries", ["user"], :name => "index_queries_on_user"
+  add_index "queries", ["user_id"], :name => "index_queries_on_user_id"
 
   create_table "sniphs", :force => true do |t|
     t.string   "url"
@@ -38,11 +40,25 @@ ActiveRecord::Schema.define(:version => 20110418015853) do
     t.datetime "updated_at"
     t.string   "title"
     t.boolean  "publique",   :default => true
+    t.integer  "user_id"
   end
 
   add_index "sniphs", ["publique"], :name => "index_sniphs_on_publique"
   add_index "sniphs", ["title"], :name => "index_sniphs_on_title"
   add_index "sniphs", ["url"], :name => "index_sniphs_on_url"
   add_index "sniphs", ["user"], :name => "index_sniphs_on_user"
+  add_index "sniphs", ["user_id"], :name => "index_sniphs_on_user_id"
+
+  create_table "users", :force => true do |t|
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "nickname"
+    t.string   "name"
+    t.string   "location"
+    t.string   "image"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

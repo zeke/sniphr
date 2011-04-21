@@ -9,3 +9,13 @@
 	= link_to("Install Sniphr", "https://chrome.google.com/extensions/detail/dgpgdcglcodcglcglbompkodmjnoobil")
 
 = sample_sniph_queries
+
+- if current_user
+	%p
+		Welcome
+		= current_user.nickname
+
+	%p= link_to "Sign Out", signout_path
+- else
+	%p
+		= link_to "Sign in with Twitter", "/auth/twitter"
