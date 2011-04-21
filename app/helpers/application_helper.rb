@@ -9,7 +9,7 @@ module ApplicationHelper
     items = []
     items << link("Home", root_path)
     if logged_in?
-      items << ("Logged in as " + link_to(current_user.nickname, "/sniphs/mine")).html_safe
+      items << ("Signed in as " + link_to(current_user.nickname, "/sniphs/mine")).html_safe
       items << link_to("Settings", settings_path)
       items << link_to("Sign Out", signout_path)
     else
