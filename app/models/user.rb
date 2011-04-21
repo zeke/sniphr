@@ -15,4 +15,10 @@ class User < ActiveRecord::Base
     end
   end
 
+  def url_domain_allowed?(url)
+    logger.debug(self.whitelist.downcase)
+    logger.debug(url.domain_without_www)
+    self.whitelist.downcase.include? url.domain_without_www
+  end
+
 end

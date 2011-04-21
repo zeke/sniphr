@@ -39,6 +39,8 @@ class SniphsController < ApplicationController
   def save
     if !logged_in?
       response_object = {:msg => 'You are not logged in.'}
+    elsif !current_user.url_domain_allowed?(params[:sniph][:url])
+      response_object = {:msg => "This URL's domain is not in your whitelist." }
     else
       @sniph = current_user.sniphs.new(params[:sniph])
       response_object = @sniph.save ? {:msg => 'Success', :id => @sniph.id} : {:msg => @sniph.errors}

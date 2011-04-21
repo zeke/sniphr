@@ -6,12 +6,19 @@
   Each time you select a piece of text, Sniphr saves it. Think of it as a casual form of bookmarking.
   
 %p.big
-  - if logged_in?
-    = "Step 1: Sign in with your Twitter account. (done)"
-  - else
-    = link_to("Step 1: Sign in with your Twitter account.", "/auth/twitter")
+  = link_to("Step 1: Sign in with your Twitter account.", "/auth/twitter")
 
 %p.big
-  = link_to("Step 2: Install the extension.", "https://chrome.google.com/extensions/detail/dgpgdcglcodcglcglbompkodmjnoobil")
+  - if logged_in?
+    = link_to("Step 2: Configure your domain whitelist.", settings_path) + " (optional)"
+  - else
+    Step 2: Configure a whitelist of sniph-able domains.
+
+%p.big
+  - if logged_in? && current_user.updated_at.present?
+    = link_to("Step 3: Install the extension.", "https://chrome.google.com/extensions/detail/dgpgdcglcodcglcglbompkodmjnoobil")
+  - else
+    Step 3: Install the extension.
+  
 
 = sample_sniph_queries

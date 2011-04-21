@@ -3,3 +3,10 @@
 
 en:
   hello: "Hello world"
+  
+  activerecord:
+    model:
+      user: "User"
+    attributes:
+      user:
+        whitelist: "Domain Whitelist"

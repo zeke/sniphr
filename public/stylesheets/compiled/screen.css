@@ -391,114 +391,119 @@ ul#user_nav li a:hover {
 }
 
 /* line 95, ../../../app/stylesheets/screen.sass */
+form.formtastic {
+  width: 600px;
+}
+
+/* line 98, ../../../app/stylesheets/screen.sass */
 ul.samples {
   margin: 50px 0 0 0;
   padding: 0;
   list-style: none;
 }
-/* line 99, ../../../app/stylesheets/screen.sass */
+/* line 102, ../../../app/stylesheets/screen.sass */
 ul.samples li {
   font-family: "Anonymous Pro", "Menlo", "Consolas", "Bitstream Vera Sans Mono", "Courier New", monospace;
   font-size: 0.9em;
   padding: 5px 0;
 }
-/* line 103, ../../../app/stylesheets/screen.sass */
+/* line 106, ../../../app/stylesheets/screen.sass */
 ul.samples li a {
   color: #666666;
 }
-/* line 105, ../../../app/stylesheets/screen.sass */
+/* line 108, ../../../app/stylesheets/screen.sass */
 ul.samples li a:hover {
   color: #4b9900;
 }
 
-/* line 108, ../../../app/stylesheets/screen.sass */
+/* line 111, ../../../app/stylesheets/screen.sass */
 ul.sniphs {
   width: 600px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
-/* line 114, ../../../app/stylesheets/screen.sass */
+/* line 117, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph {
   padding: 0 0 10px 0;
   margin: 10px 0 0 0;
   border-bottom: 1px solid #cccccc;
 }
-/* line 118, ../../../app/stylesheets/screen.sass */
+/* line 121, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph p {
   color: black;
   line-height: 1.3em;
   padding: 0 0 4px 0;
 }
-/* line 123, ../../../app/stylesheets/screen.sass */
+/* line 126, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph p.content span.q {
   color: #4b9900;
 }
-/* line 125, ../../../app/stylesheets/screen.sass */
+/* line 128, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph p.source {
   font-size: 0.9em;
   padding: 0;
   color: #999999;
 }
-/* line 129, ../../../app/stylesheets/screen.sass */
+/* line 132, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph p.source a {
   color: #4b9900;
   text-decoration: none;
 }
-/* line 132, ../../../app/stylesheets/screen.sass */
+/* line 135, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph p.source a span.domain {
   color: #aaaaaa;
   font-size: 0.9em;
 }
-/* line 136, ../../../app/stylesheets/screen.sass */
+/* line 139, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph p.metadata {
   padding: 3px 0 3px 0;
   font-size: 0.7em;
   color: #aaaaaa;
 }
-/* line 140, ../../../app/stylesheets/screen.sass */
+/* line 143, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph p.metadata a {
   color: #aaaaaa;
 }
-/* line 142, ../../../app/stylesheets/screen.sass */
+/* line 145, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph p.metadata a:hover {
   color: #999999;
 }
 
-/* line 145, ../../../app/stylesheets/screen.sass */
+/* line 148, ../../../app/stylesheets/screen.sass */
 table.queries {
   width: 100%;
   font-size: 0.9em;
 }
-/* line 151, ../../../app/stylesheets/screen.sass */
+/* line 154, ../../../app/stylesheets/screen.sass */
 table.queries thead tr th {
   padding: 3px;
   color: #999999;
 }
-/* line 156, ../../../app/stylesheets/screen.sass */
+/* line 159, ../../../app/stylesheets/screen.sass */
 table.queries tbody tr td {
   padding: 6px;
   border-top: 1px solid #cccccc;
   font-family: "Anonymous Pro", "Menlo", "Consolas", "Bitstream Vera Sans Mono", "Courier New", monospace;
 }
-/* line 160, ../../../app/stylesheets/screen.sass */
+/* line 163, ../../../app/stylesheets/screen.sass */
 table.queries tbody tr:hover {
   background-color: #333333;
 }
-/* line 162, ../../../app/stylesheets/screen.sass */
+/* line 165, ../../../app/stylesheets/screen.sass */
 table.queries tbody tr:hover td {
   color: white;
 }
-/* line 164, ../../../app/stylesheets/screen.sass */
+/* line 167, ../../../app/stylesheets/screen.sass */
 table.queries tbody tr:hover td a {
   color: white;
 }
 
-/* line 167, ../../../app/stylesheets/screen.sass */
+/* line 170, ../../../app/stylesheets/screen.sass */
 div.pagination {
   margin: 20px 0 20px 0;
 }
-/* line 169, ../../../app/stylesheets/screen.sass */
+/* line 172, ../../../app/stylesheets/screen.sass */
 div.pagination a, div.pagination em {
   padding: 4px 8px;
   background-color: #cccccc;
@@ -511,34 +516,34 @@ div.pagination a, div.pagination em {
   -khtml-border-radius: 2px;
   border-radius: 2px;
 }
-/* line 175, ../../../app/stylesheets/screen.sass */
+/* line 178, ../../../app/stylesheets/screen.sass */
 div.pagination em {
   background-color: #333333;
 }
-/* line 177, ../../../app/stylesheets/screen.sass */
+/* line 180, ../../../app/stylesheets/screen.sass */
 div.pagination a:hover {
   background-color: #4b9900;
 }
-/* line 179, ../../../app/stylesheets/screen.sass */
+/* line 182, ../../../app/stylesheets/screen.sass */
 div.pagination span.gap {
   color: #cccccc;
 }
 
-/* line 183, ../../../app/stylesheets/screen.sass */
+/* line 186, ../../../app/stylesheets/screen.sass */
 div.extension_options {
   width: 350px;
 }
-/* line 186, ../../../app/stylesheets/screen.sass */
+/* line 189, ../../../app/stylesheets/screen.sass */
 div.extension_options form {
   margin: 10px 0 0 0;
 }
-/* line 188, ../../../app/stylesheets/screen.sass */
+/* line 191, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-/* line 192, ../../../app/stylesheets/screen.sass */
+/* line 195, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs > li {
   margin: 10px 0;
   padding: 6px 0;
@@ -547,22 +552,22 @@ div.extension_options form ul.inputs > li {
   overflow: hidden;
   border-bottom: 1px solid #cccccc;
 }
-/* line 199, ../../../app/stylesheets/screen.sass */
+/* line 202, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs > li:first-child {
   border-top: 1px solid #cccccc;
 }
-/* line 201, ../../../app/stylesheets/screen.sass */
+/* line 204, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs > li:last-child {
   border-bottom: none;
 }
-/* line 203, ../../../app/stylesheets/screen.sass */
+/* line 206, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs > li label {
   padding: 6px 0 0 0;
   font-size: 0.9em;
   display: block;
   float: left;
 }
-/* line 208, ../../../app/stylesheets/screen.sass */
+/* line 211, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs > li input.text {
   display: block;
   float: right;
@@ -570,14 +575,14 @@ div.extension_options form ul.inputs > li input.text {
   padding: 1px;
   width: 120px;
 }
-/* line 214, ../../../app/stylesheets/screen.sass */
+/* line 217, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs > li select {
   display: block;
   float: right;
   font-size: 0.9em;
   width: 120px;
 }
-/* line 219, ../../../app/stylesheets/screen.sass */
+/* line 222, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs > li a#save_options {
   font-family: "Helvetica Neue", Helvetica, Arial;
   font-weight: bold;
@@ -593,11 +598,11 @@ div.extension_options form ul.inputs > li a#save_options {
   font-size: 0.8em;
   text-decoration: none;
 }
-/* line 227, ../../../app/stylesheets/screen.sass */
+/* line 230, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs > li a#save_options:hover {
   background-color: #326600;
 }
-/* line 231, ../../../app/stylesheets/screen.sass */
+/* line 234, ../../../app/stylesheets/screen.sass */
 div.extension_options div#status {
   margin: 20px 0;
   padding: 10px;
