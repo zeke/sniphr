@@ -8,6 +8,16 @@ Why
 
 - text extraction diagram goes here
 
+
+What is Sniphr?
+===============
+
+- a crowdsourced document analyzer
+- an FRD lasso
+- opt-in spyware
+- passive bookmarking
+- a tool for
+
 The Nose Knows
 ==============
 
@@ -25,23 +35,12 @@ Mullet Architecture
 	
 	{party} in the front, {business} in the back
 
-Sniphware
-=========
-
-- Privacy is important to people. Does a whitelist solve this?
-- users hit thousands of URLs each day
-- many covert http requests (most queried domains: https://gist.github.com/933620)
-
-Roadmap
+Privacy
 =======
 
-- *real* user auth/integration
-- give users their own domain white/black lists
-- highlight my sniphs on a page
-- highlight all sniphs on a page
-- sniphr.com should be blacklisted
-- save "instance number" if selected text occurs multiple times on the page?
-- allow users to manually check for sniphs on a page
+- Privacy is important to people. Does a domain whitelist solve this?
+- users hit thousands of URLs each day
+- many covert http requests (most queried domains: https://gist.github.com/933620)
 
 Oh, Auth.
 =========
@@ -51,9 +50,19 @@ Oh, Auth.
 - Essential for Javascript-powered apps (mobile, web-based)
 - Wordnik should be doing it
 
-Credits
+Roadmap
 =======
 
+- highlight my sniphs on a page
+- highlight all sniphs on a page
+- allow users to manually check for sniphs on a page
+- allow users to manually sniph outside their whitelisted domains
+- sniph-enabling or sniph-disabling keypress option
+
+Colophon
+========
+
+- github.com:zeke/sniphr.git
 Made with [Slide Show](http://slideshow.rubyforge.org/), a free web alternative to PowerPoint and KeyNote in Ruby.
 
 	rake preso
