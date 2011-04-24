@@ -3,9 +3,11 @@
   %head
     %meta{'http-equiv' => 'Content-Type', :content => 'text/html; charset=utf-8'}
     = csrf_meta_tag # required for rails 3 js
-    %title Sniphr
+    %title sniphr
     
     = stylesheet_link_tag 'compiled/screen.css', :media => 'screen, projection'
+    = stylesheet_link_tag "uniform.default"
+    
     /[if IE]
       = stylesheet_link_tag 'compiled/ie.css', :media => 'screen, projection'
     /[if lt IE 7]
@@ -15,7 +17,18 @@
     = headjs_include_tag configatron.javascripts
     
   %body
-  
-    = user_nav
+    
+    - unless request.path == chrome_options_path
+      #top_bar
+        = logo
+        = user_nav
     
     = yield
+    
+    - unless request.path == chrome_options_path
+      #bottom_bar
+        %ul
+          %li
+            Sniphr is a 
+            = link_to("wordnik", "http://wordnik.com")
+            experiment.

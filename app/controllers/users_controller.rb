@@ -7,6 +7,9 @@ class UsersController < ApplicationController
     end
   end
 
+  def chrome_options
+  end
+
   def update
     respond_to do |format|
       if current_user.update_attributes(params[:user])

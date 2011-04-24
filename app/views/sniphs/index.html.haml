@@ -1,18 +1,20 @@
-= sniph_heading(@sniphs)
+%div.content
 
-- if @sniphs.present?
-	%ul.sniphs
-		
-		- @sniphs.each do |sniph|
-			- url = sniph.url.remove_http_and_www
-			%li.sniph
-				%p.content
-					= sniph_content sniph
-				%p.source
-					= sniph_source sniph
-				%p.metadata
-					= sniph_metadata sniph
-					
-= will_paginate @sniphs
+  = sniph_heading(@sniphs)
 
-= sample_sniph_queries
+  - if @sniphs.present?
+    %ul.sniphs
+    
+      - @sniphs.each do |sniph|
+        - url = sniph.url.remove_http_and_www
+        %li.sniph
+          %p.content
+            = sniph_content sniph
+          %p.source
+            = sniph_source sniph
+          %p.metadata
+            = sniph_metadata sniph
+          
+  = will_paginate @sniphs
+
+  = sample_sniph_queries

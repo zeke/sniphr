@@ -270,10 +270,9 @@ form.formtastic fieldset > ol > li.date fieldset ol li label input, form.formtas
   padding: 0;
 }
 
-/* line 24, ../../../app/stylesheets/screen.sass */
+/* line 25, ../../../app/stylesheets/screen.sass */
 body {
   font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial;
-  padding: 15px;
 }
 
 /* line 28, ../../../app/stylesheets/screen.sass */
@@ -313,17 +312,30 @@ h2 {
 }
 
 /* line 49, ../../../app/stylesheets/screen.sass */
+h3 {
+  padding: 15px 0 5px 0;
+}
+
+/* line 52, ../../../app/stylesheets/screen.sass */
 a {
   color: #4b9900;
 }
 
-/* line 52, ../../../app/stylesheets/screen.sass */
-p {
-  padding: 10px 0 10px 0;
+/* line 55, ../../../app/stylesheets/screen.sass */
+.weak {
+  color: #cccccc;
 }
-/* line 54, ../../../app/stylesheets/screen.sass */
+
+/* line 58, ../../../app/stylesheets/screen.sass */
+p {
+  padding: 0 0 10px 0;
+  font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial;
+  font-size: 1em;
+  line-height: 1.3em;
+  color: #666666;
+}
+/* line 64, ../../../app/stylesheets/screen.sass */
 p.big {
-  width: 600px;
   font-size: 1.3em;
   line-height: 1.2em;
   font-family: "Helvetica Neue", Helvetica, Arial;
@@ -331,179 +343,311 @@ p.big {
   color: #999999;
   padding: 0 0 15px 0;
 }
-/* line 61, ../../../app/stylesheets/screen.sass */
+/* line 70, ../../../app/stylesheets/screen.sass */
 p.empty {
   color: #999999;
   padding: 0 0 15px 0;
 }
 
-/* line 65, ../../../app/stylesheets/screen.sass */
-.weak {
-  color: #cccccc;
-}
-
-/* line 68, ../../../app/stylesheets/screen.sass */
-ul#user_nav {
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 20px;
-  z-index: 2;
-  margin: 0;
-  background-color: #dddddd;
-  list-style: none;
+/* line 75, ../../../app/stylesheets/screen.sass */
+div#top_bar {
   float: none;
   clear: both;
   overflow: hidden;
-  -moz-border-radius-bottomleft: 5px;
-  -webkit-border-bottom-left-radius: 5px;
-  -o-border-bottom-left-radius: 5px;
-  -ms-border-bottom-left-radius: 5px;
-  -khtml-border-bottom-left-radius: 5px;
-  border-bottom-left-radius: 5px;
-  -moz-border-radius-bottomright: 5px;
-  -webkit-border-bottom-right-radius: 5px;
-  -o-border-bottom-right-radius: 5px;
-  -ms-border-bottom-right-radius: 5px;
-  -khtml-border-bottom-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  background-color: #dddddd;
 }
-/* line 81, ../../../app/stylesheets/screen.sass */
-ul#user_nav li {
+/* line 83, ../../../app/stylesheets/screen.sass */
+div#top_bar a#logo {
+  display: block;
+  clear: none;
+  float: left;
+  padding: 14px 15px;
+  background-color: #4b9900;
+  color: white;
+  text-decoration: none;
+}
+/* line 90, ../../../app/stylesheets/screen.sass */
+div#top_bar ul#user_nav {
+  list-style: none;
+  display: block;
+  clear: none;
+  float: right;
+}
+/* line 93, ../../../app/stylesheets/screen.sass */
+div#top_bar ul#user_nav li {
   float: left;
   color: #999999;
   font-size: 0.8em;
-  padding: 10px 10px;
-  border-right: 1px solid #cccccc;
+  line-height: 1.5em;
+  border-right: none;
 }
-/* line 87, ../../../app/stylesheets/screen.sass */
-ul#user_nav li:last-child, ul#user_nav li.last {
+/* line 99, ../../../app/stylesheets/screen.sass */
+div#top_bar ul#user_nav li:first-child, div#top_bar ul#user_nav li.first {
   border: none;
 }
-/* line 89, ../../../app/stylesheets/screen.sass */
-ul#user_nav li a {
+/* line 101, ../../../app/stylesheets/screen.sass */
+div#top_bar ul#user_nav li:last-child, div#top_bar ul#user_nav li.last {
+  border: none;
+}
+/* line 103, ../../../app/stylesheets/screen.sass */
+div#top_bar ul#user_nav li a {
+  padding: 13px 10px;
+  display: inline-block;
   color: #666666;
   text-decoration: none;
 }
-/* line 92, ../../../app/stylesheets/screen.sass */
-ul#user_nav li a:hover {
-  color: black;
+/* line 108, ../../../app/stylesheets/screen.sass */
+div#top_bar ul#user_nav li a:hover, div#top_bar ul#user_nav li a.active {
+  background-color: #666666;
+  color: white;
+}
+/* line 112, ../../../app/stylesheets/screen.sass */
+div#top_bar ul#user_nav li form.search {
+  margin: 9px 15px 0 0;
+  background: #f0f0f0;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 116, ../../../app/stylesheets/screen.sass */
+div#top_bar ul#user_nav li form.search input.q {
+  background: none;
+  border: none;
+  outline: none;
+  font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial;
+  padding: 4px;
+  font-size: 1em;
 }
 
-/* line 95, ../../../app/stylesheets/screen.sass */
-form.formtastic {
+/* line 124, ../../../app/stylesheets/screen.sass */
+div.content {
+  margin: 70px 15px 100px 15px;
+}
+/* line 127, ../../../app/stylesheets/screen.sass */
+div.content div.column {
   width: 600px;
 }
 
-/* line 98, ../../../app/stylesheets/screen.sass */
+/* line 132, ../../../app/stylesheets/screen.sass */
+ul#chrome_options li {
+  border-bottom: 1px solid #cccccc;
+  padding: 5px 0;
+  font-size: 0.9em;
+}
+/* line 136, ../../../app/stylesheets/screen.sass */
+ul#chrome_options li:last-child {
+  border: none;
+}
+/* line 138, ../../../app/stylesheets/screen.sass */
+ul#chrome_options li a {
+  text-decoration: none;
+}
+
+/* line 141, ../../../app/stylesheets/screen.sass */
+div#bottom_bar {
+  float: none;
+  clear: both;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+/* line 147, ../../../app/stylesheets/screen.sass */
+div#bottom_bar ul {
+  float: none;
+  clear: both;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  display: block;
+  clear: none;
+  float: right;
+  margin: 0 10px 0 0;
+  background: white;
+}
+/* line 33, ../../../app/stylesheets/zass/_zass.sass */
+div#bottom_bar ul li {
+  float: left;
+  clear: none;
+  margin: 0;
+  padding: 2px 10px;
+  border-right: 1px solid #dddddd;
+}
+/* line 39, ../../../app/stylesheets/zass/_zass.sass */
+div#bottom_bar ul li:first-child, div#bottom_bar ul li.last {
+  padding-left: 0;
+}
+/* line 41, ../../../app/stylesheets/zass/_zass.sass */
+div#bottom_bar ul li:last-child, div#bottom_bar ul li.last {
+  padding-right: 0;
+  border-right: none;
+}
+/* line 152, ../../../app/stylesheets/screen.sass */
+div#bottom_bar ul li {
+  color: #999999;
+  font-size: 0.8em;
+  padding: 10px;
+}
+/* line 156, ../../../app/stylesheets/screen.sass */
+div#bottom_bar ul li a {
+  color: #555555;
+}
+/* line 158, ../../../app/stylesheets/screen.sass */
+div#bottom_bar ul li a:hover {
+  color: #4b9900;
+}
+
+/* line 163, ../../../app/stylesheets/screen.sass */
+form.formtastic {
+  width: 600px;
+}
+/* line 166, ../../../app/stylesheets/screen.sass */
+form.formtastic textarea {
+  padding: 3px;
+  font-size: 0.9em;
+  color: #333333;
+  line-height: 1.3em;
+}
+
+/* line 172, ../../../app/stylesheets/screen.sass */
+ol.steps {
+  padding: 0 0 0 25px;
+}
+/* line 174, ../../../app/stylesheets/screen.sass */
+ol.steps li {
+  font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial;
+  font-size: 1em;
+  list-style-type: decimal;
+  color: #666666;
+  padding: 5px 0;
+}
+/* line 180, ../../../app/stylesheets/screen.sass */
+ol.steps li a {
+  color: #4b9900;
+  text-decoration: none;
+}
+/* line 183, ../../../app/stylesheets/screen.sass */
+ol.steps li a.complete {
+  text-decoration: line-through;
+  color: #999999;
+}
+
+/* line 187, ../../../app/stylesheets/screen.sass */
 ul.samples {
-  margin: 50px 0 0 0;
+  margin: 5px 0;
   padding: 0;
   list-style: none;
 }
-/* line 102, ../../../app/stylesheets/screen.sass */
+/* line 191, ../../../app/stylesheets/screen.sass */
 ul.samples li {
   font-family: "Anonymous Pro", "Menlo", "Consolas", "Bitstream Vera Sans Mono", "Courier New", monospace;
   font-size: 0.9em;
   padding: 5px 0;
 }
-/* line 106, ../../../app/stylesheets/screen.sass */
+/* line 195, ../../../app/stylesheets/screen.sass */
 ul.samples li a {
   color: #666666;
 }
-/* line 108, ../../../app/stylesheets/screen.sass */
+/* line 197, ../../../app/stylesheets/screen.sass */
 ul.samples li a:hover {
   color: #4b9900;
 }
 
-/* line 111, ../../../app/stylesheets/screen.sass */
+/* line 200, ../../../app/stylesheets/screen.sass */
 ul.sniphs {
   width: 600px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
-/* line 117, ../../../app/stylesheets/screen.sass */
+/* line 206, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph {
   padding: 0 0 10px 0;
   margin: 10px 0 0 0;
   border-bottom: 1px solid #cccccc;
 }
-/* line 121, ../../../app/stylesheets/screen.sass */
+/* line 210, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph p {
   color: black;
   line-height: 1.3em;
   padding: 0 0 4px 0;
 }
-/* line 126, ../../../app/stylesheets/screen.sass */
+/* line 215, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph p.content span.q {
   color: #4b9900;
 }
-/* line 128, ../../../app/stylesheets/screen.sass */
+/* line 217, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph p.source {
   font-size: 0.9em;
   padding: 0;
   color: #999999;
 }
-/* line 132, ../../../app/stylesheets/screen.sass */
+/* line 221, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph p.source a {
   color: #4b9900;
   text-decoration: none;
 }
-/* line 135, ../../../app/stylesheets/screen.sass */
+/* line 224, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph p.source a span.domain {
   color: #aaaaaa;
   font-size: 0.9em;
 }
-/* line 139, ../../../app/stylesheets/screen.sass */
+/* line 228, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph p.metadata {
   padding: 3px 0 3px 0;
   font-size: 0.7em;
   color: #aaaaaa;
 }
-/* line 143, ../../../app/stylesheets/screen.sass */
+/* line 232, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph p.metadata a {
   color: #aaaaaa;
 }
-/* line 145, ../../../app/stylesheets/screen.sass */
+/* line 234, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph p.metadata a:hover {
   color: #999999;
 }
 
-/* line 148, ../../../app/stylesheets/screen.sass */
+/* line 237, ../../../app/stylesheets/screen.sass */
 table.queries {
   width: 100%;
   font-size: 0.9em;
 }
-/* line 154, ../../../app/stylesheets/screen.sass */
+/* line 243, ../../../app/stylesheets/screen.sass */
 table.queries thead tr th {
   padding: 3px;
   color: #999999;
 }
-/* line 159, ../../../app/stylesheets/screen.sass */
+/* line 248, ../../../app/stylesheets/screen.sass */
 table.queries tbody tr td {
   padding: 6px;
   border-top: 1px solid #cccccc;
   font-family: "Anonymous Pro", "Menlo", "Consolas", "Bitstream Vera Sans Mono", "Courier New", monospace;
 }
-/* line 163, ../../../app/stylesheets/screen.sass */
+/* line 252, ../../../app/stylesheets/screen.sass */
 table.queries tbody tr:hover {
   background-color: #333333;
 }
-/* line 165, ../../../app/stylesheets/screen.sass */
+/* line 254, ../../../app/stylesheets/screen.sass */
 table.queries tbody tr:hover td {
   color: white;
 }
-/* line 167, ../../../app/stylesheets/screen.sass */
+/* line 256, ../../../app/stylesheets/screen.sass */
 table.queries tbody tr:hover td a {
   color: white;
 }
 
-/* line 170, ../../../app/stylesheets/screen.sass */
+/* line 259, ../../../app/stylesheets/screen.sass */
 div.pagination {
   margin: 20px 0 20px 0;
 }
-/* line 172, ../../../app/stylesheets/screen.sass */
+/* line 261, ../../../app/stylesheets/screen.sass */
 div.pagination a, div.pagination em {
   padding: 4px 8px;
   background-color: #cccccc;
@@ -516,34 +660,34 @@ div.pagination a, div.pagination em {
   -khtml-border-radius: 2px;
   border-radius: 2px;
 }
-/* line 178, ../../../app/stylesheets/screen.sass */
+/* line 267, ../../../app/stylesheets/screen.sass */
 div.pagination em {
   background-color: #333333;
 }
-/* line 180, ../../../app/stylesheets/screen.sass */
+/* line 269, ../../../app/stylesheets/screen.sass */
 div.pagination a:hover {
   background-color: #4b9900;
 }
-/* line 182, ../../../app/stylesheets/screen.sass */
+/* line 271, ../../../app/stylesheets/screen.sass */
 div.pagination span.gap {
   color: #cccccc;
 }
 
-/* line 186, ../../../app/stylesheets/screen.sass */
+/* line 275, ../../../app/stylesheets/screen.sass */
 div.extension_options {
   width: 350px;
 }
-/* line 189, ../../../app/stylesheets/screen.sass */
+/* line 278, ../../../app/stylesheets/screen.sass */
 div.extension_options form {
   margin: 10px 0 0 0;
 }
-/* line 191, ../../../app/stylesheets/screen.sass */
+/* line 280, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-/* line 195, ../../../app/stylesheets/screen.sass */
+/* line 284, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs > li {
   margin: 10px 0;
   padding: 6px 0;
@@ -552,22 +696,22 @@ div.extension_options form ul.inputs > li {
   overflow: hidden;
   border-bottom: 1px solid #cccccc;
 }
-/* line 202, ../../../app/stylesheets/screen.sass */
+/* line 291, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs > li:first-child {
   border-top: 1px solid #cccccc;
 }
-/* line 204, ../../../app/stylesheets/screen.sass */
+/* line 293, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs > li:last-child {
   border-bottom: none;
 }
-/* line 206, ../../../app/stylesheets/screen.sass */
+/* line 295, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs > li label {
   padding: 6px 0 0 0;
   font-size: 0.9em;
   display: block;
   float: left;
 }
-/* line 211, ../../../app/stylesheets/screen.sass */
+/* line 300, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs > li input.text {
   display: block;
   float: right;
@@ -575,14 +719,14 @@ div.extension_options form ul.inputs > li input.text {
   padding: 1px;
   width: 120px;
 }
-/* line 217, ../../../app/stylesheets/screen.sass */
+/* line 306, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs > li select {
   display: block;
   float: right;
   font-size: 0.9em;
   width: 120px;
 }
-/* line 222, ../../../app/stylesheets/screen.sass */
+/* line 311, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs > li a#save_options {
   font-family: "Helvetica Neue", Helvetica, Arial;
   font-weight: bold;
@@ -598,11 +742,11 @@ div.extension_options form ul.inputs > li a#save_options {
   font-size: 0.8em;
   text-decoration: none;
 }
-/* line 230, ../../../app/stylesheets/screen.sass */
+/* line 319, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs > li a#save_options:hover {
   background-color: #326600;
 }
-/* line 234, ../../../app/stylesheets/screen.sass */
+/* line 323, ../../../app/stylesheets/screen.sass */
 div.extension_options div#status {
   margin: 20px 0;
   padding: 10px;

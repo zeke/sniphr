@@ -1,21 +1,23 @@
-= query_heading(@queries)
+%div.content
 
-= will_paginate @queries
+  = query_heading(@queries)
 
-- if @queries.present?
-	
-	%table.queries
-		%thead
-			%tr
-				%th Query
-				%th User
-				%th Results
-				
-		%tbody
-			- @queries.each do |query|
-				%tr
-					%td= query_q(query)
-					%td= query.user.nickname if query.user.present?
-					%td= weak_if_zero(query.num_results)
-	
-= will_paginate @queries
+  = will_paginate @queries
+
+  - if @queries.present?
+  
+    %table.queries
+      %thead
+        %tr
+          %th Query
+          %th User
+          %th Results
+        
+      %tbody
+        - @queries.each do |query|
+          %tr
+            %td= query_q(query)
+            %td= query.user.nickname if query.user.present?
+            %td= weak_if_zero(query.num_results)
+  
+  = will_paginate @queries

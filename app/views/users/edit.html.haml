@@ -1,12 +1,20 @@
-%h1 Your Sniphr settings
+%div.content
 
-= semantic_form_for(current_user, :html => {:class => ""}) do |form|
+  %h1 Settings
 
-	= errors_for form
-	
-	= form.inputs do
-		= form.input :mode, :as => :select, :collection => %w(public private), :include_blank => false
-		= form.input :whitelist, :hint => "(one domain per line; leave blank to allow all domains)"
+  = semantic_form_for(current_user, :html => {:class => ""}) do |form|
 
-	= form.buttons do
-		= form.submit "Save"
+    = errors_for form
+  
+    = form.inputs do
+    
+      %h3 Mode
+      %p Sniphs saved when you're in private mode are only visible to you.
+      = form.input :mode, :as => :select, :collection => %w(public private), :include_blank => false, :label => false
+
+      %h3 Domain Whitelist
+      %p One domain per line. Leave blank to allow all domains. Leave off the www.
+      = form.input :whitelist, :label => false
+
+    = form.buttons do
+      = form.submit "Save"

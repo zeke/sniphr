@@ -7,6 +7,7 @@ $column_width: 600px
 $extension_options_width = 350px
 $extension_options_input_width = 120px
 
+@import "zass/zass"
 @import "compass/reset"
 @import "compass/css3"
 @import "formtastic_defaults"
@@ -23,7 +24,6 @@ $extension_options_input_width = 120px
 
 body
   @include fonty
-  padding: 15px
   
 h1, h2, h3, h4, h5, h6
   @include fonty_bold
@@ -45,14 +45,23 @@ h1
 h2
   padding: 15px 0 5px 0
   font-size: 1.4em
+
+h3
+  padding: 15px 0 5px 0
     
 a
   color: $main_color
-    
+  
+.weak
+  color: #CCC
+  
 p
-  padding: 10px 0 10px 0
+  padding: 0 0 10px 0
+  @include fonty
+  font-size: 1em
+  line-height: 1.3em
+  color: #666
   &.big
-    width: $column_width
     font-size: 1.3em
     line-height: 1.2em
     @include fonty_bold
@@ -62,41 +71,121 @@ p
     color: #999
     padding: 0 0 15px 0
 
-.weak
-  color: #CCC
-  
-ul#user_nav
-  display: block
-  position: absolute
+
+div#top_bar
+  @include no_float
+  width: 100%
+  position: fixed
   top: 0
-  right: 20px
   z-index: 2
-  margin: 0
   background-color: #DDD
-  list-style: none
-  float: none
-  clear: both
-  overflow: hidden
-  @include border-bottom-radius(5px)
+  
+  a#logo
+    @include float_left
+    padding: 14px 15px
+    background-color: $main_color
+    color: white
+    text-decoration: none
+
+  ul#user_nav
+    list-style: none
+    @include float_right
+    li
+      float: left
+      color: #999
+      font-size: .8em
+      line-height: 1.5em
+      border-right: none
+      &:first-child, &.first
+        border: none
+      &:last-child, &.last
+        border: none
+      a
+        padding: 13px 10px
+        display: inline-block
+        color: #666
+        text-decoration: none
+        &:hover, &.active
+          background-color: #666
+          color: white
+        
+      form.search
+        margin: 9px 15px 0 0 
+        background: #F0F0F0
+        @include border-radius(4px)
+        input.q
+          background: none
+          border: none
+          outline: none
+          @include fonty
+          padding: 4px
+          font-size: 1em
+          
+div.content
+  margin: 70px 15px 100px 15px
+
+  div.column
+    width: $column_width
+
+      
+ul#chrome_options
   li
-    float: left
-    color: #999
-    font-size: .8em
-    padding: 10px 10px
-    border-right: 1px solid #CCC
-    &:last-child, &.last
+    border-bottom: 1px solid #CCC
+    padding: 5px 0
+    font-size: .9em
+    &:last-child
       border: none
     a
-      color: #666
       text-decoration: none
-      &:hover
-        color: black
+      
+div#bottom_bar
+  @include no_float
+  position: fixed
+  bottom: 0
+  width: 100%
+
+  ul
+    @include horizontal_list
+    @include float_right
+    margin: 0 10px 0 0
+    background: white
+    li
+      color: #999
+      font-size: .8em
+      padding: 10px
+      a
+        color: #555
+        &:hover
+          color: $main_color
+
+        
 
 form.formtastic
   width: 600px
+  
+  textarea
+    padding: 3px
+    font-size: .9em
+    color: #333
+    line-height: 1.3em
+  
+ol.steps
+  padding: 0 0 0 25px
+  li
+    @include fonty
+    font-size: 1em
+    list-style-type: decimal
+    color: #666
+    padding: 5px 0
+    a
+      color: $main_color
+      text-decoration: none
+      &.complete
+        text-decoration: line-through
+        color: #999
 
 ul.samples
-  margin: 50px 0 0 0
+  margin: 5px 0
   padding: 0
   list-style: none
   li

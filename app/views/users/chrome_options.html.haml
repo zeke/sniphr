@@ -1,0 +1,12 @@
+%ul#chrome_options
+
+  - if logged_in?
+    %li= link_to("View public sniphs from this page", '#', :target => "_blank")
+    %li= link_to("View all your sniphs", '#', :target => "_blank")
+    %li= link_to("Add this page's domain to your whitelist", '#', :target => "_blank")
+    
+  - else
+    %li
+      Your are signed out of Sniphr.com
+    %li
+      = link_to("Sign in", "/auth/twitter", :target => "_blank")

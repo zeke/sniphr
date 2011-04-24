@@ -1,49 +1,51 @@
-%h1 Frequently Axed Questions
+%div.content
 
-%div.content_column
+  %h1 Frequently Axed Questions
 
-  %h2 What is Sniphr?
-  %p
-    Sniphr is an open-source Ruby on Rails application and Google Chrome extension that 
-    saves the snippets of text you select as you browse the web.
+  %div.column
 
-  %h2 Why is it cool?
-  %p
-    Sniphr helps you capture the content that matters to you without getting in your way.
-    It takes the simplicity of social bookmarking services like Delicious a step further: 
-    Why jump through the time- and brain-power-consuming hoops of creating a bookmark when you 
-    can do it implicitly just by browsing the web and highlighting stuff?
-  
-  %h2 What about my privacy?
-  %p
-    Sniphr only sticks its nose in the places you give it permission to. In your account 
-    settings, you can 
-    = link_to "configure a whitelist of domains", settings_path
-    that Sniphr is a allowed to sniph text from. When you highlight text on a page whose 
-    domain is not in your whitelist, it will not be saved.
-  
-  %p
-    If you want to sniph with reckless abandon but don't want anyone else to be
-    able to see the content you've sniphed, you can
-    = link_to("put your account in private mode", settings_path) + "."
-    All the
-    sniphs you save when your account is in private mode will be visible to you only.
-  
-  %h2 What if I want to sniph stuff outside my whitelist?
-  %p
-    You can make Sniphr temporarily bypass your domain whitelist by holding 
-    down shift as you select text.
+    %h2 What is Sniphr?
+    %p
+      Sniphr is an open-source Ruby on Rails application and Google Chrome extension that 
+      saves the snippets of text you select as you browse the web.
 
-  %h2 Where's the source code?
+    %h2 Why is it cool?
+    %p
+      Sniphr helps you capture the content that matters to you without getting in your way.
+      It takes the simplicity of social bookmarking services like Delicious a step further: 
+      Why jump through the time- and brain-power-consuming hoops of creating a bookmark when you 
+      can do it implicitly just by browsing the web and highlighting stuff?
   
-  %p
-    = link_to("github.com/zeke/sniphr", "http://github.com/zeke/sniphr")
-    and
-    = link_to("github.com/zeke/sniphr-chrome", "http://github.com/zeke/sniphr-chrome")
+    %h2 What about my privacy?
+    %p
+      Sniphr only sticks its nose in the places you give it permission to. In your account 
+      settings, you can 
+      = link_to "configure a whitelist of domains", settings_path
+      that sniphr is a allowed to sniph text from. When you highlight text on a page whose 
+      domain is not in your whitelist, it will not be saved.
+  
+    %p
+      If you want to sniph with reckless abandon but don't want anyone else to be
+      able to see the content you've sniphed, you can
+      = link_to("put your account in private mode", settings_path) + "."
+      All the
+      sniphs you save when your account is in private mode will be visible to you only.
+  
+    %h2 What if I want to sniph stuff outside my whitelist?
+    %p
+      You can make sniphr temporarily bypass your domain whitelist by holding 
+      down shift as you select text.
+
+    %h2 Where's the source code?
+  
+    %p
+      = link_to("github.com/zeke/sniphr", "http://github.com/zeke/sniphr")
+      and
+      = link_to("github.com/zeke/sniphr-chrome", "http://github.com/zeke/sniphr-chrome")
     
-  %h2 Who's behind this?
-  %p 
-    = link_to("@zeke", "http://twitter.com/zeke")
-    and
-    = link_to("@wordnik", "http://twitter.com/wordnik") + "."
-    Hit us up with your questions/comments/ideas!
+    %h2 Who's behind this?
+    %p 
+      = link_to("@zeke", "http://twitter.com/zeke")
+      and
+      = link_to("@wordnik", "http://twitter.com/wordnik") + "."
+      Hit us up with your questions/comments/ideas!

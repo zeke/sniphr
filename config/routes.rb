@@ -7,16 +7,19 @@ Sniphr::Application.routes.draw do
       get 'save'
     end
   end
-  match "/sniphs/:whose" => "sniphs#index"
+
+  match "/sniphs/:whose" => "sniphs#index", :as => :user_home
 
   root :to => "static#index"
   match "/about" => "static#about", :as => :about
 
-  match "/auth/:provider/callback" => "sessions#create"
+  match "/auth/:provider/callback" => "sessions#create", :as => :signin
+  match "/auth/failure" => "sessions#failure"
   match "/signout" => "sessions#destroy", :as => :signout
 
   resources :users, :only => [:edit, :update]
   match "/settings" => "users#edit", :as => :settings
+  match "/chrome_options" => "users#chrome_options", :as => :chrome_options
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

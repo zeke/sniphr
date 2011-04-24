@@ -1,25 +1,20 @@
-%h1 Sniphr
+%div.content
 
-%div.content_column
+  %div.column
 
-  %p.big
-    Sniphr is a Google Chrome extension that tracks the text you select as you browse the web.
-    Each time you select a piece of text, Sniphr saves it. Think of it as a casual form of bookmarking.
+
+    %h3 What?
+
+    %p
+      Sniphr is a Google Chrome extension that saves the snippets of text you highlight as you
+      browse around the web. It's the lazy (wo)man's bookmarking tool.
+      
+    %p
+      Using sniphr is simple. When you select text on a page whose domain is in your whitelist,
+      that snippet of text will be saved to your Sniphr account, along with the URL and title of
+      the page. If you want to save a snippet of text from a page that's not in your whitelist, 
+      hold down the shift key while selecting the text. That's it!
+
   
-  %h2 Setup
-  = installation_steps
-
-  %h2 Use
-
-  %p
-    Using Sniphr is simple. When you select text on a page whose domain is in your whitelist,
-    that snippet of text will be saved to your Sniphr account. If you want to save a snippet
-    of text from a page that's not in your whitelist, hold down the shift key while selecting 
-    the text.
-
-  %p
-    For more info, check out the
-    =link_to("frequently axed questions", about_path) + "."
-
-  %h2 Viewing yr sniphs
-  = sample_sniph_queries
+    %h3 How?
+    = installation_steps

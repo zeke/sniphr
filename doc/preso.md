@@ -3,8 +3,8 @@ Author:
 Subtitle: a crowdsourced context collector
 Company:
 
-Why
-===
+Why?
+====
 
 - text extraction diagram goes here
 
@@ -15,32 +15,31 @@ What is Sniphr?
 - a crowdsourced document analyzer
 - an FRD lasso
 - opt-in spyware
-- passive bookmarking
-- a tool for
+- a passive bookmarking tool
 
-The Nose Knows
-==============
+The New Paradigm
+================
 
-![Nose](http://etc.usf.edu/clipart/19100/19107/nose_19107_lg.gif)
+``` ruby
+def mullet_architecture
+  party = "javascript"
+  business = "JSON API"
+	"#{party} in the front, #{business} in the back"
+end
+```
 
-- passive bookmarking
-- 
+The Client
+==========
 
-Mullet Architecture
-===================
-
-	party = javascript
-	
-	business = JSON API
-	
-	{party} in the front, {business} in the back
+- Nothing but static JS/HTML
+- As low-level/general purpose/agnostic as possible.
+- Options window is a remote iframe
 
 Privacy
 =======
 
 - Privacy is important to people. Does a domain whitelist solve this?
-- users hit thousands of URLs each day
-- many covert http requests (most queried domains: https://gist.github.com/933620)
+- many covert http requests (facebook, imdb, ad networks: https://gist.github.com/933620)
 
 Oh, Auth.
 =========

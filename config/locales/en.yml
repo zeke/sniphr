@@ -10,3 +10,8 @@ en:
     attributes:
       user:
         whitelist: "Domain Whitelist"
+
+  formtastic:
+    hints:
+      user:
+        whitelist: "This is your whitelist"

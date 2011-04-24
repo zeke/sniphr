@@ -24,4 +24,8 @@ class User < ActiveRecord::Base
     self.mode == 'public'
   end
 
+  def manually_configured?
+    self.created_at != self.updated_at
+  end
+
 end

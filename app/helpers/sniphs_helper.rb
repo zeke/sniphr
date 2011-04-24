@@ -65,7 +65,7 @@ module SniphsHelper
       link_to(path, path)
     end
 
-    links = links.unshift("Example queries")
+    # links = links.unshift("Example queries")
   	content_tag(:ul, convert_to_list_items(links), :class => 'samples')
   end
 
