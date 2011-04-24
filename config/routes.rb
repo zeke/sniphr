@@ -10,6 +10,7 @@ Sniphr::Application.routes.draw do
   match "/sniphs/:whose" => "sniphs#index"
 
   root :to => "static#index"
+  match "/about" => "static#about", :as => :about
 
   match "/auth/:provider/callback" => "sessions#create"
   match "/signout" => "sessions#destroy", :as => :signout
