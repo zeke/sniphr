@@ -12,7 +12,7 @@ module ApplicationHelper
   def user_nav
     items = []
     items << content_tag(:form, :action => sniphs_path, :class => "search") do
-      text_field_tag(:q, params[:q], :placeholder => "Search", :class => 'q')
+      text_field_tag(:q, params[:q], :placeholder => "Search all sniphs", :class => 'q')
     end
     if logged_in?
       items << link("My sniphs", "/sniphs/mine")
