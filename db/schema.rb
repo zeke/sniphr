@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110421053604) do
+ActiveRecord::Schema.define(:version => 20110426011416) do
 
   create_table "queries", :force => true do |t|
     t.string   "q"
@@ -25,6 +25,16 @@ ActiveRecord::Schema.define(:version => 20110421053604) do
   add_index "queries", ["num_results"], :name => "index_queries_on_num_results"
   add_index "queries", ["q"], :name => "index_queries_on_q"
   add_index "queries", ["user_id"], :name => "index_queries_on_user_id"
+
+  create_table "sessions", :force => true do |t|
+    t.string   "session_id", :null => false
+    t.text     "data"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "sessions", ["session_id"], :name => "index_sessions_on_session_id"
+  add_index "sessions", ["updated_at"], :name => "index_sessions_on_updated_at"
 
   create_table "sniphs", :force => true do |t|
     t.string   "url"
