@@ -16,6 +16,7 @@ Sniphr::Application.routes.draw do
   match "/auth/:provider/callback" => "sessions#create", :as => :signin
   match "/auth/failure" => "sessions#failure"
   match "/signout" => "sessions#destroy", :as => :signout
+  match "/session_status" => "sessions#session_status"
 
   resources :users, :only => [:edit, :update]
   match "/settings" => "users#edit", :as => :settings
