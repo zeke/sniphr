@@ -8,6 +8,16 @@ class UsersController < ApplicationController
   end
 
   def chrome_options
+    if params[:last_url].present?
+      @current_url = params[:last_url]
+      @domain = @current_url.domain_without_www
+      @num_sniphs_at_url = Sniph.where("url LIKE ?", "%#{@current_url}%").count
+      @num_sniphs_at_domain = Sniph.where("url LIKE ?", "%#{@domain}%").count
+    end
+
+    respond_to do |format|
+      format.html
+    end
   end
 
   def update

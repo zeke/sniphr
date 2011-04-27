@@ -1,12 +1,30 @@
 %ul#chrome_options
 
-  - if logged_in?
-    %li= link_to("View public sniphs from this page", '#', :target => "_blank")
-    %li= link_to("View all your sniphs", '#', :target => "_blank")
-    %li= link_to("Add this page's domain to your whitelist", '#', :target => "_blank")
+  - if !logged_in?
+    %li Your are signed out of Sniphr.com
+    %li= link_to("Sign in", "/auth/twitter", :target => "_blank")
     
+  - elsif @current_url.blank?
+    %li Sorry, there was a problem getting your current URL.
+
   - else
     %li
-      Your are signed out of Sniphr.com
-    %li
-      = link_to("Sign in", "/auth/twitter", :target => "_blank")
+      %h1= truncate(@current_url.remove_http_and_www, :length => 60)
+
+    - if @num_sniphs_at_url.zero?
+      %li.weak= "No sniphs at this URL"
+    - else
+      %li= link_to("View the #{pluralize(@num_sniphs_at_url, 'sniph')} from this URL", "/sniphs?q=#{@current_url.remove_http_and_www}", :target => "_blank")
+      
+    - if @num_sniphs_at_domain.zero?
+      %li.weak= "No sniphs at this domain"
+    - else
+      %li= link_to("View the #{pluralize(@num_sniphs_at_domain, 'sniph')} from this domain", "/sniphs?q=#{@domain}", :target => "_blank")
+
+
+    %li.weak Add this domain to your whitelist (soon)
+    %li.weak Highlight this URL's sniphs inline (soon)
+    %li= link_to("Your sniphs", "/sniphs/mine", :target => "_blank")
+    %li= link_to("Settings", settings_path, :target => "_blank")
+    %li= link_to("Sniphr.com", root_path, :target => "_blank")
+    
