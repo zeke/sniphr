@@ -7,8 +7,8 @@ require 'rake'
 Sniphr::Application.load_tasks
 
 task :preso => :environment do  
-  system "sass ~/.slideshow/templates/sniphr/ui/default/pretty.sass ~/.slideshow/templates/sniphr/ui/default/pretty.css"
-  system "slideshow -o ~/Projects/wordnik/sniphr/doc/slides -t sniphr.txt ~/Projects/wordnik/sniphr/doc/preso.md"
+  system "sass ~/.slideshow/templates/helvetica/ui/default/pretty.sass ~/.slideshow/templates/helvetica/ui/default/pretty.css"
+  system "slideshow -o ~/Projects/wordnik/sniphr/doc/slides -t helvetica.txt ~/Projects/wordnik/sniphr/doc/preso.md"
   system "open ~/Projects/wordnik/sniphr/doc/slides/preso.html"
 end
 

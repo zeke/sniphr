@@ -45,35 +45,63 @@
 </div>
 
 <div class='slide '>
-<h1 id="why">Why</h1><ul>
-  <li>OAuth is badass</li>
-  <li>gather domain stats</li>
-  <li>users hit thousands of URLs each day</li>
-  <li>whitelist/blacklist</li>
-  <li>little snitch</li>
-  <li>illustrator</li>
-  <li>text extraction diagram</li>
+<h1 id="what-is-sniphr">What is Sniphr?</h1><ul>
+  <li>a crowdsourced context collector</li>
+  <li>an FRD lasso</li>
+  <li>a passive bookmarking tool</li>
+  <li>a tool for human validation of R&amp;D stuff</li>
+  <li>a tool that shouldn&rsquo;t be called sniphr any more</li>
 </ul>
 
 
 </div>
 <div class='slide '>
-<h1 id="the-nose-knows">The Nose Knows</h1><p><img src="http://etc.usf.edu/clipart/19100/19107/nose_19107_lg.gif" alt="Nose" /></p>
+<h1 id="origins">Origins</h1><p><img src="http://cl.ly/6H4p/Screen_shot_2011-04-26_at_2.34.59_PM.png" alt="Extracting what matters" /></p>
 
 
 </div>
 <div class='slide '>
-<h1 id="mullet-architecture">Mullet Architecture</h1><pre><code>party = javascript
-business = api
+<h1 id="matterhorn">Matterhorn</h1><p>A better name for what Sniphr has become.</p>
 
-{party} in the front, {business} in the back
+<p><img src="http://cl.ly/6HRt/Screen_shot_2011-04-26_at_2.37.19_PM.png" alt="Matterhorn" /></p>
+
+
+</div>
+<div class='slide '>
+<h1 id="setup">Setup</h1><p>Simple. Go to <a href="http://sniphr.com">sniphr.com</a>.</p>
+
+
+</div>
+<div class='slide '>
+<h1 id="frds">FRDs</h1><p><img src="http://cl.ly/6IZx/Screen_shot_2011-04-27_at_8.13.11_PM.png" alt="frd1" />
+<img src="http://cl.ly/6J65/Screen_shot_2011-04-27_at_8.12.21_PM.png" alt="frd2" /></p>
+
+
+</div>
+<div class='slide '>
+<h1 id="little-sniphs">Little Sniphs</h1><ul>
+  <li>trending words</li>
+  <li>words people are about to look up</li>
+  <li>named entities</li>
+</ul>
+
+
+</div>
+<div class='slide '>
+<h1 id="mullet-architecture">Mullet Architecture</h1><pre><code>def mullet
+ business = "javascript"
+ party = "JSON API"
+ "#{business} in the front, #{party} in the back"
+end
 </code></pre>
 
 
 </div>
 <div class='slide '>
-<h1 id="roadmap">Roadmap</h1><ul>
-  <li>domain whitelist / blacklist </li>
+<h1 id="the-chrome-client">The Chrome Client</h1><ul>
+  <li>Nothing but static JS/HTML</li>
+  <li>As low-level/general purpose/agnostic as possible.</li>
+  <li>Options window is a remote iframe</li>
 </ul>
 
 
@@ -83,19 +111,18 @@ business = api
   <li>What is OAuth? Let&rsquo;s ask sniphr: <a href="http://sniphr.com/sniphs?q=OAuth">sniphr.com/sniphs?q=OAuth</a></li>
   <li>All the <a href="https://github.com/intridea/omniauth">cool kids</a> are doing it.</li>
   <li>Essential for Javascript-powered apps (mobile, web-based)</li>
+  <li>Wordnik should be doing it</li>
 </ul>
 
 
 </div>
 <div class='slide '>
-<h1 id="credits">Credits</h1><p>Made with <a href="http://slideshow.rubyforge.org/">Slide Show</a>, a free web alternative to PowerPoint and KeyNote in Ruby.</p>
-
-<pre><code>cd ~/.slideshow/templates/sniphr/ui/default/
-sass pretty.sass pretty.css
-cd ~/Projects/wordnik/sniphr/doc
-slideshow -o slides -t sniphr.txt preso.md
-open slides/preso.html
-</code></pre>
+<h1 id="fin">Fin</h1><ul>
+  <li>Please try out sniphr and give me feedback!</li>
+  <li>Rails source: <a href="http://github.com:zeke/sniphr.git">github.com:zeke/sniphr.git</a></li>
+  <li>Chrome extension source: <a href="http://github.com:zeke/sniphr.git">github.com:zeke/sniphr-chrome.git</a></li>
+  <li>Made with <a href="http://slideshow.rubyforge.org/">Slide Show (s9)</a>.</li>
+</ul>
 </div>
 
 

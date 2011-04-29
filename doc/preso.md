@@ -3,43 +3,60 @@ Author:
 Subtitle: a crowdsourced context collector
 Company:
 
-Why?
-====
-
-- text extraction diagram goes here
-
-
 What is Sniphr?
 ===============
 
-- a crowdsourced document analyzer
+- a crowdsourced context collector
 - an FRD lasso
-- opt-in spyware
 - a passive bookmarking tool
+- a tool for human validation of R&D stuff
+- a tool that shouldn't be called sniphr any more
 
-The New Paradigm
-================
+Origins
+=======
 
-``` ruby
-def mullet_architecture
-  party = "javascript"
-  business = "JSON API"
-	"#{party} in the front, #{business} in the back"
-end
-```
+![Extracting what matters](http://cl.ly/6H4p/Screen_shot_2011-04-26_at_2.34.59_PM.png)
 
-The Client
+Matterhorn
 ==========
+
+A better name for what Sniphr has become.
+
+![Matterhorn](http://cl.ly/6HRt/Screen_shot_2011-04-26_at_2.37.19_PM.png)
+
+Setup
+=====
+
+Simple. Go to [sniphr.com](http://sniphr.com).
+
+FRDs
+====
+
+![frd1](http://cl.ly/6IZx/Screen_shot_2011-04-27_at_8.13.11_PM.png)
+![frd2](http://cl.ly/6J65/Screen_shot_2011-04-27_at_8.12.21_PM.png)
+
+Little Sniphs
+=============
+
+- trending words
+- words people are about to look up
+- named entities
+
+Mullet Architecture 
+===================
+
+	def mullet
+	 business = "javascript"
+	 party = "JSON API"
+	 "#{business} in the front, #{party} in the back"
+	end
+
+The Chrome Client
+=================
 
 - Nothing but static JS/HTML
 - As low-level/general purpose/agnostic as possible.
 - Options window is a remote iframe
-
-Privacy
-=======
-
-- Privacy is important to people. Does a domain whitelist solve this?
-- many covert http requests (facebook, imdb, ad networks: https://gist.github.com/933620)
 
 Oh, Auth.
 =========
@@ -49,19 +66,10 @@ Oh, Auth.
 - Essential for Javascript-powered apps (mobile, web-based)
 - Wordnik should be doing it
 
-Roadmap
-=======
+Fin
+===
 
-- highlight my sniphs on a page
-- highlight all sniphs on a page
-- allow users to manually check for sniphs on a page
-- allow users to manually sniph outside their whitelisted domains
-- sniph-enabling or sniph-disabling keypress option
-
-Colophon
-========
-
-- github.com:zeke/sniphr.git
-Made with [Slide Show](http://slideshow.rubyforge.org/), a free web alternative to PowerPoint and KeyNote in Ruby.
-
-	rake preso
+- Please try out sniphr and give me feedback!
+- Rails source: [github.com:zeke/sniphr.git](http://github.com:zeke/sniphr.git)
+- Chrome extension source: [github.com:zeke/sniphr-chrome.git](http://github.com:zeke/sniphr.git)
+- Made with [Slide Show (s9)](http://slideshow.rubyforge.org/).
