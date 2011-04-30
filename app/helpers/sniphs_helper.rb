@@ -51,6 +51,10 @@ module SniphsHelper
 		out.join(" ").html_safe
   end
 
+  def sniph_tags(sniph)
+    sniph.tag_list
+  end
+
   def sample_sniph_queries
     paths = [
       sniphs_path,

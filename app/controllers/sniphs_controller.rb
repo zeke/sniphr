@@ -10,10 +10,12 @@ class SniphsController < ApplicationController
 
   def index
     if logged_in? && params[:whose]
-      @sniphs = current_user.sniphs.order('created_at DESC')
+      @sniphs = current_user.sniphs.order('sniphs.created_at DESC')
     else
-      @sniphs = Sniph.order('created_at DESC').where(:publique => true)
+      @sniphs = Sniph.order('sniphs.created_at DESC').where(:publique => true)
     end
+    
+    @sniphs = @sniphs.includes(:tags)
 
     @sniphs = @sniphs.where("url LIKE ? OR content LIKE ? OR title LIKE ?", "%#{params[:q]}%", "%#{params[:q]}%", "%#{params[:q]}%") if params[:q]
     @sniphs = @sniphs.paginate(:page => params[:page], :per_page => 200)

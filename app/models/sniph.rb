@@ -4,6 +4,7 @@ class Sniph < ActiveRecord::Base
 
   validates :url, :presence => true
   validates :content, :presence => true
-
   belongs_to :user
+  acts_as_taggable
+
 end

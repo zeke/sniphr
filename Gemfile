@@ -13,6 +13,8 @@ gem 'formtastic', '1.2.3'
 # gem 'pg_search'
 gem "will_paginate", "~> 3.0.pre2"
 gem "omniauth"
+gem 'acts-as-taggable-on'
+gem 'httparty'
 gem "slideshow"
 
 group :development, :test do
