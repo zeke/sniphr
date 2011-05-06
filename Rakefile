@@ -42,6 +42,7 @@ task :tag_sniphs => :environment do
     else
       puts "\t\t\t BAD RESPONSE: #{response.to_yaml}"
     end
+    sleep(2)
   end
   
 end
