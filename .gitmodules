@@ -1,0 +1,3 @@
+[submodule "app/stylesheets/zass"]
+	path = app/stylesheets/zass
+	url = git@github.com:zeke/zass
