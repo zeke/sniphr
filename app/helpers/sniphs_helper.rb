@@ -58,9 +58,16 @@ module SniphsHelper
   end
 
   def sniph_tags(sniph)
-    sniph.tags.map do |tag|
-      link_to(tag.name, sniphs_path(:tag => tag.name))
-    end.join(', ').html_safe
+    names = sniph.tags.map do |tag|
+      next if tag.name.include? '%'
+      tag.name
+    end.compact.sort
+    
+    names.map do |name|
+      p = {:tag => name}
+      p[:q] = params[:q] if params[:q].present?
+      link_to(name, sniphs_path(p))
+    end.join(' ').html_safe
   end
 
   def sample_sniph_queries
