@@ -34,21 +34,23 @@ module ApplicationHelper
     css = logged_in? ? "complete" : ""
     steps << link_to(label, "/auth/twitter", :class => css)
 
-    label = "Configure your account's level of publicity."
-    if logged_in? && current_user.manually_configured?
-      steps << link_to(label, settings_path, :class => "complete")
-    elsif logged_in?
-      steps << link_to(label, settings_path)
-    else
-      steps << label
-    end
+    # label = "Configure your account's level of publicity."
+    # if logged_in? && current_user.manually_configured?
+    #   steps << link_to(label, settings_path, :class => "complete")
+    # elsif logged_in?
+    #   steps << link_to(label, settings_path)
+    # else
+    #   steps << label
+    # end
 
     label = "Install the Chrome extension."
-    if logged_in? && current_user.manually_configured?
+    if logged_in?
       steps << link_to(label, "https://chrome.google.com/extensions/detail/dgpgdcglcodcglcglbompkodmjnoobil")
     else
       steps << label
     end
+    
+    steps << "Browse the web! To save sniphs, hold down the shift key while selecting text, or right-click on the text after selecting it."
 
     content_tag(:ol, convert_to_list_items(steps), :class => "steps")
   end
