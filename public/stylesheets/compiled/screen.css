@@ -1,87 +1,769 @@
-/*
-Syntax error: Undefined mixin 'no_float'.
-        on line 76 of /Users/zeke/Projects/wordnik/sniphr/app/stylesheets/screen.sass, in `no_float'
-        from line 76 of /Users/zeke/Projects/wordnik/sniphr/app/stylesheets/screen.sass
+/* line 14, ../../../../../../.rvm/gems/ruby-1.9.2-p136/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
 
-71:     color: #999
-72:     padding: 0 0 15px 0
-73: 
-74: 
-75: div#top_bar
-76:   @include no_float
-77:   width: 100%
-78:   position: fixed
-79:   top: 0
-80:   z-index: 2
-81:   background-color: #DDD
+/* line 17, ../../../../../../.rvm/gems/ruby-1.9.2-p136/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+body {
+  line-height: 1;
+  color: black;
+  background: white;
+}
 
-Backtrace:
-/Users/zeke/Projects/wordnik/sniphr/app/stylesheets/screen.sass:76:in `no_float'
-/Users/zeke/Projects/wordnik/sniphr/app/stylesheets/screen.sass:76
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/haml-3.0.25/lib/sass/tree/mixin_node.rb:62:in `perform!'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/haml-3.0.25/lib/sass/tree/node.rb:305:in `_perform'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/haml-3.0.25/lib/sass/tree/node.rb:213:in `perform'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/haml-3.0.25/lib/sass/tree/node.rb:327:in `block in perform_children'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/haml-3.0.25/lib/sass/tree/node.rb:327:in `map'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/haml-3.0.25/lib/sass/tree/node.rb:327:in `perform_children'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/haml-3.0.25/lib/sass/tree/node.rb:317:in `perform!'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/haml-3.0.25/lib/sass/tree/rule_node.rb:191:in `perform!'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/haml-3.0.25/lib/sass/tree/node.rb:305:in `_perform'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/haml-3.0.25/lib/sass/tree/node.rb:213:in `perform'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/haml-3.0.25/lib/sass/tree/node.rb:327:in `block in perform_children'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/haml-3.0.25/lib/sass/tree/node.rb:327:in `map'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/haml-3.0.25/lib/sass/tree/node.rb:327:in `perform_children'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/haml-3.0.25/lib/sass/tree/node.rb:317:in `perform!'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/haml-3.0.25/lib/sass/tree/root_node.rb:59:in `perform!'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/haml-3.0.25/lib/sass/tree/node.rb:305:in `_perform'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/haml-3.0.25/lib/sass/tree/node.rb:213:in `perform'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/haml-3.0.25/lib/sass/tree/root_node.rb:37:in `perform'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/haml-3.0.25/lib/sass/tree/root_node.rb:29:in `render'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/haml-3.0.25/lib/sass/plugin.rb:223:in `update_stylesheet'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/haml-3.0.25/lib/sass/plugin.rb:88:in `block (2 levels) in update_stylesheets'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/haml-3.0.25/lib/sass/plugin.rb:81:in `each'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/haml-3.0.25/lib/sass/plugin.rb:81:in `block in update_stylesheets'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/haml-3.0.25/lib/sass/plugin.rb:79:in `each'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/haml-3.0.25/lib/sass/plugin.rb:79:in `update_stylesheets'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/haml-3.0.25/lib/sass/plugin.rb:50:in `check_for_updates'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/haml-3.0.25/lib/sass/plugin/rack.rb:40:in `call'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/head.rb:14:in `call'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/rack-1.2.2/lib/rack/methodoverride.rb:24:in `call'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/params_parser.rb:21:in `call'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/flash.rb:182:in `call'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/session/abstract_store.rb:149:in `call'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/cookies.rb:302:in `call'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/activerecord-3.0.5/lib/active_record/query_cache.rb:32:in `block in call'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/activerecord-3.0.5/lib/active_record/connection_adapters/abstract/query_cache.rb:28:in `cache'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/activerecord-3.0.5/lib/active_record/query_cache.rb:12:in `cache'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/activerecord-3.0.5/lib/active_record/query_cache.rb:31:in `call'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/activerecord-3.0.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:354:in `call'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/callbacks.rb:46:in `block in call'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/activesupport-3.0.5/lib/active_support/callbacks.rb:415:in `_run_call_callbacks'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/callbacks.rb:44:in `call'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/rack-1.2.2/lib/rack/sendfile.rb:107:in `call'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/railties-3.0.5/lib/rails/rack/logger.rb:13:in `call'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/rack-1.2.2/lib/rack/runtime.rb:17:in `call'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/rack-1.2.2/lib/rack/lock.rb:11:in `block in call'
-<internal:prelude>:10:in `synchronize'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/rack-1.2.2/lib/rack/lock.rb:11:in `call'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/actionpack-3.0.5/lib/action_dispatch/middleware/static.rb:30:in `call'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/railties-3.0.5/lib/rails/application.rb:168:in `call'
-/Users/zeke/.rvm/gems/ruby-1.9.2-p136/gems/railties-3.0.5/lib/rails/application.rb:77:in `method_missing'
-/Users/zeke/Library/Application Support/Pow/Versions/0.2.2/node_modules/nack/lib/nack/server.rb:146:in `handle'
-/Users/zeke/Library/Application Support/Pow/Versions/0.2.2/node_modules/nack/lib/nack/server.rb:99:in `rescue in block (2 levels) in start'
-/Users/zeke/Library/Application Support/Pow/Versions/0.2.2/node_modules/nack/lib/nack/server.rb:96:in `block (2 levels) in start'
-/Users/zeke/Library/Application Support/Pow/Versions/0.2.2/node_modules/nack/lib/nack/server.rb:86:in `each'
-/Users/zeke/Library/Application Support/Pow/Versions/0.2.2/node_modules/nack/lib/nack/server.rb:86:in `block in start'
-/Users/zeke/Library/Application Support/Pow/Versions/0.2.2/node_modules/nack/lib/nack/server.rb:66:in `loop'
-/Users/zeke/Library/Application Support/Pow/Versions/0.2.2/node_modules/nack/lib/nack/server.rb:66:in `start'
-/Users/zeke/Library/Application Support/Pow/Versions/0.2.2/node_modules/nack/lib/nack/server.rb:13:in `run'
-/Users/zeke/Library/Application Support/Pow/Versions/0.2.2/node_modules/nack/bin/nack_worker:4:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Undefined mixin 'no_float'.\A         on line 76 of /Users/zeke/Projects/wordnik/sniphr/app/stylesheets/screen.sass, in `no_float'\A         from line 76 of /Users/zeke/Projects/wordnik/sniphr/app/stylesheets/screen.sass\A \A 71:     color: #999\A 72:     padding: 0 0 15px 0\A 73: \A 74: \A 75: div#top_bar\A 76:   @include no_float\A 77:   width: 100%\A 78:   position: fixed\A 79:   top: 0\A 80:   z-index: 2\A 81:   background-color: #DDD"; }
+/* line 19, ../../../../../../.rvm/gems/ruby-1.9.2-p136/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 21, ../../../../../../.rvm/gems/ruby-1.9.2-p136/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+
+/* line 23, ../../../../../../.rvm/gems/ruby-1.9.2-p136/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 25, ../../../../../../.rvm/gems/ruby-1.9.2-p136/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: "" "";
+}
+/* line 96, ../../../../../../.rvm/gems/ruby-1.9.2-p136/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+}
+
+/* line 27, ../../../../../../.rvm/gems/ruby-1.9.2-p136/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 5, ../../../app/stylesheets/_formtastic_defaults.sass */
+form.formtastic {
+  margin: 0;
+  padding: 0;
+}
+/* line 8, ../../../app/stylesheets/_formtastic_defaults.sass */
+form.formtastic ul, form.formtastic ol, form.formtastic li, form.formtastic fieldset, form.formtastic legend, form.formtastic input, form.formtastic textarea, form.formtastic select, form.formtastic p {
+  margin: 0;
+  padding: 0;
+}
+/* line 11, ../../../app/stylesheets/_formtastic_defaults.sass */
+form.formtastic fieldset {
+  border: 0;
+}
+/* line 13, ../../../app/stylesheets/_formtastic_defaults.sass */
+form.formtastic em, form.formtastic strong {
+  font-style: normal;
+  font-weight: normal;
+}
+/* line 16, ../../../app/stylesheets/_formtastic_defaults.sass */
+form.formtastic ol, form.formtastic ul {
+  list-style: none;
+}
+/* line 18, ../../../app/stylesheets/_formtastic_defaults.sass */
+form.formtastic abbr, form.formtastic acronym {
+  border: 0;
+  font-variant: normal;
+}
+/* line 21, ../../../app/stylesheets/_formtastic_defaults.sass */
+form.formtastic input, form.formtastic textarea, form.formtastic select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+/* line 25, ../../../app/stylesheets/_formtastic_defaults.sass */
+form.formtastic input, form.formtastic textarea, form.formtastic select {
+  font-size: 100%;
+}
+/* line 27, ../../../app/stylesheets/_formtastic_defaults.sass */
+form.formtastic legend {
+  white-space: normal;
+  color: black;
+}
+/* line 30, ../../../app/stylesheets/_formtastic_defaults.sass */
+form.formtastic ul.errors {
+  color: #cc0000;
+  margin: 0.5em 0 1.5em 25%;
+  list-style: square;
+}
+/* line 34, ../../../app/stylesheets/_formtastic_defaults.sass */
+form.formtastic ul.errors li {
+  padding: 0;
+  border: none;
+  display: list-item;
+}
+/* line 38, ../../../app/stylesheets/_formtastic_defaults.sass */
+form.formtastic fieldset {
+  overflow: auto;
+}
+/* line 41, ../../../app/stylesheets/_formtastic_defaults.sass */
+form.formtastic fieldset.buttons {
+  padding-left: 25%;
+}
+/* line 44, ../../../app/stylesheets/_formtastic_defaults.sass */
+form.formtastic fieldset.buttons li {
+  float: left;
+  padding-right: 0.5em;
+}
+/* line 47, ../../../app/stylesheets/_formtastic_defaults.sass */
+form.formtastic fieldset > ol > li {
+  padding: 0.5em 0;
+  margin-top: -0.5em;
+  margin-bottom: 1em;
+  overflow: auto;
+}
+/* line 53, ../../../app/stylesheets/_formtastic_defaults.sass */
+form.formtastic fieldset > ol > li label {
+  display: block;
+  width: 25%;
+  float: left;
+  padding-top: 0.2em;
+}
+/* line 58, ../../../app/stylesheets/_formtastic_defaults.sass */
+form.formtastic fieldset > ol > li > li label {
+  line-height: 100%;
+  padding-top: 0;
+}
+/* line 61, ../../../app/stylesheets/_formtastic_defaults.sass */
+form.formtastic fieldset > ol > li > li label input {
+  line-height: 100%;
+  vertical-align: middle;
+  margin-top: -0.1em;
+}
+/* line 65, ../../../app/stylesheets/_formtastic_defaults.sass */
+form.formtastic fieldset > ol > li fieldset {
+  position: relative;
+}
+/* line 67, ../../../app/stylesheets/_formtastic_defaults.sass */
+form.formtastic fieldset > ol > li fieldset legend {
+  position: absolute;
+  width: 95%;
+  padding-top: 0.1em;
+  left: 0px;
+}
+/* line 72, ../../../app/stylesheets/_formtastic_defaults.sass */
+form.formtastic fieldset > ol > li fieldset legend span, form.formtastic fieldset > ol > li fieldset legend.label label {
+  position: absolute;
+}
+/* line 74, ../../../app/stylesheets/_formtastic_defaults.sass */
+form.formtastic fieldset > ol > li fieldset ol {
+  float: left;
+  width: 74%;
+  margin: 0;
+  padding: 0 0 0 25%;
+}
+/* line 79, ../../../app/stylesheets/_formtastic_defaults.sass */
+form.formtastic fieldset > ol > li fieldset ol li {
+  padding: 0;
+  border: 0;
+}
+/* line 83, ../../../app/stylesheets/_formtastic_defaults.sass */
+form.formtastic fieldset > ol > li p.inline-hints {
+  color: #666666;
+  margin: 0.5em 0 0 25%;
+}
+/* line 86, ../../../app/stylesheets/_formtastic_defaults.sass */
+form.formtastic fieldset > ol > li p.inline-errors {
+  color: #cc0000;
+  margin: 0.5em 0 0 25%;
+}
+/* line 89, ../../../app/stylesheets/_formtastic_defaults.sass */
+form.formtastic fieldset > ol > li ul.errors {
+  color: #cc0000;
+  margin: 0.5em 0 0 25%;
+  list-style: square;
+}
+/* line 93, ../../../app/stylesheets/_formtastic_defaults.sass */
+form.formtastic fieldset > ol > li ul.errors li {
+  padding: 0;
+  border: none;
+  display: list-item;
+}
+/* line 97, ../../../app/stylesheets/_formtastic_defaults.sass */
+form.formtastic fieldset > ol > li.string input, form.formtastic fieldset > ol > li.password input, form.formtastic fieldset > ol > li.numeric input, form.formtastic fieldset > ol > li.email input, form.formtastic fieldset > ol > li.url input, form.formtastic fieldset > ol > li.phone input, form.formtastic fieldset > ol > li.search input {
+  width: 72%;
+}
+/* line 99, ../../../app/stylesheets/_formtastic_defaults.sass */
+form.formtastic fieldset > ol > li.string input[size], form.formtastic fieldset > ol > li.password input[size], form.formtastic fieldset > ol > li.numeric input[size], form.formtastic fieldset > ol > li.email input[size], form.formtastic fieldset > ol > li.url input[size], form.formtastic fieldset > ol > li.phone input[size], form.formtastic fieldset > ol > li.search input[size] {
+  width: auto;
+  max-width: 72%;
+}
+/* line 102, ../../../app/stylesheets/_formtastic_defaults.sass */
+form.formtastic fieldset > ol > li.text textarea {
+  width: 72%;
+}
+/* line 104, ../../../app/stylesheets/_formtastic_defaults.sass */
+form.formtastic fieldset > ol > li.text textarea[cols] {
+  width: auto;
+  max-width: 72%;
+}
+/* line 107, ../../../app/stylesheets/_formtastic_defaults.sass */
+form.formtastic fieldset ol li.hidden {
+  display: none;
+}
+/* line 110, ../../../app/stylesheets/_formtastic_defaults.sass */
+form.formtastic fieldset > ol > li.boolean label {
+  padding-left: 25%;
+  width: auto;
+}
+/* line 113, ../../../app/stylesheets/_formtastic_defaults.sass */
+form.formtastic fieldset > ol > li.boolean label input {
+  margin: 0 0.5em 0 0.2em;
+}
+/* line 115, ../../../app/stylesheets/_formtastic_defaults.sass */
+form.formtastic fieldset > ol > li.radio fieldset, form.formtastic fieldset > ol > li.check_boxes fieldset {
+  overflow: visible;
+}
+/* line 117, ../../../app/stylesheets/_formtastic_defaults.sass */
+form.formtastic fieldset > ol > li.radio fieldset ol, form.formtastic fieldset > ol > li.check_boxes fieldset ol {
+  margin-bottom: -0.5em;
+}
+/* line 119, ../../../app/stylesheets/_formtastic_defaults.sass */
+form.formtastic fieldset > ol > li.radio fieldset ol li, form.formtastic fieldset > ol > li.check_boxes fieldset ol li {
+  margin: 0.1em 0 0.5em 0;
+  overflow: visible;
+}
+/* line 122, ../../../app/stylesheets/_formtastic_defaults.sass */
+form.formtastic fieldset > ol > li.radio fieldset ol li label, form.formtastic fieldset > ol > li.check_boxes fieldset ol li label {
+  float: none;
+  width: 100%;
+}
+/* line 125, ../../../app/stylesheets/_formtastic_defaults.sass */
+form.formtastic fieldset > ol > li.radio fieldset ol li label input, form.formtastic fieldset > ol > li.check_boxes fieldset ol li label input {
+  margin-right: 0.2em;
+}
+/* line 127, ../../../app/stylesheets/_formtastic_defaults.sass */
+form.formtastic fieldset > ol > li.date fieldset ol li, form.formtastic fieldset > ol > li.time fieldset ol li, form.formtastic fieldset > ol > li.datetime fieldset ol li {
+  float: left;
+  width: auto;
+  margin: 0 0.3em 0 0;
+}
+/* line 131, ../../../app/stylesheets/_formtastic_defaults.sass */
+form.formtastic fieldset > ol > li.date fieldset ol li label, form.formtastic fieldset > ol > li.time fieldset ol li label, form.formtastic fieldset > ol > li.datetime fieldset ol li label {
+  display: none;
+}
+/* line 133, ../../../app/stylesheets/_formtastic_defaults.sass */
+form.formtastic fieldset > ol > li.date fieldset ol li label input, form.formtastic fieldset > ol > li.time fieldset ol li label input, form.formtastic fieldset > ol > li.datetime fieldset ol li label input {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 25, ../../../app/stylesheets/screen.sass */
+body {
+  font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial;
+}
+
+/* line 28, ../../../app/stylesheets/screen.sass */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Helvetica Neue", Helvetica, Arial;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+/* line 32, ../../../app/stylesheets/screen.sass */
+h1 span.weak, h2 span.weak, h3 span.weak, h4 span.weak, h5 span.weak, h6 span.weak {
+  color: #999999;
+}
+/* line 34, ../../../app/stylesheets/screen.sass */
+h1 a.rogue, h2 a.rogue, h3 a.rogue, h4 a.rogue, h5 a.rogue, h6 a.rogue {
+  color: black;
+}
+/* line 36, ../../../app/stylesheets/screen.sass */
+h1 a.rogue:hover, h2 a.rogue:hover, h3 a.rogue:hover, h4 a.rogue:hover, h5 a.rogue:hover, h6 a.rogue:hover {
+  color: #4b9900;
+}
+
+/* line 39, ../../../app/stylesheets/screen.sass */
+h1 {
+  font-size: 2em;
+  padding: 0 0 15px 0;
+}
+/* line 42, ../../../app/stylesheets/screen.sass */
+h1 span.q, h1 span.user, h1 span.tag {
+  color: #4b9900;
+}
+
+/* line 45, ../../../app/stylesheets/screen.sass */
+h2 {
+  padding: 15px 0 5px 0;
+  font-size: 1.4em;
+}
+
+/* line 49, ../../../app/stylesheets/screen.sass */
+h3 {
+  padding: 15px 0 5px 0;
+}
+
+/* line 52, ../../../app/stylesheets/screen.sass */
+a {
+  color: #4b9900;
+}
+
+/* line 55, ../../../app/stylesheets/screen.sass */
+.weak {
+  color: #cccccc;
+}
+
+/* line 58, ../../../app/stylesheets/screen.sass */
+p {
+  padding: 0 0 10px 0;
+  font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial;
+  font-size: 1em;
+  line-height: 1.3em;
+  color: #666666;
+}
+/* line 64, ../../../app/stylesheets/screen.sass */
+p.big {
+  font-size: 1.3em;
+  line-height: 1.2em;
+  font-family: "Helvetica Neue", Helvetica, Arial;
+  font-weight: bold;
+  color: #999999;
+  padding: 0 0 15px 0;
+}
+/* line 70, ../../../app/stylesheets/screen.sass */
+p.empty {
+  color: #999999;
+  padding: 0 0 15px 0;
+}
+
+/* line 75, ../../../app/stylesheets/screen.sass */
+div#top_bar {
+  float: none;
+  clear: both;
+  overflow: hidden;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  background-color: #dddddd;
+}
+/* line 83, ../../../app/stylesheets/screen.sass */
+div#top_bar a#logo {
+  display: block;
+  clear: none;
+  float: left;
+  padding: 14px 15px;
+  background-color: #4b9900;
+  color: white;
+  text-decoration: none;
+}
+/* line 90, ../../../app/stylesheets/screen.sass */
+div#top_bar ul#user_nav {
+  margin: 0 15px 0 0;
+  list-style: none;
+  display: block;
+  clear: none;
+  float: right;
+}
+/* line 94, ../../../app/stylesheets/screen.sass */
+div#top_bar ul#user_nav li {
+  float: left;
+  color: #999999;
+  font-size: 0.8em;
+  line-height: 1.5em;
+  border-right: none;
+}
+/* line 100, ../../../app/stylesheets/screen.sass */
+div#top_bar ul#user_nav li:first-child, div#top_bar ul#user_nav li.first {
+  border: none;
+}
+/* line 102, ../../../app/stylesheets/screen.sass */
+div#top_bar ul#user_nav li:last-child, div#top_bar ul#user_nav li.last {
+  border: none;
+}
+/* line 104, ../../../app/stylesheets/screen.sass */
+div#top_bar ul#user_nav li a {
+  padding: 13px 10px;
+  display: inline-block;
+  color: #666666;
+  text-decoration: none;
+}
+/* line 109, ../../../app/stylesheets/screen.sass */
+div#top_bar ul#user_nav li a:hover, div#top_bar ul#user_nav li a.active {
+  background-color: #666666;
+  color: white;
+}
+/* line 113, ../../../app/stylesheets/screen.sass */
+div#top_bar ul#user_nav li form.search {
+  margin: 9px 15px 0 0;
+  background: #f0f0f0;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  border-radius: 4px;
+}
+/* line 117, ../../../app/stylesheets/screen.sass */
+div#top_bar ul#user_nav li form.search input.q {
+  background: none;
+  border: none;
+  outline: none;
+  font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial;
+  padding: 4px;
+  font-size: 1em;
+}
+
+/* line 125, ../../../app/stylesheets/screen.sass */
+div.content {
+  margin: 70px 15px 100px 15px;
+}
+/* line 128, ../../../app/stylesheets/screen.sass */
+div.content div.column {
+  width: 600px;
+}
+
+/* line 132, ../../../app/stylesheets/screen.sass */
+ul#chrome_options {
+  margin: 10px;
+}
+/* line 134, ../../../app/stylesheets/screen.sass */
+ul#chrome_options li {
+  border-bottom: 1px solid #cccccc;
+  padding: 7px 0;
+  font-size: 0.9em;
+}
+/* line 138, ../../../app/stylesheets/screen.sass */
+ul#chrome_options li:last-child {
+  border: none;
+}
+/* line 140, ../../../app/stylesheets/screen.sass */
+ul#chrome_options li.weak {
+  color: #999999;
+}
+/* line 142, ../../../app/stylesheets/screen.sass */
+ul#chrome_options li h1 {
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+}
+/* line 146, ../../../app/stylesheets/screen.sass */
+ul#chrome_options li a {
+  text-decoration: none;
+}
+
+/* line 149, ../../../app/stylesheets/screen.sass */
+div#bottom_bar {
+  float: none;
+  clear: both;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+/* line 155, ../../../app/stylesheets/screen.sass */
+div#bottom_bar ul {
+  float: none;
+  clear: both;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  display: block;
+  clear: none;
+  float: right;
+  margin: 0 10px 0 0;
+  background: white;
+}
+/* line 33, ../../../app/stylesheets/zass/_zass.sass */
+div#bottom_bar ul li {
+  float: left;
+  clear: none;
+  margin: 0;
+  padding: 2px 10px;
+  border-right: 1px solid #dddddd;
+}
+/* line 39, ../../../app/stylesheets/zass/_zass.sass */
+div#bottom_bar ul li:first-child, div#bottom_bar ul li.first {
+  padding-left: 0;
+}
+/* line 41, ../../../app/stylesheets/zass/_zass.sass */
+div#bottom_bar ul li:last-child, div#bottom_bar ul li.last {
+  padding-right: 0;
+  border-right: none;
+}
+/* line 160, ../../../app/stylesheets/screen.sass */
+div#bottom_bar ul li {
+  color: #999999;
+  font-size: 0.8em;
+  padding: 10px;
+}
+/* line 164, ../../../app/stylesheets/screen.sass */
+div#bottom_bar ul li a {
+  color: #555555;
+}
+/* line 166, ../../../app/stylesheets/screen.sass */
+div#bottom_bar ul li a:hover {
+  color: #4b9900;
+}
+
+/* line 171, ../../../app/stylesheets/screen.sass */
+form.formtastic {
+  width: 600px;
+}
+/* line 174, ../../../app/stylesheets/screen.sass */
+form.formtastic textarea {
+  padding: 3px;
+  font-size: 0.9em;
+  color: #333333;
+  line-height: 1.3em;
+}
+
+/* line 180, ../../../app/stylesheets/screen.sass */
+ol.steps {
+  padding: 0 0 0 25px;
+}
+/* line 182, ../../../app/stylesheets/screen.sass */
+ol.steps li {
+  font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial;
+  font-size: 1em;
+  list-style-type: decimal;
+  color: #666666;
+  padding: 5px 0;
+}
+/* line 188, ../../../app/stylesheets/screen.sass */
+ol.steps li a {
+  color: #4b9900;
+  text-decoration: none;
+}
+/* line 191, ../../../app/stylesheets/screen.sass */
+ol.steps li a.complete {
+  text-decoration: line-through;
+  color: #999999;
+}
+
+/* line 195, ../../../app/stylesheets/screen.sass */
+ul.samples {
+  margin: 5px 0;
+  padding: 0;
+  list-style: none;
+}
+/* line 199, ../../../app/stylesheets/screen.sass */
+ul.samples li {
+  font-family: "Anonymous Pro", "Menlo", "Consolas", "Bitstream Vera Sans Mono", "Courier New", monospace;
+  font-size: 0.9em;
+  padding: 5px 0;
+}
+/* line 203, ../../../app/stylesheets/screen.sass */
+ul.samples li a {
+  color: #666666;
+}
+/* line 205, ../../../app/stylesheets/screen.sass */
+ul.samples li a:hover {
+  color: #4b9900;
+}
+
+/* line 208, ../../../app/stylesheets/screen.sass */
+ul.sniphs {
+  width: 600px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* line 214, ../../../app/stylesheets/screen.sass */
+ul.sniphs li.sniph {
+  padding: 0 0 10px 0;
+  margin: 10px 0 0 0;
+  border-bottom: 1px solid #cccccc;
+}
+/* line 218, ../../../app/stylesheets/screen.sass */
+ul.sniphs li.sniph p {
+  color: black;
+  line-height: 1.3em;
+  padding: 0 0 4px 0;
+}
+/* line 223, ../../../app/stylesheets/screen.sass */
+ul.sniphs li.sniph p.content span.q {
+  color: #4b9900;
+}
+/* line 225, ../../../app/stylesheets/screen.sass */
+ul.sniphs li.sniph p.source {
+  font-size: 0.9em;
+  padding: 0;
+  color: #999999;
+}
+/* line 229, ../../../app/stylesheets/screen.sass */
+ul.sniphs li.sniph p.source a {
+  color: #4b9900;
+  text-decoration: none;
+}
+/* line 232, ../../../app/stylesheets/screen.sass */
+ul.sniphs li.sniph p.source a span.domain {
+  color: #aaaaaa;
+  font-size: 0.9em;
+}
+/* line 236, ../../../app/stylesheets/screen.sass */
+ul.sniphs li.sniph p.metadata {
+  padding: 3px 0 3px 0;
+  font-size: 0.7em;
+  color: #aaaaaa;
+}
+/* line 240, ../../../app/stylesheets/screen.sass */
+ul.sniphs li.sniph p.metadata a {
+  color: #aaaaaa;
+}
+/* line 242, ../../../app/stylesheets/screen.sass */
+ul.sniphs li.sniph p.metadata a:hover {
+  color: #999999;
+}
+
+/* line 245, ../../../app/stylesheets/screen.sass */
+table.queries {
+  width: 100%;
+  font-size: 0.9em;
+}
+/* line 251, ../../../app/stylesheets/screen.sass */
+table.queries thead tr th {
+  padding: 3px;
+  color: #999999;
+}
+/* line 256, ../../../app/stylesheets/screen.sass */
+table.queries tbody tr td {
+  padding: 6px;
+  border-top: 1px solid #cccccc;
+  font-family: "Anonymous Pro", "Menlo", "Consolas", "Bitstream Vera Sans Mono", "Courier New", monospace;
+}
+/* line 260, ../../../app/stylesheets/screen.sass */
+table.queries tbody tr:hover {
+  background-color: #333333;
+}
+/* line 262, ../../../app/stylesheets/screen.sass */
+table.queries tbody tr:hover td {
+  color: white;
+}
+/* line 264, ../../../app/stylesheets/screen.sass */
+table.queries tbody tr:hover td a {
+  color: white;
+}
+
+/* line 267, ../../../app/stylesheets/screen.sass */
+div.pagination {
+  margin: 20px 0 20px 0;
+}
+/* line 269, ../../../app/stylesheets/screen.sass */
+div.pagination a, div.pagination em {
+  padding: 4px 8px;
+  background-color: #cccccc;
+  color: white;
+  text-decoration: none;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+}
+/* line 275, ../../../app/stylesheets/screen.sass */
+div.pagination em {
+  background-color: #333333;
+}
+/* line 277, ../../../app/stylesheets/screen.sass */
+div.pagination a:hover {
+  background-color: #4b9900;
+}
+/* line 279, ../../../app/stylesheets/screen.sass */
+div.pagination span.gap {
+  color: #cccccc;
+}
+
+/* line 283, ../../../app/stylesheets/screen.sass */
+div.extension_options {
+  width: 350px;
+}
+/* line 286, ../../../app/stylesheets/screen.sass */
+div.extension_options form {
+  margin: 10px 0 0 0;
+}
+/* line 288, ../../../app/stylesheets/screen.sass */
+div.extension_options form ul.inputs {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+/* line 292, ../../../app/stylesheets/screen.sass */
+div.extension_options form ul.inputs > li {
+  margin: 10px 0;
+  padding: 6px 0;
+  display: block;
+  clear: both;
+  overflow: hidden;
+  border-bottom: 1px solid #cccccc;
+}
+/* line 299, ../../../app/stylesheets/screen.sass */
+div.extension_options form ul.inputs > li:first-child {
+  border-top: 1px solid #cccccc;
+}
+/* line 301, ../../../app/stylesheets/screen.sass */
+div.extension_options form ul.inputs > li:last-child {
+  border-bottom: none;
+}
+/* line 303, ../../../app/stylesheets/screen.sass */
+div.extension_options form ul.inputs > li label {
+  padding: 6px 0 0 0;
+  font-size: 0.9em;
+  display: block;
+  float: left;
+}
+/* line 308, ../../../app/stylesheets/screen.sass */
+div.extension_options form ul.inputs > li input.text {
+  display: block;
+  float: right;
+  font-size: 0.9em;
+  padding: 1px;
+  width: 120px;
+}
+/* line 314, ../../../app/stylesheets/screen.sass */
+div.extension_options form ul.inputs > li select {
+  display: block;
+  float: right;
+  font-size: 0.9em;
+  width: 120px;
+}
+/* line 319, ../../../app/stylesheets/screen.sass */
+div.extension_options form ul.inputs > li a#save_options {
+  font-family: "Helvetica Neue", Helvetica, Arial;
+  font-weight: bold;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -o-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -khtml-border-radius: 4px;
+  border-radius: 4px;
+  color: white;
+  background-color: #4b9900;
+  padding: 4px 8px;
+  font-size: 0.8em;
+  text-decoration: none;
+}
+/* line 327, ../../../app/stylesheets/screen.sass */
+div.extension_options form ul.inputs > li a#save_options:hover {
+  background-color: #326600;
+}
+/* line 331, ../../../app/stylesheets/screen.sass */
+div.extension_options div#status {
+  margin: 20px 0;
+  padding: 10px;
+  background-color: #fdebab;
+}
