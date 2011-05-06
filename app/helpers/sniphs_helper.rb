@@ -18,6 +18,12 @@ module SniphsHelper
       out << "matching"
       out << content_tag(:span, "#{params[:q]}".html_safe, :class => 'q')
     end
+    
+    if params[:tag].present?
+      out << "tagged with"
+      out << content_tag(:span, "#{params[:tag]}".html_safe, :class => 'tag')
+    end
+    
     content_tag(:h1, out.join(' ').html_safe)
   end
 
@@ -52,7 +58,9 @@ module SniphsHelper
   end
 
   def sniph_tags(sniph)
-    sniph.tag_list
+    sniph.tags.map do |tag|
+      link_to(tag.name, sniphs_path(:tag => tag.name))
+    end.join(', ').html_safe
   end
 
   def sample_sniph_queries

@@ -15,7 +15,11 @@ class SniphsController < ApplicationController
       @sniphs = Sniph.order('sniphs.created_at DESC').where(:publique => true)
     end
     
-    @sniphs = @sniphs.includes(:tags)
+    if params[:tag]
+      @sniphs = @sniphs.tagged_with(params[:tag])
+    end
+    
+    @sniphs = @sniphs.includes(:user, :tags)
 
     @sniphs = @sniphs.where("url LIKE ? OR content LIKE ? OR title LIKE ?", "%#{params[:q]}%", "%#{params[:q]}%", "%#{params[:q]}%") if params[:q]
     @sniphs = @sniphs.paginate(:page => params[:page], :per_page => 200)
