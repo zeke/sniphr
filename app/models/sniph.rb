@@ -7,12 +7,9 @@ class Sniph < ActiveRecord::Base
   belongs_to :user
   acts_as_taggable
 
-  def blatantly_update_tags!(tag_list)
+  def blatantly_update_tags!(tag_list_string)
     self.last_tagging_attempted_at = Time.now
-    if tag_list.present?
-      self.tag_list = tag_list
-      self.cached_tag_list = tag_list.slice(0,250)
-    end
+    self.tag_list = tag_list_string if tag_list_string.present?
     self.save!
   end
 
