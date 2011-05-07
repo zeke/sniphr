@@ -3,7 +3,7 @@ class StaticController < ApplicationController
   def index
   end
 
-  def about
+  def faq
   end
 
 end

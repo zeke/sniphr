@@ -11,7 +11,7 @@ Sniphr::Application.routes.draw do
   match "/sniphs/:whose" => "sniphs#index", :as => :user_home
 
   root :to => "static#index"
-  match "/about" => "static#about", :as => :about
+  match "/faq" => "static#faq", :as => :faq
 
   match "/auth/:provider/callback" => "sessions#create", :as => :signin
   match "/auth/failure" => "sessions#failure"

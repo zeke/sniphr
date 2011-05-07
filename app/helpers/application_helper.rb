@@ -21,7 +21,7 @@ module ApplicationHelper
     else
       items << link("Sign in with Twitter", "/auth/twitter")
     end
-    items << link("About", about_path)
+    items << link("FAQ", faq_path)
     items << link("Sign out", signout_path) if logged_in?
 
     content_tag(:ul, convert_to_list_items(items), :id => 'user_nav')
