@@ -30,19 +30,23 @@ task :top_query_domains => :environment do
 end
 
 task :tag_sniphs => :environment do
-  
+
   Sniph.where(:tagged_at => nil).limit(200).each do |sniph|
-    url = "http://folksonomatron.heroku.com/munge/#{sniph.url}"
-    puts "#{sniph.id} - #{url}"
-    response = HTTParty.get(url)
-    if response.is_a? Array
-      sniph.tagged_at = Time.now unless response.empty?
-      sniph.tag_list = response.join(", ")
+
+    tags = Delicious.get_tags_for_url(sniph.url)
+
+    if tags.present?
+      sniph.tagged_at = Time.now
+      sniph.tag_list = tags.join(", ")
       sniph.save
+      puts tags.join(", ")
     else
-      puts "\t\t\t BAD RESPONSE: #{response.to_yaml}"
+      puts "---- no tags for #{sniph.url}"
     end
+
+    # Don't get banned..
     sleep(2)
+
   end
-  
+
 end
