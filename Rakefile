@@ -29,16 +29,20 @@ task :top_query_domains => :environment do
 
 end
 
+
+
+
 task :tag_sniphs => :environment do
 
-  Sniph.where(:tagged_at => nil).limit(200).each do |sniph|
+  #  Find sniphs for which no tagging has been attempted
+  Sniph.where(:last_tagging_attempted_at => nil).limit(200).each do |sniph|
 
     tags = Delicious.get_tags_for_url(sniph.url)
-
+    
+    # Timestamp the sniph with the tagging attempt, even if no tags were found
+    sniph.blatantly_update_tags! tags.join(", ")
+  
     if tags.present?
-      sniph.tagged_at = Time.now
-      sniph.tag_list = tags.join(", ")
-      sniph.save
       puts tags.join(", ")
     else
       puts "---- no tags for #{sniph.url}"
