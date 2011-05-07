@@ -44,7 +44,7 @@ h1
 
 h2
   padding: 15px 0 5px 0
-  font-size: 1.4em
+  font-size: 1.2em
 
 h3
   padding: 15px 0 5px 0
@@ -56,7 +56,7 @@ a
   color: #CCC
   
 p
-  padding: 0 0 10px 0
+  padding: 5px 0 5px 0
   @include fonty
   font-size: 1em
   line-height: 1.3em
@@ -194,7 +194,7 @@ ol.steps
         color: #999
 
 ul.samples
-  margin: 5px 0
+  margin: 0 0 5px 0
   padding: 0
   list-style: none
   li
@@ -273,6 +273,11 @@ ul.sniphs
           color: #AAA
           &:hover
             color: #999
+          &.delete
+            text-decoration: none
+            &:hover
+              color: #990000
+              text-decoration: underline
       &.tags
         font-size: .9em
         color: #CCC

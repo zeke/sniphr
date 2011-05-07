@@ -11,7 +11,7 @@ class SniphsController < ApplicationController
   def index
     @tags = Sniph.tag_counts_on(:tags)
     
-    if logged_in? && params[:whose]
+    if logged_in? && request.path == my_sniphs_path
       @sniphs = current_user.sniphs.order('sniphs.created_at DESC')
     else
       @sniphs = Sniph.order('sniphs.created_at DESC').where(:publique => true)
@@ -44,6 +44,10 @@ class SniphsController < ApplicationController
     end
   end
 
+  def show
+    render :text => "show is not yet implemented"
+  end
+
   def save
     if !logged_in?
       response_object = {:msg => 'You are not logged in.'}
@@ -62,5 +66,21 @@ class SniphsController < ApplicationController
       format.json { render :json => response_object.to_json }
     end
   end
+  
+  def destroy
+    @sniph = current_user.sniphs.find(params[:id])
+    @sniph.destroy
+    
+    respond_to do |format|
+      format.html do 
+        if request.xhr?
+          render :json => @sniph.to_json
+        else
+          redirect_to(my_sniphs_path, :notice => "Sniph #{@sniph.id} wiped!")
+        end
+      end
+    end
+  end
+
 
 end

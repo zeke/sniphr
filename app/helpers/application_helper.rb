@@ -16,7 +16,7 @@ module ApplicationHelper
     end
     items << link("All sniphs", sniphs_path)
     if logged_in?
-      items << link("My sniphs", "/sniphs/mine")
+      items << link("My sniphs", my_sniphs_path)
       items << link("Settings", settings_path)
     else
       items << link("Sign in with Twitter", "/auth/twitter")

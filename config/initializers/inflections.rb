@@ -10,5 +10,6 @@ ActiveSupport::Inflector.inflections do |inflect|
   inflect.irregular 'Sniph', 'Sniphs'
   inflect.irregular 'sniphr', 'sniphrs'
   inflect.irregular 'Sniphr', 'Sniphrs'
+  inflect.irregular 'public Sniph', 'public Sniphs'
 #   inflect.uncountable %w( fish sheep )
 end

@@ -7,7 +7,7 @@
     
       - @sniphs.each do |sniph|
         - url = sniph.url.remove_http_and_www
-        %li.sniph
+        %li.sniph{:id => "sniph_#{sniph.id}"}
           %p.content
             = sniph_content sniph
           %p.source

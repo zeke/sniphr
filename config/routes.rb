@@ -2,13 +2,13 @@ Sniphr::Application.routes.draw do
 
   resources :queries, :only => [:index]
 
-  resources :sniphs, :only => [:index] do
+  match "/sniphs/mine" => "sniphs#index", :as => :my_sniphs
+
+  resources :sniphs, :only => [:index, :show, :destroy] do
     collection do
       get 'save'
     end
   end
-
-  match "/sniphs/:whose" => "sniphs#index", :as => :user_home
 
   root :to => "static#index"
   match "/faq" => "static#faq", :as => :faq

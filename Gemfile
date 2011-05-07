@@ -7,15 +7,15 @@ gem 'haml', '3.0.25'
 gem 'configatron', '2.6.4'
 gem 'wordnik_ruby_helpers', '0.1.0'
 gem 'headjs-rails', '0.3.0'
+gem 'jquery-rails', '>= 0.2.6'
 gem 'formtastic', '1.2.3'
-# gem 'wordnik', '0.4.3'
-# gem 'pg'
-# gem 'pg_search'
 gem "will_paginate", "~> 3.0.pre2"
 gem "omniauth"
 gem 'acts-as-taggable-on'
 gem 'httparty'
 gem "slideshow"
+# gem 'pg'
+# gem 'pg_search'
 
 group :development, :test do
   gem 'rspec', '2.5.0'

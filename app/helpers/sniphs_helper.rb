@@ -12,10 +12,12 @@ module SniphsHelper
   def sniph_heading(sniphs=nil)
     out = []
 
-    # 0 Sniphs, 1 Sniph, 234 Sniphs
-    out << "Your" if params[:whose]
-
-    out << link_to(pluralize(sniphs.total_entries, "Sniph"), root_path, :class => "rogue")
+    if request.path == my_sniphs_path
+      out << "Your" 
+      out << link_to(pluralize(sniphs.total_entries, "Sniph"), root_path, :class => "rogue")
+    else
+      out << link_to(pluralize(sniphs.total_entries, "public Sniph"), root_path, :class => "rogue")
+    end
 
     if params[:user].present?
       out << "sniph&rsquo;d by"
@@ -60,7 +62,10 @@ module SniphsHelper
     out << time_ago_in_words_or_date(sniph.created_at)
     if sniph.user == current_user
 		  out << "by"
-      out << link_to('You', "/sniphs/mine")
+      out << link_to('You', my_sniphs_path)
+      out << link_to("Delete", sniph_path(sniph), :method => :delete, :remote => true, :class => 'delete')
+      # out << link_to("delete", "#{sniph_path(sniph)}.json", :method => :delete, :remote => true, :class => "remove", :confirm => 'Are you sure?')
+
 		end
 		out.join(" ").html_safe
   end
@@ -81,11 +86,11 @@ module SniphsHelper
   def sample_sniph_queries
     paths = [
       sniphs_path,
-      sniphs_path(:q => 'nytimes.com'),
+      sniphs_path(:q => 'nytimes.com', :format => 'json'),
       sniphs_path(:q => 'economist.com', :format => 'json'),
-      sniphs_path(:q => 'en.wikipedia.org'),
-      sniphs_path(:q => 'google.com', :user => "zeke"),
-      sniphs_path(:q => 'economist.com/node/18530079'),
+      sniphs_path(:q => 'en.wikipedia.org', :format => 'json'),
+      sniphs_path(:q => 'google.com', :user => "zeke", :format => 'json'),
+      sniphs_path(:q => 'economist.com/node/18530079', :format => 'json'),
       sniphs_path(:format => 'json'),
     ]
     links = paths.map do |path|
