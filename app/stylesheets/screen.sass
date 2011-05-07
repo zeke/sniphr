@@ -205,6 +205,38 @@ ul.samples
       color: #666
       &:hover
         color: $main_color
+        
+ul.tag_cloud
+  margin: 20px 0
+  @include no_float
+  li
+    @include float_left
+    display: block
+    height: 30px
+    overflow: hidden
+    a
+      text-decoration: none
+      padding: 2px 10px 
+      line-height: 1.2em
+      @include border-radius(2px)
+      &.tag4
+        font-size: 1.75em
+        @include opacity(1)
+      &.tag3
+        font-size: 1.5em
+        @include opacity(.75)
+      &.tag2
+        font-size: 1.25em
+        @include opacity(.5)
+      &.tag1
+        margin-top: 10px
+        font-size: .9em
+        @include opacity(.25)
+      &:hover
+        background-color: $main_color
+        color: white
+        @include opacity(1)
+
   
 ul.sniphs
   width: $column_width

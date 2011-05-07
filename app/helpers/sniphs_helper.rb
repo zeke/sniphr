@@ -1,5 +1,13 @@
 module SniphsHelper
-
+  include ActsAsTaggableOn::TagsHelper
+  
+  def sniph_tag_cloud(tags)
+    items = []
+    tag_cloud(tags, %w(tag1 tag2 tag3 tag4)) do |tag, css_class|
+      items << link_to(tag.name, sniphs_path(:tag => tag.name), :class => css_class)
+    end
+    content_tag(:ul, convert_to_list_items(items), :class => "tag_cloud")
+  end
 
   def sniph_heading(sniphs=nil)
     out = []

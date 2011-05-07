@@ -496,7 +496,7 @@ div#bottom_bar ul li {
   border-right: 1px solid #dddddd;
 }
 /* line 39, ../../../app/stylesheets/zass/_zass.sass */
-div#bottom_bar ul li:first-child, div#bottom_bar ul li.first {
+div#bottom_bar ul li:first-child, div#bottom_bar ul li.last {
   padding-left: 0;
 }
 /* line 41, ../../../app/stylesheets/zass/_zass.sass */
@@ -577,102 +577,168 @@ ul.samples li a:hover {
 }
 
 /* line 209, ../../../app/stylesheets/screen.sass */
+ul.tag_cloud {
+  margin: 20px 0;
+  float: none;
+  clear: both;
+  overflow: hidden;
+}
+/* line 212, ../../../app/stylesheets/screen.sass */
+ul.tag_cloud li {
+  display: block;
+  clear: none;
+  float: left;
+  display: block;
+  height: 30px;
+  overflow: hidden;
+}
+/* line 217, ../../../app/stylesheets/screen.sass */
+ul.tag_cloud li a {
+  text-decoration: none;
+  padding: 2px 10px;
+  line-height: 1.2em;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
+}
+/* line 222, ../../../app/stylesheets/screen.sass */
+ul.tag_cloud li a.tag4 {
+  font-size: 1.75em;
+  opacity: 1;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+}
+/* line 225, ../../../app/stylesheets/screen.sass */
+ul.tag_cloud li a.tag3 {
+  font-size: 1.5em;
+  opacity: 0.75;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75);
+}
+/* line 228, ../../../app/stylesheets/screen.sass */
+ul.tag_cloud li a.tag2 {
+  font-size: 1.25em;
+  opacity: 0.5;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+}
+/* line 231, ../../../app/stylesheets/screen.sass */
+ul.tag_cloud li a.tag1 {
+  margin-top: 10px;
+  font-size: 0.9em;
+  opacity: 0.25;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=25);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=25);
+}
+/* line 235, ../../../app/stylesheets/screen.sass */
+ul.tag_cloud li a:hover {
+  background-color: #4b9900;
+  color: white;
+  opacity: 1;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+}
+
+/* line 241, ../../../app/stylesheets/screen.sass */
 ul.sniphs {
   width: 600px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
-/* line 215, ../../../app/stylesheets/screen.sass */
+/* line 247, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph {
   padding: 0 0 10px 0;
   margin: 10px 0 0 0;
   border-bottom: 1px solid #cccccc;
 }
-/* line 219, ../../../app/stylesheets/screen.sass */
+/* line 251, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph p {
   color: black;
   line-height: 1.3em;
   padding: 0 0 4px 0;
 }
-/* line 224, ../../../app/stylesheets/screen.sass */
+/* line 256, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph p.content span.q {
   color: #4b9900;
 }
-/* line 226, ../../../app/stylesheets/screen.sass */
+/* line 258, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph p.source {
   font-size: 0.9em;
   padding: 0;
   color: #999999;
 }
-/* line 230, ../../../app/stylesheets/screen.sass */
+/* line 262, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph p.source a {
   color: #4b9900;
   text-decoration: none;
 }
-/* line 233, ../../../app/stylesheets/screen.sass */
+/* line 265, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph p.source a span.domain {
   color: #aaaaaa;
   font-size: 0.9em;
 }
-/* line 236, ../../../app/stylesheets/screen.sass */
+/* line 268, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph p.metadata {
   padding: 3px 0 3px 0;
   font-size: 0.7em;
   color: #aaaaaa;
 }
-/* line 240, ../../../app/stylesheets/screen.sass */
+/* line 272, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph p.metadata a {
   color: #aaaaaa;
 }
-/* line 242, ../../../app/stylesheets/screen.sass */
+/* line 274, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph p.metadata a:hover {
   color: #999999;
 }
-/* line 244, ../../../app/stylesheets/screen.sass */
+/* line 276, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph p.tags {
   font-size: 0.9em;
   color: #cccccc;
 }
-/* line 247, ../../../app/stylesheets/screen.sass */
+/* line 279, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph p.tags a {
   color: #999999;
 }
 
-/* line 250, ../../../app/stylesheets/screen.sass */
+/* line 282, ../../../app/stylesheets/screen.sass */
 table.queries {
   width: 100%;
   font-size: 0.9em;
 }
-/* line 256, ../../../app/stylesheets/screen.sass */
+/* line 288, ../../../app/stylesheets/screen.sass */
 table.queries thead tr th {
   padding: 3px;
   color: #999999;
 }
-/* line 261, ../../../app/stylesheets/screen.sass */
+/* line 293, ../../../app/stylesheets/screen.sass */
 table.queries tbody tr td {
   padding: 6px;
   border-top: 1px solid #cccccc;
   font-family: "Anonymous Pro", "Menlo", "Consolas", "Bitstream Vera Sans Mono", "Courier New", monospace;
 }
-/* line 265, ../../../app/stylesheets/screen.sass */
+/* line 297, ../../../app/stylesheets/screen.sass */
 table.queries tbody tr:hover {
   background-color: #333333;
 }
-/* line 267, ../../../app/stylesheets/screen.sass */
+/* line 299, ../../../app/stylesheets/screen.sass */
 table.queries tbody tr:hover td {
   color: white;
 }
-/* line 269, ../../../app/stylesheets/screen.sass */
+/* line 301, ../../../app/stylesheets/screen.sass */
 table.queries tbody tr:hover td a {
   color: white;
 }
 
-/* line 272, ../../../app/stylesheets/screen.sass */
+/* line 304, ../../../app/stylesheets/screen.sass */
 div.pagination {
   margin: 20px 0 20px 0;
 }
-/* line 274, ../../../app/stylesheets/screen.sass */
+/* line 306, ../../../app/stylesheets/screen.sass */
 div.pagination a, div.pagination em {
   padding: 4px 8px;
   background-color: #cccccc;
@@ -685,34 +751,34 @@ div.pagination a, div.pagination em {
   -khtml-border-radius: 2px;
   border-radius: 2px;
 }
-/* line 280, ../../../app/stylesheets/screen.sass */
+/* line 312, ../../../app/stylesheets/screen.sass */
 div.pagination em {
   background-color: #333333;
 }
-/* line 282, ../../../app/stylesheets/screen.sass */
+/* line 314, ../../../app/stylesheets/screen.sass */
 div.pagination a:hover {
   background-color: #4b9900;
 }
-/* line 284, ../../../app/stylesheets/screen.sass */
+/* line 316, ../../../app/stylesheets/screen.sass */
 div.pagination span.gap {
   color: #cccccc;
 }
 
-/* line 288, ../../../app/stylesheets/screen.sass */
+/* line 320, ../../../app/stylesheets/screen.sass */
 div.extension_options {
   width: 350px;
 }
-/* line 291, ../../../app/stylesheets/screen.sass */
+/* line 323, ../../../app/stylesheets/screen.sass */
 div.extension_options form {
   margin: 10px 0 0 0;
 }
-/* line 293, ../../../app/stylesheets/screen.sass */
+/* line 325, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-/* line 297, ../../../app/stylesheets/screen.sass */
+/* line 329, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs > li {
   margin: 10px 0;
   padding: 6px 0;
@@ -721,22 +787,22 @@ div.extension_options form ul.inputs > li {
   overflow: hidden;
   border-bottom: 1px solid #cccccc;
 }
-/* line 304, ../../../app/stylesheets/screen.sass */
+/* line 336, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs > li:first-child {
   border-top: 1px solid #cccccc;
 }
-/* line 306, ../../../app/stylesheets/screen.sass */
+/* line 338, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs > li:last-child {
   border-bottom: none;
 }
-/* line 308, ../../../app/stylesheets/screen.sass */
+/* line 340, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs > li label {
   padding: 6px 0 0 0;
   font-size: 0.9em;
   display: block;
   float: left;
 }
-/* line 313, ../../../app/stylesheets/screen.sass */
+/* line 345, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs > li input.text {
   display: block;
   float: right;
@@ -744,14 +810,14 @@ div.extension_options form ul.inputs > li input.text {
   padding: 1px;
   width: 120px;
 }
-/* line 319, ../../../app/stylesheets/screen.sass */
+/* line 351, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs > li select {
   display: block;
   float: right;
   font-size: 0.9em;
   width: 120px;
 }
-/* line 324, ../../../app/stylesheets/screen.sass */
+/* line 356, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs > li a#save_options {
   font-family: "Helvetica Neue", Helvetica, Arial;
   font-weight: bold;
@@ -767,11 +833,11 @@ div.extension_options form ul.inputs > li a#save_options {
   font-size: 0.8em;
   text-decoration: none;
 }
-/* line 332, ../../../app/stylesheets/screen.sass */
+/* line 364, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs > li a#save_options:hover {
   background-color: #326600;
 }
-/* line 336, ../../../app/stylesheets/screen.sass */
+/* line 368, ../../../app/stylesheets/screen.sass */
 div.extension_options div#status {
   margin: 20px 0;
   padding: 10px;

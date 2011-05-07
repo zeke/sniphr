@@ -9,6 +9,8 @@ class SniphsController < ApplicationController
   end
 
   def index
+    @tags = Sniph.tag_counts_on(:tags)
+    
     if logged_in? && params[:whose]
       @sniphs = current_user.sniphs.order('sniphs.created_at DESC')
     else
