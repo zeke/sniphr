@@ -16,8 +16,7 @@ class User < ActiveRecord::Base
   end
 
   def url_domain_allowed?(url)
-    return true if self.whitelist.blank?
-    self.whitelist.downcase.include? url.domain_without_www
+    self.whitelist.to_s.downcase.include? url.domain_without_www
   end
 
   def public_mode?
