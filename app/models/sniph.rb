@@ -11,7 +11,7 @@ class Sniph < ActiveRecord::Base
     self.last_tagging_attempted_at = Time.now
     if tag_list.present?
       self.tag_list = tag_list
-      self.cached_tag_list = tag_list
+      self.cached_tag_list = tag_list.slice(0,250)
     end
     self.save!
   end
