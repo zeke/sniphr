@@ -2,7 +2,8 @@
 
   - if !logged_in?
     %li Your are signed out of Sniphr.com
-    %li= link_to("Sign in", "/auth/twitter", :target => "_blank")
+    %li= link_to("Sign in with Twitter", "/auth/twitter", :target => "_blank")
+    %li= link_to("Sign in with Facebook", "/auth/facebook", :target => "_blank")
     
   - elsif @current_url.blank?
     %li Sorry, there was a problem getting your current URL.

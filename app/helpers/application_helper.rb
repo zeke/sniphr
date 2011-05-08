@@ -19,7 +19,7 @@ module ApplicationHelper
       items << link("My sniphs", my_sniphs_path)
       items << link("Settings", settings_path)
     else
-      items << link("Sign in with Twitter", "/auth/twitter")
+      items << "Sign in with" + link("Twitter", "/auth/twitter") + "or" + link("Facebook", "/auth/facebook") + "."
     end
     items << link("FAQ", faq_path)
     items << link("Sign out", signout_path) if logged_in?
@@ -29,10 +29,12 @@ module ApplicationHelper
 
   def installation_steps
     steps = []
-
-    label = "Sign in with your Twitter account.".html_safe
-    css = logged_in? ? "complete" : ""
-    steps << link_to(label, "/auth/twitter", :class => css)
+    
+    if logged_in?
+      items << content_tag(:span, "Sign in.", :class => 'complete')
+    else
+      items << "Sign in with" + link("Twitter", "/auth/twitter") + "or" + link("Facebook", "/auth/facebook") + "."
+    end
 
     # label = "Configure your account's level of publicity."
     # if logged_in? && current_user.manually_configured?

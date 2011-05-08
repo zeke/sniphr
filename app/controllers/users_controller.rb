@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 
   def edit
     if !logged_in?
-      redirect_to("/auth/twitter")
+      redirect_to(root_path)
       return
     end
   end
