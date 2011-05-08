@@ -14,13 +14,10 @@
   
     = form.inputs do
     
-      %h3 Mode
-      %p Sniphs saved when you're in private mode are only visible to you.
-      = form.input :mode, :as => :select, :collection => %w(public private), :include_blank => false, :label => false
 
-      %h3 Domain Whitelist
-      %p One domain per line. Leave blank to allow all domains. Leave off the www.
-      = form.input :whitelist, :label => false
+      = form.input :mode, :as => :select, :collection => %w(public private), :include_blank => false, :hint => t('formtastic.hints.user.mode')
+        
+      = form.input :whitelist, :hint => t('formtastic.hints.user.whitelist')
 
     = form.buttons do
       = form.submit "Save"

@@ -169,13 +169,20 @@ div#bottom_bar
         
 
 form.formtastic
-  width: 600px
-  
-  textarea
-    padding: 3px
-    font-size: .9em
-    color: #333
-    line-height: 1.3em
+  width: $column_width
+  @include no_float
+  margin: 10px 0
+      
+  fieldset.inputs
+    ol
+      li
+        label
+          @include fonty_bold
+        p.inline-hints
+          font-size: .8em
+        textarea
+          border: 1px solid #CCC
+        
   
 ol.steps
   padding: 0 0 0 25px
