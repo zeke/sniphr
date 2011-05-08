@@ -15,5 +15,5 @@ en:
     hints:
       user:
         mode: "Sniphs saved when you're in private mode are only visible to you. Sniphs saved when you're in public mode are visible to everyone."
-        whitelist: "One domain per line. Leave off the 'www'. Sniphr only sticks its nose in the places you give it permission to. When you highlight text on a page whose domain is in your whitelist, the text will be sniph'd automatically, even if you don't hold down the shift key or right click on your selection."
+        whitelist: "When you select text on pages with a whitelisted domain, it gets sniph'd automatically. One domain per line. Leave off the www."
         
