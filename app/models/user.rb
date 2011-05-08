@@ -7,11 +7,21 @@ class User < ActiveRecord::Base
     create! do |user|
       user.provider = auth["provider"]
       user.uid = auth["uid"]
-      user.nickname = auth["user_info"]["nickname"]
       user.name = auth["user_info"]["name"]
-      user.location = auth["user_info"]["location"]
       user.image = auth["user_info"]["image"]
-      user.description = auth["user_info"]["description"]
+      
+      case user.provider.to_sym
+      when :twitter
+        user.nickname = auth["user_info"]["nickname"]
+        user.location = auth["user_info"]["location"]
+        user.description = auth["user_info"]["description"]
+      when :facebook
+        user.nickname = auth["user_info"]["name"]
+        user.description = auth["extra"]["user_hash"]["bio"]
+        user.email = auth["user_info"]["email"]
+        user.fb_url = auth["user_info"]["urls"]["Facebook"]
+      end
+      
     end
   end
 
@@ -25,6 +35,11 @@ class User < ActiveRecord::Base
 
   def manually_configured?
     self.created_at != self.updated_at
+  end
+  
+  def personal_homepage
+    return "http://twitter.com/#{self.nickname}" if self.provider == 'twitter'
+    return self.fb_url if self.provider == 'facebook'
   end
 
 end

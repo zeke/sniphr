@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110507232504) do
+ActiveRecord::Schema.define(:version => 20110508193449) do
 
   create_table "queries", :force => true do |t|
     t.string   "q"
@@ -82,6 +82,8 @@ ActiveRecord::Schema.define(:version => 20110507232504) do
     t.datetime "updated_at"
     t.text     "whitelist"
     t.string   "mode",        :default => "private"
+    t.string   "email"
+    t.string   "fb_url"
   end
 
 end

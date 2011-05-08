@@ -19,7 +19,8 @@ module ApplicationHelper
       items << link("My sniphs", my_sniphs_path)
       items << link("Settings", settings_path)
     else
-      items << "Sign in with" + link("Twitter", "/auth/twitter") + "or" + link("Facebook", "/auth/facebook") + "."
+      items << link("Sign in with Twitter", "/auth/twitter")
+      items << link("Sign in with Facebook", "/auth/facebook")
     end
     items << link("FAQ", faq_path)
     items << link("Sign out", signout_path) if logged_in?
@@ -31,9 +32,9 @@ module ApplicationHelper
     steps = []
     
     if logged_in?
-      items << content_tag(:span, "Sign in.", :class => 'complete')
+      steps << content_tag(:span, "Sign in.", :class => 'complete')
     else
-      items << "Sign in with" + link("Twitter", "/auth/twitter") + "or" + link("Facebook", "/auth/facebook") + "."
+      steps << ("Sign in with " + link("Twitter", "/auth/twitter") + " or " + link("Facebook", "/auth/facebook") + ".").html_safe
     end
 
     # label = "Configure your account's level of publicity."
