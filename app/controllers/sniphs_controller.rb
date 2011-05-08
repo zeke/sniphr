@@ -9,7 +9,8 @@ class SniphsController < ApplicationController
   end
 
   def index
-    @tags = Sniph.tag_counts_on(:tags)
+    @tags = Sniph.where(:publique => true).tag_counts_on(:tags).sort_by(&:name)
+    @user_tags = current_user.sniphs.tag_counts_on(:tags).sort_by(&:name) if logged_in?
     
     if logged_in? && request.path == my_sniphs_path
       @sniphs = current_user.sniphs.order('sniphs.created_at DESC')

@@ -19,4 +19,10 @@
           
   = will_paginate @sniphs
 
+  - if logged_in?
+    %h2 Your Tags
+    = sniph_tag_cloud(@user_tags, :user => true)
+
+  %h2 Public Tags
   = sniph_tag_cloud(@tags)
+

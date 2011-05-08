@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110507065002) do
+ActiveRecord::Schema.define(:version => 20110507232504) do
 
   create_table "queries", :force => true do |t|
     t.string   "q"
@@ -45,7 +45,7 @@ ActiveRecord::Schema.define(:version => 20110507065002) do
     t.boolean  "publique",                  :default => true
     t.integer  "user_id"
     t.datetime "last_tagging_attempted_at"
-    t.string   "cached_tag_list"
+    t.text     "cached_tag_list"
   end
 
   add_index "sniphs", ["last_tagging_attempted_at"], :name => "index_sniphs_on_tagged_at"

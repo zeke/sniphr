@@ -29,9 +29,6 @@ task :top_query_domains => :environment do
 
 end
 
-
-
-
 task :tag_sniphs => :environment do
 
   #  Find sniphs for which no tagging has been attempted
