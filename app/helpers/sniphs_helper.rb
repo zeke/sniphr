@@ -21,7 +21,7 @@ module SniphsHelper
     end
 
     if params[:user].present?
-      out << "sniph&rsquo;d by"
+      out << "by"
       out << content_tag(:span, "#{params[:user]}".html_safe, :class => 'user')
     end
 
