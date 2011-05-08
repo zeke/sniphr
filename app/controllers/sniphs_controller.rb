@@ -9,23 +9,30 @@ class SniphsController < ApplicationController
   end
 
   def index
+
+    @users = User.all
+    @users = @users.sort { |a,b| b.sniphs.where(:publique=> true).count <=> a.sniphs.where(:publique=> true).count }
+    
     @tags = Sniph.where(:publique => true).tag_counts_on(:tags).sort_by(&:name)
     @user_tags = current_user.sniphs.tag_counts_on(:tags).sort_by(&:name) if logged_in?
-    
-    if logged_in? && request.path == my_sniphs_path
-      @sniphs = current_user.sniphs.order('sniphs.created_at DESC')
-    else
-      @sniphs = Sniph.order('sniphs.created_at DESC').where(:publique => true)
-    end
-    
-    if params[:tag]
-      @sniphs = @sniphs.tagged_with(params[:tag])
-    end
-    
-    @sniphs = @sniphs.includes(:user, :tags)
 
+    @sniphs = Sniph.includes(:user, :tags).order('sniphs.created_at DESC')
+    if logged_in? && request.path == my_sniphs_path
+      @sniphs = @sniphs.where(:user_id => current_user.id)
+    else
+      @sniphs = @sniphs.where(:publique => true)
+      
+      # Undocumented way to view one user's public sniphs
+      # TODO: Make UI hooks for this
+      if params[:user]
+        @user = User.find_by_nickname(params[:user])
+        @sniphs = @sniphs.where(:user_id => @user.id)
+      end
+      
+    end    
+    @sniphs = @sniphs.tagged_with(params[:tag]) if params[:tag]
     @sniphs = @sniphs.where("url LIKE ? OR content LIKE ? OR title LIKE ?", "%#{params[:q]}%", "%#{params[:q]}%", "%#{params[:q]}%") if params[:q]
-    @sniphs = @sniphs.paginate(:page => params[:page], :per_page => 200)
+    @sniphs = @sniphs.paginate(:page => params[:page], :per_page => configatron.pagination.per_page)
 
     # Save this query if searching for a term
     if params[:q].present?

@@ -308,6 +308,26 @@ table.queries
           color: white
           a
             color: white
+ul.users
+  width: 300px
+  > li
+    @include no_float
+    padding: 7px
+    border-bottom: 1px solid #DDD
+    &:last-child, &.last
+      border-bottom: none
+    a
+      @include underline_on_hover_only
+      &.nickname
+        @include float_left
+        width: 230px
+      &.sniph_count
+        color: #999
+        font-size: .9em
+        @include float_right
+        width: 40px
+        text-align: center
+    
             
 div.pagination
   margin: 20px 0 20px 0
@@ -323,6 +343,9 @@ div.pagination
     background-color: $main_color
   span.gap
     color: #CCC
+  span.disabled
+    color: #CCC
+    
 
 
 div.extension_options
