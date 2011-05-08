@@ -25,7 +25,7 @@ class SniphsController < ApplicationController
     @sniphs = @sniphs.includes(:user, :tags)
 
     @sniphs = @sniphs.where("url LIKE ? OR content LIKE ? OR title LIKE ?", "%#{params[:q]}%", "%#{params[:q]}%", "%#{params[:q]}%") if params[:q]
-    @sniphs = @sniphs.paginate(:page => params[:page], :per_page => 200)
+    @sniphs = @sniphs.paginate(:page => params[:page], :per_page => configatron.pagination.per_page)
 
     # Save this query if searching for a term
     if params[:q].present?

@@ -6,3 +6,6 @@ javascripts:
   - 'jquery.uniform.min'
   - 'rails'
   - 'application' # This should be last
+
+pagination:
+  per_page: 50
