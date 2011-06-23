@@ -69,6 +69,9 @@ GEM
     haml (3.0.25)
     headjs-rails (0.3.0)
       rails (>= 3.0.0)
+    hoptoad_notifier (2.4.6)
+      activesupport
+      builder
     httparty (0.7.4)
       crack (= 0.1.8)
     i18n (0.5.0)
@@ -214,6 +217,7 @@ DEPENDENCIES
   formtastic (= 1.2.3)
   haml (= 3.0.25)
   headjs-rails (= 0.3.0)
+  hoptoad_notifier
   httparty
   jquery-rails (>= 0.2.6)
   linecache19 (= 0.5.11)

@@ -496,7 +496,7 @@ div#bottom_bar ul li {
   border-right: 1px solid #dddddd;
 }
 /* line 39, ../../../app/stylesheets/zass/_zass.sass */
-div#bottom_bar ul li:first-child, div#bottom_bar ul li.last {
+div#bottom_bar ul li:first-child, div#bottom_bar ul li.first {
   padding-left: 0;
 }
 /* line 41, ../../../app/stylesheets/zass/_zass.sass */

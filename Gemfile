@@ -14,6 +14,7 @@ gem "omniauth"
 gem 'acts-as-taggable-on'
 gem 'httparty'
 gem "slideshow"
+gem 'hoptoad_notifier'
 # gem 'pg'
 # gem 'pg_search'
 
