@@ -9,9 +9,10 @@ class SniphsController < ApplicationController
   end
 
   def index
-
-    @users = User.all
-    @users = @users.sort { |a,b| b.sniphs.where(:publique=> true).count <=> a.sniphs.where(:publique=> true).count }
+    
+    # Turned this off.. it was getting really slow
+    # @users = User.all
+    # @users = @users.sort { |a,b| b.sniphs.where(:publique=> true).count <=> a.sniphs.where(:publique=> true).count }
     
     @tags = Sniph.where(:publique => true).tag_counts_on(:tags).sort_by(&:name)
     @user_tags = current_user.sniphs.tag_counts_on(:tags).sort_by(&:name) if logged_in?
