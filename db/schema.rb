@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110508193449) do
+ActiveRecord::Schema.define(:version => 20111011171449) do
 
   create_table "queries", :force => true do |t|
     t.string   "q"
@@ -65,10 +65,16 @@ ActiveRecord::Schema.define(:version => 20110508193449) do
   end
 
   add_index "taggings", ["tag_id"], :name => "index_taggings_on_tag_id"
+  add_index "taggings", ["taggable_id"], :name => "index_taggings_on_taggable_id"
+  add_index "taggings", ["taggable_type"], :name => "index_taggings_on_taggable_type"
+  add_index "taggings", ["tagger_id"], :name => "index_taggings_on_tagger_id"
+  add_index "taggings", ["tagger_type"], :name => "index_taggings_on_tagger_type"
 
   create_table "tags", :force => true do |t|
     t.string "name"
   end
+
+  add_index "tags", ["name"], :name => "index_tags_on_name"
 
   create_table "users", :force => true do |t|
     t.string   "provider"
