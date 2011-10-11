@@ -3,3 +3,4 @@ db/*.sqlite3
 log/*.log
 tmp/
 config/config_secrets.yml
+config/database.yml
