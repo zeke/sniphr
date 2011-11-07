@@ -3,6 +3,7 @@
 
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
+require 'open-uri'
 
 Sniphr::Application.load_tasks
 
@@ -34,7 +35,7 @@ task :tag_sniphs => :environment do
   #  Find sniphs for which no tagging has been attempted
   Sniph.where(:last_tagging_attempted_at => nil).limit(200).each do |sniph|
 
-    tags = Delicious.get_tags_for_url(sniph.url)
+    tags = Delicious.get_tags_for_url(URI.encode(sniph.url))
     
     # Timestamp the sniph with the tagging attempt, even if no tags were found
     sniph.blatantly_update_tags! tags.join(", ")
