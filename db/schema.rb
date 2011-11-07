@@ -1,3 +1,4 @@
+# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -65,6 +66,7 @@ ActiveRecord::Schema.define(:version => 20111011171449) do
   end
 
   add_index "taggings", ["tag_id"], :name => "index_taggings_on_tag_id"
+  add_index "taggings", ["taggable_id", "taggable_type", "context"], :name => "index_taggings_on_taggable_id_and_taggable_type_and_context"
   add_index "taggings", ["taggable_id"], :name => "index_taggings_on_taggable_id"
   add_index "taggings", ["taggable_type"], :name => "index_taggings_on_taggable_type"
   add_index "taggings", ["tagger_id"], :name => "index_taggings_on_tagger_id"
