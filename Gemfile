@@ -11,7 +11,7 @@ gem 'jquery-rails', '>= 0.2.6'
 gem 'formtastic', '1.2.3'
 gem "will_paginate", "~> 3.0.pre2"
 gem "omniauth", "~>0.3.2"
-gem 'acts-as-taggable-on'
+gem 'acts-as-taggable-on', "~>2.2.2"
 gem 'httparty'
 gem "slideshow"
 gem 'hoptoad_notifier'
@@ -19,8 +19,7 @@ gem 'hoptoad_notifier'
 # gem 'pg_search'
 
 group :test do
-  gem 'rspec', '2.6.0'
-  gem 'rspec-rails', '2.6.1'
+  gem 'rspec-rails', '2.8.1'
   gem 'rspec2-rails-views-matchers'
   gem 'factory_girl', '1.3.3'
   gem 'factory_girl_rails', '1.0.1'
