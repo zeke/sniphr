@@ -330,9 +330,9 @@ a {
 p {
   padding: 5px 0 5px 0;
   font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial;
-  font-size: 1em;
+  font-size: 1.3em;
   line-height: 1.3em;
-  color: #666666;
+  color: #333333;
 }
 /* line 64, ../../../app/stylesheets/screen.sass */
 p.big {
