@@ -1,8 +1,7 @@
 # See also config/config_environment_specific.yml
 
 javascripts:
-  - 'https://ajax.googleapis.com/ajax/libs/jquery/1.6.0/jquery.min.js'
-  # - 'jquery.min'
+  - 'http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'
   - 'jquery.uniform.min'
   - 'rails'
   - 'application' # This should be last
