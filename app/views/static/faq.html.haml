@@ -16,14 +16,6 @@
       No need to jump through the time-sucking and brain-power-consuming hoops of creating a bookmark 
       when you can do it implicitly just by browsing the web and highlighting stuff!
   
-    %h2 What about my privacy?
-    %p
-      Sniphr only sticks its nose in the places you give it permission to. In your account 
-      settings, you can 
-      = link_to "configure a whitelist of domains", settings_path
-      that Sniphr is allowed to sniph text from. When you highlight text on a page whose 
-      domain is not in your whitelist, it will not be saved.
-  
     %p
       If you want to sniph with reckless abandon but don't want anyone else to be
       able to see the content you've sniphed, you can
@@ -34,12 +26,7 @@
     %h2 I accidentally sniph'd some top-secret and/or embarrassing content. Can I delete it?
 
     %p Yes.
-  
-    %h2 What if I want to sniph stuff from domains I haven't whitelisted?
-    %p
-      There are two different ways to temp temporarily bypass your domain whitelist: 1. Hold down the 
-      shift key as you select text. 2. Right-clicking on text after you select it, then click 'Sniph It!'
-      
+        
     %h2 Can I get a side of JSON with those sniphs?
 
     %p Yeah. Just tack <b>.json</b> onto any <b>/sniphs</b> URL. Some example queries:

@@ -25,10 +25,6 @@ class User < ActiveRecord::Base
     end
   end
 
-  def url_domain_allowed?(url)
-    self.whitelist.to_s.downcase.include? url.domain_without_www
-  end
-
   def public_mode?
     self.mode == 'public'
   end

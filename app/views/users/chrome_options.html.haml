@@ -23,7 +23,6 @@
       %li= link_to("View the #{pluralize(@num_sniphs_at_domain, 'sniph')} from this domain", "/sniphs?q=#{@domain}", :target => "_blank")
 
 
-    %li.weak Add this domain to your whitelist (soon)
     %li.weak Highlight this URL's sniphs inline (soon)
     %li= link_to("Your sniphs", my_sniphs_path, :target => "_blank")
     %li= link_to("Settings", settings_path, :target => "_blank")

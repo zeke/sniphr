@@ -58,11 +58,4 @@ module ApplicationHelper
     content_tag(:ol, convert_to_list_items(steps), :class => "steps")
   end
 
-  def usage_steps
-    steps = []
-    steps << "Browse the web. Any text you highlight will be saved automatically for domains you've whitelisted."
-    steps << "To save a text selection on a page that's not in your whitelist, hold down SHIFT while selecting."
-    content_tag(:ol, convert_to_list_items(steps), :class => "steps")
-  end
-
 end
