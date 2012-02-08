@@ -54,7 +54,11 @@ class SniphsController < ApplicationController
   end
 
   def show
-    render :text => "show is not yet implemented"
+    @sniph = Sniph.find(params[:id])
+    respond_to do |format|
+      format.html
+      format.json { render :json => @sniph, :callback => params[:callback] }
+    end
   end
 
   def save
