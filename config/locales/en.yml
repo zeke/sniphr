@@ -9,11 +9,9 @@ en:
       user: "User"
     attributes:
       user:
-        whitelist: "Domain Whitelist"
 
   formtastic:
     hints:
       user:
         mode: "Sniphs saved when you're in private mode are only visible to you. Sniphs saved when you're in public mode are visible to everyone."
-        whitelist: "When you select text on pages with a whitelisted domain, it gets sniph'd automatically. One domain per line. Leave off the www."
         

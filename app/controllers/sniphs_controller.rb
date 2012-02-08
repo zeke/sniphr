@@ -64,11 +64,6 @@ class SniphsController < ApplicationController
   def save
     if !logged_in?
       response_object = {:msg => 'You are not logged in.'}
-
-    # Bail if URL's domain is not whitelisted (unless user is forcing the save by holding down a modifier key)
-    elsif !current_user.url_domain_allowed?(params[:sniph][:url]) && params[:force].blank?
-      response_object = {:msg => "This URL's domain is not in your whitelist." }
-
     else
       @sniph = current_user.sniphs.new(params[:sniph])
       @sniph.publique = current_user.public_mode?

@@ -78,7 +78,7 @@ div#top_bar
   position: fixed
   top: 0
   z-index: 2
-  background-color: #DDD
+  background-color: #CCC
   
   a#logo
     @include float_left
@@ -112,8 +112,9 @@ div#top_bar
         
       form.search
         margin: 9px 15px 0 0 
-        background: #F0F0F0
+        background: white
         @include border-radius(4px)
+        +box-shadow(rgba(black, 0.4), 1px, 1px, 1px, 0px, inset)
         input.q
           background: none
           border: none
