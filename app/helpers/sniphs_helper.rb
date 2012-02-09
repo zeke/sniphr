@@ -39,9 +39,13 @@ module SniphsHelper
   end
 
   def sniph_content(sniph)
-    content = sniph.content.dup.strip_tags
-    content.gsub!(/(#{params[:q]})/i, "<span class='q'>#{params[:q]}</span>") if params[:q].present?
-    content.html_safe
+    if sniph.image?
+      link_to image_tag(sniph.content), sniph.url
+    else
+      content = sniph.content.dup.strip_tags
+      content.gsub!(/(#{params[:q]})/i, "<span class='q'>#{params[:q]}</span>") if params[:q].present?
+      content.html_safe
+    end
   end
 
   # Generates a link to the sniph using page title and domain

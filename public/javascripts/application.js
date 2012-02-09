@@ -22,6 +22,11 @@ $(function(){
         alert(response);
       }
     });
+    
+    $("ul.sniphs.images").isotope({
+      itemSelector: "li",
+      layoutMode: "masonry"      
+    });
       
 });
 

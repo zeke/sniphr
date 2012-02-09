@@ -3,11 +3,12 @@
   = sniph_heading(@sniphs)
 
   - if @sniphs.present?
-    %ul.sniphs
+    %ul.sniphs{:class => ("images" if params[:images].present?)}
     
       - @sniphs.each do |sniph|
         - url = sniph.url.remove_http_and_www
         %li.sniph{:id => "sniph_#{sniph.id}"}
+        
           %p.content
             = sniph_content sniph
           %p.source
