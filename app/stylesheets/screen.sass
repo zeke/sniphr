@@ -58,7 +58,7 @@ a
 p
   padding: 5px 0 5px 0
   @include fonty
-  font-size: 1.3em
+  font-size: 1.1em
   line-height: 1.3em
   color: #333
   &.big
@@ -76,13 +76,13 @@ div#top_bar
   @include no_float
   width: 100%
   position: fixed
-  top: 0
+  top: 20px
   z-index: 2
-  background-color: #CCC
   
   a#logo
     @include float_left
-    padding: 14px 15px
+    margin: 0
+    padding: 10px 15px
     background-color: $main_color
     color: white
     text-decoration: none
@@ -102,29 +102,30 @@ div#top_bar
       &:last-child, &.last
         border: none
       a
-        padding: 13px 10px
+        padding: 8px 10px
         display: inline-block
-        color: #666
+        color: #999
         text-decoration: none
         &:hover, &.active
-          background-color: #666
+          background-color: #999
           color: white
         
       form.search
-        margin: 9px 15px 0 0 
+        margin: 3px 15px 0 0 
         background: white
         @include border-radius(4px)
         +box-shadow(rgba(black, 0.4), 1px, 1px, 1px, 0px, inset)
+        border: 1px solid #CCC
         input.q
           background: none
           border: none
           outline: none
           @include fonty
-          padding: 4px
+          padding: 6px 4px
           font-size: 1em
           
 div.content
-  margin: 70px 15px 100px 15px
+  margin: 70px 15px 100px 100px
 
   div.column
     width: $column_width
@@ -278,6 +279,13 @@ ul.sniphs
           span.domain
             color: #AAA
             font-size: .9em
+            
+          &.faviconic
+            padding: 5px 0 5px 20px
+            background-repeat: no-repeat
+            background-position: left center
+            color: #000 !important
+            
       &.metadata
         padding: 3px 0 3px 0
         font-size: .7em

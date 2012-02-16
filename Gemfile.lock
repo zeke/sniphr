@@ -222,7 +222,7 @@ GEM
     uuid (2.3.4)
       macaddr (~> 1.0)
     will_paginate (3.0.2)
-    wordnik_ruby_helpers (0.1.0)
+    wordnik_ruby_helpers (0.1.8)
       RedCloth (>= 4.2.3)
       rails
     xpath (0.1.4)
@@ -262,4 +262,4 @@ DEPENDENCIES
   simplecov
   slideshow
   will_paginate (~> 3.0.pre2)
-  wordnik_ruby_helpers (= 0.1.0)
+  wordnik_ruby_helpers (= 0.1.8)

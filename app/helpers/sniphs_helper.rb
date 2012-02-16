@@ -57,14 +57,22 @@ module SniphsHelper
     else
       label << truncate(sniph.url.remove_http_and_www, :length => 70)
     end
-    link_to(label.join(" ").html_safe, sniph.url)
+    
+    
+    link_to(
+      label.join(" ").html_safe,
+      sniph.url,
+      :class => "faviconic",
+      :style => "background-image:url('#{sniph.url.domain_without_www.favicon_url_for_domain}')"
+    )
+    
   end
 
   # e.g. "Saved about five minutes ago by joe_sniffington"
   def sniph_metadata(sniph)
     out = []
     out << "Saved"
-    out << time_ago_in_words_or_date(sniph.created_at)
+    out << time_ago_in_words(sniph.created_at)
     if sniph.user == current_user
 		  out << "by"
       out << link_to('You', my_sniphs_path)

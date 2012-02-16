@@ -1,4 +1,4 @@
-/* line 14, ../../../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 14, ../../../../../../.rvm/gems/ruby-1.9.3-p0/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -18,42 +18,42 @@ table, caption, tbody, tfoot, thead, tr, th, td {
   vertical-align: baseline;
 }
 
-/* line 17, ../../../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../../../.rvm/gems/ruby-1.9.3-p0/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 body {
   line-height: 1;
   color: black;
   background: white;
 }
 
-/* line 19, ../../../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 19, ../../../../../../.rvm/gems/ruby-1.9.3-p0/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 21, ../../../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 21, ../../../../../../.rvm/gems/ruby-1.9.3-p0/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: separate;
   border-spacing: 0;
   vertical-align: middle;
 }
 
-/* line 23, ../../../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 23, ../../../../../../.rvm/gems/ruby-1.9.3-p0/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 25, ../../../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 25, ../../../../../../.rvm/gems/ruby-1.9.3-p0/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: "" "";
 }
-/* line 96, ../../../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 96, ../../../../../../.rvm/gems/ruby-1.9.3-p0/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
 }
 
-/* line 27, ../../../../../../.rvm/gems/ruby-1.9.2-p290/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 27, ../../../../../../.rvm/gems/ruby-1.9.3-p0/gems/compass-0.10.6/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
@@ -330,7 +330,7 @@ a {
 p {
   padding: 5px 0 5px 0;
   font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial;
-  font-size: 1.3em;
+  font-size: 1.1em;
   line-height: 1.3em;
   color: #333333;
 }
@@ -356,16 +356,16 @@ div#top_bar {
   overflow: hidden;
   width: 100%;
   position: fixed;
-  top: 0;
+  top: 20px;
   z-index: 2;
-  background-color: #cccccc;
 }
-/* line 83, ../../../app/stylesheets/screen.sass */
+/* line 82, ../../../app/stylesheets/screen.sass */
 div#top_bar a#logo {
   display: block;
   clear: none;
   float: left;
-  padding: 14px 15px;
+  margin: 0;
+  padding: 10px 15px;
   background-color: #4b9900;
   color: white;
   text-decoration: none;
@@ -396,19 +396,19 @@ div#top_bar ul#user_nav li:last-child, div#top_bar ul#user_nav li.last {
 }
 /* line 104, ../../../app/stylesheets/screen.sass */
 div#top_bar ul#user_nav li a {
-  padding: 13px 10px;
+  padding: 8px 10px;
   display: inline-block;
-  color: #666666;
+  color: #999999;
   text-decoration: none;
 }
 /* line 109, ../../../app/stylesheets/screen.sass */
 div#top_bar ul#user_nav li a:hover, div#top_bar ul#user_nav li a.active {
-  background-color: #666666;
+  background-color: #999999;
   color: white;
 }
 /* line 113, ../../../app/stylesheets/screen.sass */
 div#top_bar ul#user_nav li form.search {
-  margin: 9px 15px 0 0;
+  margin: 3px 15px 0 0;
   background: white;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -420,56 +420,57 @@ div#top_bar ul#user_nav li form.search {
   -webkit-box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 1px 0px inset;
   -o-box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 1px 0px inset;
   box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 1px 0px inset;
+  border: 1px solid #cccccc;
 }
-/* line 118, ../../../app/stylesheets/screen.sass */
+/* line 119, ../../../app/stylesheets/screen.sass */
 div#top_bar ul#user_nav li form.search input.q {
   background: none;
   border: none;
   outline: none;
   font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial;
-  padding: 4px;
+  padding: 6px 4px;
   font-size: 1em;
 }
 
-/* line 126, ../../../app/stylesheets/screen.sass */
+/* line 127, ../../../app/stylesheets/screen.sass */
 div.content {
-  margin: 70px 15px 100px 15px;
+  margin: 70px 15px 100px 100px;
 }
-/* line 129, ../../../app/stylesheets/screen.sass */
+/* line 130, ../../../app/stylesheets/screen.sass */
 div.content div.column {
   width: 600px;
 }
 
-/* line 132, ../../../app/stylesheets/screen.sass */
+/* line 133, ../../../app/stylesheets/screen.sass */
 ul#chrome_options {
   margin: 10px;
 }
-/* line 134, ../../../app/stylesheets/screen.sass */
+/* line 135, ../../../app/stylesheets/screen.sass */
 ul#chrome_options li {
   border-bottom: 1px solid #cccccc;
   padding: 7px 0;
   font-size: 0.9em;
 }
-/* line 138, ../../../app/stylesheets/screen.sass */
+/* line 139, ../../../app/stylesheets/screen.sass */
 ul#chrome_options li:last-child {
   border: none;
 }
-/* line 140, ../../../app/stylesheets/screen.sass */
+/* line 141, ../../../app/stylesheets/screen.sass */
 ul#chrome_options li.weak {
   color: #999999;
 }
-/* line 142, ../../../app/stylesheets/screen.sass */
+/* line 143, ../../../app/stylesheets/screen.sass */
 ul#chrome_options li h1 {
   font-size: 1em;
   margin: 0;
   padding: 0;
 }
-/* line 146, ../../../app/stylesheets/screen.sass */
+/* line 147, ../../../app/stylesheets/screen.sass */
 ul#chrome_options li a {
   text-decoration: none;
 }
 
-/* line 149, ../../../app/stylesheets/screen.sass */
+/* line 150, ../../../app/stylesheets/screen.sass */
 div#bottom_bar {
   float: none;
   clear: both;
@@ -478,7 +479,7 @@ div#bottom_bar {
   bottom: 0;
   width: 100%;
 }
-/* line 155, ../../../app/stylesheets/screen.sass */
+/* line 156, ../../../app/stylesheets/screen.sass */
 div#bottom_bar ul {
   float: none;
   clear: both;
@@ -508,22 +509,22 @@ div#bottom_bar ul li:last-child, div#bottom_bar ul li.last {
   padding-right: 0;
   border-right: none;
 }
-/* line 160, ../../../app/stylesheets/screen.sass */
+/* line 161, ../../../app/stylesheets/screen.sass */
 div#bottom_bar ul li {
   color: #999999;
   font-size: 0.8em;
   padding: 10px;
 }
-/* line 164, ../../../app/stylesheets/screen.sass */
+/* line 165, ../../../app/stylesheets/screen.sass */
 div#bottom_bar ul li a {
   color: #555555;
 }
-/* line 166, ../../../app/stylesheets/screen.sass */
+/* line 167, ../../../app/stylesheets/screen.sass */
 div#bottom_bar ul li a:hover {
   color: #4b9900;
 }
 
-/* line 171, ../../../app/stylesheets/screen.sass */
+/* line 172, ../../../app/stylesheets/screen.sass */
 form.formtastic {
   width: 600px;
   float: none;
@@ -531,25 +532,25 @@ form.formtastic {
   overflow: hidden;
   margin: 10px 0;
 }
-/* line 179, ../../../app/stylesheets/screen.sass */
+/* line 180, ../../../app/stylesheets/screen.sass */
 form.formtastic fieldset.inputs ol li label {
   font-family: "Helvetica Neue", Helvetica, Arial;
   font-weight: bold;
 }
-/* line 181, ../../../app/stylesheets/screen.sass */
+/* line 182, ../../../app/stylesheets/screen.sass */
 form.formtastic fieldset.inputs ol li p.inline-hints {
   font-size: 0.8em;
 }
-/* line 183, ../../../app/stylesheets/screen.sass */
+/* line 184, ../../../app/stylesheets/screen.sass */
 form.formtastic fieldset.inputs ol li textarea {
   border: 1px solid #cccccc;
 }
 
-/* line 187, ../../../app/stylesheets/screen.sass */
+/* line 188, ../../../app/stylesheets/screen.sass */
 ol.steps {
   padding: 0 0 0 25px;
 }
-/* line 189, ../../../app/stylesheets/screen.sass */
+/* line 190, ../../../app/stylesheets/screen.sass */
 ol.steps li {
   font-family: "Droid Sans", "Helvetica Neue", Helvetica, Arial;
   font-size: 1em;
@@ -558,51 +559,51 @@ ol.steps li {
   color: #666666;
   padding: 5px 0;
 }
-/* line 196, ../../../app/stylesheets/screen.sass */
+/* line 197, ../../../app/stylesheets/screen.sass */
 ol.steps li span.complete {
   text-decoration: line-through;
   color: #999999;
 }
-/* line 199, ../../../app/stylesheets/screen.sass */
+/* line 200, ../../../app/stylesheets/screen.sass */
 ol.steps li a {
   color: #4b9900;
   text-decoration: none;
 }
-/* line 202, ../../../app/stylesheets/screen.sass */
+/* line 203, ../../../app/stylesheets/screen.sass */
 ol.steps li a.complete {
   text-decoration: line-through;
   color: #999999;
 }
 
-/* line 206, ../../../app/stylesheets/screen.sass */
+/* line 207, ../../../app/stylesheets/screen.sass */
 ul.samples {
   margin: 0 0 5px 0;
   padding: 0;
   list-style: none;
 }
-/* line 210, ../../../app/stylesheets/screen.sass */
+/* line 211, ../../../app/stylesheets/screen.sass */
 ul.samples li {
   font-family: "Anonymous Pro", "Menlo", "Consolas", "Bitstream Vera Sans Mono", "Courier New", monospace;
   font-size: 0.9em;
   padding: 5px 0;
 }
-/* line 214, ../../../app/stylesheets/screen.sass */
+/* line 215, ../../../app/stylesheets/screen.sass */
 ul.samples li a {
   color: #666666;
 }
-/* line 216, ../../../app/stylesheets/screen.sass */
+/* line 217, ../../../app/stylesheets/screen.sass */
 ul.samples li a:hover {
   color: #4b9900;
 }
 
-/* line 219, ../../../app/stylesheets/screen.sass */
+/* line 220, ../../../app/stylesheets/screen.sass */
 ul.tag_cloud {
   margin: 20px 0;
   float: none;
   clear: both;
   overflow: hidden;
 }
-/* line 222, ../../../app/stylesheets/screen.sass */
+/* line 223, ../../../app/stylesheets/screen.sass */
 ul.tag_cloud li {
   display: block;
   clear: none;
@@ -611,7 +612,7 @@ ul.tag_cloud li {
   height: 30px;
   overflow: hidden;
 }
-/* line 227, ../../../app/stylesheets/screen.sass */
+/* line 228, ../../../app/stylesheets/screen.sass */
 ul.tag_cloud li a {
   text-decoration: none;
   padding: 2px 10px;
@@ -623,28 +624,28 @@ ul.tag_cloud li a {
   -khtml-border-radius: 2px;
   border-radius: 2px;
 }
-/* line 232, ../../../app/stylesheets/screen.sass */
+/* line 233, ../../../app/stylesheets/screen.sass */
 ul.tag_cloud li a.tag4 {
   font-size: 1.75em;
   opacity: 1;
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
 }
-/* line 235, ../../../app/stylesheets/screen.sass */
+/* line 236, ../../../app/stylesheets/screen.sass */
 ul.tag_cloud li a.tag3 {
   font-size: 1.5em;
   opacity: 0.75;
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=75);
 }
-/* line 238, ../../../app/stylesheets/screen.sass */
+/* line 239, ../../../app/stylesheets/screen.sass */
 ul.tag_cloud li a.tag2 {
   font-size: 1.25em;
   opacity: 0.5;
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
 }
-/* line 241, ../../../app/stylesheets/screen.sass */
+/* line 242, ../../../app/stylesheets/screen.sass */
 ul.tag_cloud li a.tag1 {
   margin-top: 10px;
   font-size: 0.9em;
@@ -652,7 +653,7 @@ ul.tag_cloud li a.tag1 {
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=25);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=25);
 }
-/* line 245, ../../../app/stylesheets/screen.sass */
+/* line 246, ../../../app/stylesheets/screen.sass */
 ul.tag_cloud li a:hover {
   background-color: #4b9900;
   color: white;
@@ -661,116 +662,123 @@ ul.tag_cloud li a:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
 }
 
-/* line 251, ../../../app/stylesheets/screen.sass */
+/* line 252, ../../../app/stylesheets/screen.sass */
 ul.sniphs {
   width: 600px;
   margin: 0;
   padding: 0;
   list-style: none;
 }
-/* line 257, ../../../app/stylesheets/screen.sass */
+/* line 258, ../../../app/stylesheets/screen.sass */
 ul.sniphs.images {
   width: 100%;
 }
-/* line 260, ../../../app/stylesheets/screen.sass */
+/* line 261, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph {
   padding: 0 0 10px 0;
   margin: 10px 0 0 0;
   border-bottom: 1px solid #cccccc;
 }
-/* line 264, ../../../app/stylesheets/screen.sass */
+/* line 265, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph p {
   color: black;
   line-height: 1.3em;
   padding: 0 0 4px 0;
 }
-/* line 269, ../../../app/stylesheets/screen.sass */
+/* line 270, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph p.content span.q {
   color: #4b9900;
 }
-/* line 271, ../../../app/stylesheets/screen.sass */
+/* line 272, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph p.source {
   font-size: 0.9em;
   padding: 0;
   color: #999999;
 }
-/* line 275, ../../../app/stylesheets/screen.sass */
+/* line 276, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph p.source a {
   color: #4b9900;
   text-decoration: none;
 }
-/* line 278, ../../../app/stylesheets/screen.sass */
+/* line 279, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph p.source a span.domain {
   color: #aaaaaa;
   font-size: 0.9em;
 }
-/* line 281, ../../../app/stylesheets/screen.sass */
+/* line 283, ../../../app/stylesheets/screen.sass */
+ul.sniphs li.sniph p.source a.faviconic {
+  padding: 5px 0 5px 20px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  color: black !important;
+}
+/* line 289, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph p.metadata {
   padding: 3px 0 3px 0;
   font-size: 0.7em;
   color: #aaaaaa;
 }
-/* line 285, ../../../app/stylesheets/screen.sass */
+/* line 293, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph p.metadata a {
   color: #aaaaaa;
 }
-/* line 287, ../../../app/stylesheets/screen.sass */
+/* line 295, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph p.metadata a:hover {
   color: #999999;
 }
-/* line 289, ../../../app/stylesheets/screen.sass */
+/* line 297, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph p.metadata a.delete {
   text-decoration: none;
 }
-/* line 291, ../../../app/stylesheets/screen.sass */
+/* line 299, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph p.metadata a.delete:hover {
   color: #990000;
   text-decoration: underline;
 }
-/* line 294, ../../../app/stylesheets/screen.sass */
+/* line 302, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph p.tags {
   font-size: 0.9em;
   color: #cccccc;
 }
-/* line 297, ../../../app/stylesheets/screen.sass */
+/* line 305, ../../../app/stylesheets/screen.sass */
 ul.sniphs li.sniph p.tags a {
   color: #999999;
 }
 
-/* line 300, ../../../app/stylesheets/screen.sass */
+/* line 308, ../../../app/stylesheets/screen.sass */
 table.queries {
   width: 100%;
   font-size: 0.9em;
 }
-/* line 306, ../../../app/stylesheets/screen.sass */
+/* line 314, ../../../app/stylesheets/screen.sass */
 table.queries thead tr th {
   padding: 3px;
   color: #999999;
 }
-/* line 311, ../../../app/stylesheets/screen.sass */
+/* line 319, ../../../app/stylesheets/screen.sass */
 table.queries tbody tr td {
   padding: 6px;
   border-top: 1px solid #cccccc;
   font-family: "Anonymous Pro", "Menlo", "Consolas", "Bitstream Vera Sans Mono", "Courier New", monospace;
 }
-/* line 315, ../../../app/stylesheets/screen.sass */
+/* line 323, ../../../app/stylesheets/screen.sass */
 table.queries tbody tr:hover {
   background-color: #333333;
 }
-/* line 317, ../../../app/stylesheets/screen.sass */
+/* line 325, ../../../app/stylesheets/screen.sass */
 table.queries tbody tr:hover td {
   color: white;
 }
-/* line 319, ../../../app/stylesheets/screen.sass */
+/* line 327, ../../../app/stylesheets/screen.sass */
 table.queries tbody tr:hover td a {
   color: white;
 }
 
-/* line 321, ../../../app/stylesheets/screen.sass */
+/* line 329, ../../../app/stylesheets/screen.sass */
 ul.users {
   width: 300px;
 }
-/* line 323, ../../../app/stylesheets/screen.sass */
+/* line 331, ../../../app/stylesheets/screen.sass */
 ul.users > li {
   float: none;
   clear: both;
@@ -778,11 +786,11 @@ ul.users > li {
   padding: 7px;
   border-bottom: 1px solid #dddddd;
 }
-/* line 327, ../../../app/stylesheets/screen.sass */
+/* line 335, ../../../app/stylesheets/screen.sass */
 ul.users > li:last-child, ul.users > li.last {
   border-bottom: none;
 }
-/* line 329, ../../../app/stylesheets/screen.sass */
+/* line 337, ../../../app/stylesheets/screen.sass */
 ul.users > li a {
   text-decoration: none;
 }
@@ -790,14 +798,14 @@ ul.users > li a {
 ul.users > li a:hover {
   text-decoration: underline;
 }
-/* line 331, ../../../app/stylesheets/screen.sass */
+/* line 339, ../../../app/stylesheets/screen.sass */
 ul.users > li a.nickname {
   display: block;
   clear: none;
   float: left;
   width: 230px;
 }
-/* line 334, ../../../app/stylesheets/screen.sass */
+/* line 342, ../../../app/stylesheets/screen.sass */
 ul.users > li a.sniph_count {
   color: #999999;
   font-size: 0.9em;
@@ -808,11 +816,11 @@ ul.users > li a.sniph_count {
   text-align: center;
 }
 
-/* line 342, ../../../app/stylesheets/screen.sass */
+/* line 350, ../../../app/stylesheets/screen.sass */
 div.pagination {
   margin: 20px 0 20px 0;
 }
-/* line 344, ../../../app/stylesheets/screen.sass */
+/* line 352, ../../../app/stylesheets/screen.sass */
 div.pagination a, div.pagination em {
   padding: 4px 8px;
   background-color: #cccccc;
@@ -825,38 +833,38 @@ div.pagination a, div.pagination em {
   -khtml-border-radius: 2px;
   border-radius: 2px;
 }
-/* line 350, ../../../app/stylesheets/screen.sass */
+/* line 358, ../../../app/stylesheets/screen.sass */
 div.pagination em {
   background-color: #333333;
 }
-/* line 352, ../../../app/stylesheets/screen.sass */
+/* line 360, ../../../app/stylesheets/screen.sass */
 div.pagination a:hover {
   background-color: #4b9900;
 }
-/* line 354, ../../../app/stylesheets/screen.sass */
+/* line 362, ../../../app/stylesheets/screen.sass */
 div.pagination span.gap {
   color: #cccccc;
 }
-/* line 356, ../../../app/stylesheets/screen.sass */
+/* line 364, ../../../app/stylesheets/screen.sass */
 div.pagination span.disabled {
   color: #cccccc;
 }
 
-/* line 361, ../../../app/stylesheets/screen.sass */
+/* line 369, ../../../app/stylesheets/screen.sass */
 div.extension_options {
   width: 350px;
 }
-/* line 364, ../../../app/stylesheets/screen.sass */
+/* line 372, ../../../app/stylesheets/screen.sass */
 div.extension_options form {
   margin: 10px 0 0 0;
 }
-/* line 366, ../../../app/stylesheets/screen.sass */
+/* line 374, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-/* line 370, ../../../app/stylesheets/screen.sass */
+/* line 378, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs > li {
   margin: 10px 0;
   padding: 6px 0;
@@ -865,22 +873,22 @@ div.extension_options form ul.inputs > li {
   overflow: hidden;
   border-bottom: 1px solid #cccccc;
 }
-/* line 377, ../../../app/stylesheets/screen.sass */
+/* line 385, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs > li:first-child {
   border-top: 1px solid #cccccc;
 }
-/* line 379, ../../../app/stylesheets/screen.sass */
+/* line 387, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs > li:last-child {
   border-bottom: none;
 }
-/* line 381, ../../../app/stylesheets/screen.sass */
+/* line 389, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs > li label {
   padding: 6px 0 0 0;
   font-size: 0.9em;
   display: block;
   float: left;
 }
-/* line 386, ../../../app/stylesheets/screen.sass */
+/* line 394, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs > li input.text {
   display: block;
   float: right;
@@ -888,14 +896,14 @@ div.extension_options form ul.inputs > li input.text {
   padding: 1px;
   width: 120px;
 }
-/* line 392, ../../../app/stylesheets/screen.sass */
+/* line 400, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs > li select {
   display: block;
   float: right;
   font-size: 0.9em;
   width: 120px;
 }
-/* line 397, ../../../app/stylesheets/screen.sass */
+/* line 405, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs > li a#save_options {
   font-family: "Helvetica Neue", Helvetica, Arial;
   font-weight: bold;
@@ -911,11 +919,11 @@ div.extension_options form ul.inputs > li a#save_options {
   font-size: 0.8em;
   text-decoration: none;
 }
-/* line 405, ../../../app/stylesheets/screen.sass */
+/* line 413, ../../../app/stylesheets/screen.sass */
 div.extension_options form ul.inputs > li a#save_options:hover {
   background-color: #326600;
 }
-/* line 409, ../../../app/stylesheets/screen.sass */
+/* line 417, ../../../app/stylesheets/screen.sass */
 div.extension_options div#status {
   margin: 20px 0;
   padding: 10px;
