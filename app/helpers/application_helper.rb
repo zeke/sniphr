@@ -14,9 +14,9 @@ module ApplicationHelper
     items << content_tag(:form, :action => sniphs_path, :class => "search") do
       text_field_tag(:q, params[:q], :placeholder => "Search all sniphs", :class => 'q')
     end
-    items << link("All sniphs", sniphs_path)
+    items << link("All", sniphs_path)
     if logged_in?
-      items << link("My sniphs", my_sniphs_path)
+      items << link("Mine", my_sniphs_path)
       items << link("Settings", settings_path)
     else
       items << link("Sign in with Twitter", "/auth/twitter")
