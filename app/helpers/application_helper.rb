@@ -37,23 +37,14 @@ module ApplicationHelper
       steps << ("Sign in with " + link("Twitter", "/auth/twitter") + " or " + link("Facebook", "/auth/facebook") + ".").html_safe
     end
 
-    # label = "Configure your account's level of publicity."
-    # if logged_in? && current_user.manually_configured?
-    #   steps << link_to(label, settings_path, :class => "complete")
-    # elsif logged_in?
-    #   steps << link_to(label, settings_path)
-    # else
-    #   steps << label
-    # end
-
-    label = "Install the Chrome extension."
+    label = "Install the Google Chrome extension."
     if logged_in?
       steps << link_to(label, "https://chrome.google.com/extensions/detail/dgpgdcglcodcglcglbompkodmjnoobil")
     else
       steps << label
     end
     
-    steps << "Browse the web! To save sniphs, hold down the shift key while selecting text, or right-click on the text after selecting it."
+    steps << "Browse the web. When you see something you want to save, just hold down the shift key and click on an image or select some text. Or you can right-click on any image or snippet of selected text and click 'Sniph' from the context menu."
 
     content_tag(:ol, convert_to_list_items(steps), :class => "steps")
   end

@@ -4,32 +4,58 @@
 
   %div.column
 
-    %h2 What is Sniphr?
+    %h2 What is it?
     %p
-      Sniphr is an open-source Ruby on Rails application and Google Chrome extension that 
-      saves the snippets of text you select as you browse the web.
+      Sniphr is a website and Google Chrome extension that 
+      lets you save images and snippets of text as you browse the web.
 
-    %h2 Why is it cool?
+    %h2 Why is it better?
+
+    %h3 Design
+
     %p
-      Sniphr helps you capture the content that matters to you without getting in your way.
-      It takes the simplicity of social bookmarking services like Delicious a step further: 
-      No need to jump through the time-sucking and brain-power-consuming hoops of creating a bookmark 
-      when you can do it implicitly just by browsing the web and highlighting stuff!
+      The sniphr extension doesn't get in your way.
+      To save something, you just hold down the 
+      %b shift key
+      and click on an image or select some text. Or you can right-click 
+      on any image or snippet of selected text and click 
+      'Sniph' from the context menu.
+      
+      = image_tag "context_menu_screenshot.png", :class => "roomy"
+
+    %h3 Automation
+      
+    %p
+      Sniphr automatically tags your content for you using linguistic APIs from Delicious and Wordnik.
+      This makes it easy for you to find stuff you've saved without having to tag and organize it all.
+
+    %h3 Granularity
+
+    %p Why bookmark entire webpages when you can save specific fragments of sentences and images?
+      
+    %h3 Accessibility
+      
+    %p
+      The Sniphr website and browser extension are free, and  
+      = link_to("Sniphr has an API", "http://github.com/zeke/sniphr") + "," 
+      much like Andre has a posse.
+    
+    %h2 What about my privacy?
   
     %p
-      If you want to sniph with reckless abandon but don't want anyone else to be
-      able to see the content you've sniphed, you can
-      = link_to("put your account in private mode", settings_path) + "."
-      All the
-      sniphs you save when your account is in private mode will be visible to you only.
+      We believe your data is your own, and we provide controls to protect your privacy.
+      When you
+      = link_to("put your account in private mode", settings_path) + ","
+      the content you save is hidden from everyone but you.
 
     %h2 I accidentally sniph'd some top-secret and/or embarrassing content. Can I delete it?
 
-    %p Yes.
+    %p
+      Yep.
         
     %h2 Can I get a side of JSON with those sniphs?
 
-    %p Yeah. Just tack <b>.json</b> onto any <b>/sniphs</b> URL. Some example queries:
+    %p Comin' right up. Just tack <b>.json</b> onto any <b>/sniphs</b> URL. Some example queries:
     
     %p= sample_sniph_queries
       
