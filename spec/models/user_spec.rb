@@ -10,6 +10,11 @@ describe User do
     
     it "generates a permalinkish UID for the user based on the provider handle"
     
+    it "is in public mode by default" do
+      @user = User.new
+      @user.mode.should == "public"
+    end
+    
   end
 
   describe "helper methods for provider" do
