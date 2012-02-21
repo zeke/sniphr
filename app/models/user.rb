@@ -47,5 +47,10 @@ class User < ActiveRecord::Base
     when :facebook then fb_url.present? ? fb_url : "http://www.facebook.com/profile.php?id=#{uid}"
     end
   end
+  
+  def self.modes_collection
+    {'Public' => 'public', 'Private' => 'private'}
+  end
+
 
 end

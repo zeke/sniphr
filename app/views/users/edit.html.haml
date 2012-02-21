@@ -12,7 +12,7 @@
     = errors_for form
     
     = form.inputs do
-      = form.input :mode, :as => :select, :collection => %w(public private), :include_blank => false, :hint => t('formtastic.hints.user.mode')
+      = form.input :mode, :as => :radio, :collection => User.modes_collection, :include_blank => false#, :hint => t('formtastic.hints.user.mode')
 
     = form.buttons do
       = form.submit "Save"

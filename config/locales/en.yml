@@ -9,6 +9,7 @@ en:
       user: "User"
     attributes:
       user:
+        mode: "Mode"
 
   formtastic:
     hints:
