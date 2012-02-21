@@ -86,7 +86,7 @@ div#top_bar
   z-index: 2
   
   a#logo
-    @include float_left
+    +float_left
     margin: 0
     padding: 10px 15px
     background-color: $main_color
@@ -227,7 +227,7 @@ ul.tag_cloud
   margin: 20px 0
   @include no_float
   li
-    @include float_left
+    +float_left
     display: block
     height: 30px
     overflow: hidden
@@ -332,26 +332,40 @@ table.queries
           color: white
           a
             color: white
-ul.users
-  width: 300px
-  > li
-    @include no_float
-    padding: 7px
-    border-bottom: 1px solid #DDD
-    &:last-child, &.last
-      border-bottom: none
-    a
-      @include underline_on_hover_only
-      &.nickname
-        @include float_left
-        width: 230px
-      &.sniph_count
-        color: #999
-        font-size: .9em
-        @include float_right
-        width: 40px
-        text-align: center
-    
+
+.users
+  .user
+    +float_left
+    margin: 0 10px 50px 0
+    width: 240px
+    img.avatar
+      +float_left
+      width: 53px
+      height: 53px
+      +box-sizing(border-box)
+      background-color: white
+      border: 1px solid black
+      border-top-color: #F0F0F0
+      border-right-color: #CCC
+      border-bottom-color: #CCC
+      border-left-color: #F0F0F0
+      margin-right: 10px
+    .meta
+      +float_left
+      span
+        +no_float
+        display: block
+        word-wrap: break-word
+        &.name
+          padding-top: 7px
+          a
+            font-weight: bold
+            text-decoration: none
+            color: black
+        &.location
+          padding-top: 5px
+          color: #999
+          font-size: .9em
             
 div.pagination
   margin: 20px 0 20px 0

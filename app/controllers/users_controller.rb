@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
 
+  def index
+    @users = User.includes(:sniphs)#.order('sniphs.created_at DESC')
+  end
+    
   def edit
     if !logged_in?
       redirect_to(root_path)

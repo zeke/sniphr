@@ -18,7 +18,7 @@ Sniphr::Application.routes.draw do
   match "/signout" => "sessions#destroy", :as => :signout
   match "/session_status" => "sessions#session_status"
 
-  resources :users, :only => [:edit, :update]
+  resources :users, :only => [:index, :edit, :update]
   match "/settings" => "users#edit", :as => :settings
   match "/chrome_options" => "users#chrome_options", :as => :chrome_options
 

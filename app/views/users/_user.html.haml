@@ -1,0 +1,6 @@
+.user
+  = link_to image_tag(user.image, :class => "avatar"), user.url
+
+  .meta
+    %span.name= link_to(user.nickname, user.url)
+    %span.location{:title => user.location}= truncate(user.location, :length => 17)

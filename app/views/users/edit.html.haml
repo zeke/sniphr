@@ -4,7 +4,7 @@
   
   %p
     You are currently signed in using your 
-    = link_to(current_user.nickname, current_user.personal_homepage)
+    = link_to(current_user.nickname, current_user.url)
     = current_user.provider.titlecase
     account.
 
