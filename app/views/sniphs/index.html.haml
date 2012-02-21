@@ -20,21 +20,10 @@
           
   = will_paginate @sniphs
 
-  - if logged_in?
+  - if false && logged_in?
     %h2 Your Tags
     = sniph_tag_cloud(@user_tags, :user => true)
 
-  %h2 Public Tags
-  = sniph_tag_cloud(@tags)
-
-  
-  / %h2 Top Public Sniphrs
-  / 
-  / %ul.users
-  /   - @users.each do |user| # 
-  /     - sniph_count = user.sniphs.where(:publique=> true).count
-  /     - next if sniph_count.zero?
-  /     - path = sniphs_path(:user=> user.nickname)
-  /     %li
-  /       = link_to(user.nickname, path, :class=> 'nickname')
-  /       = link_to(sniph_count, path, :class=> 'sniph_count')
+  - if false
+    %h2 Public Tags
+    = sniph_tag_cloud(@tags)
