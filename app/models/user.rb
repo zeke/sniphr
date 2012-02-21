@@ -33,9 +33,19 @@ class User < ActiveRecord::Base
     self.created_at != self.updated_at
   end
   
-  def personal_homepage
-    return "http://twitter.com/#{self.nickname}" if self.provider == 'twitter'
-    return self.fb_url if self.provider == 'facebook'
+  def facebook?
+    self.provider == 'facebook'
+  end
+  
+  def twitter?
+    self.provider == 'twitter'
+  end
+
+  def url
+    case self.provider.to_sym
+    when :twitter then "https://twitter.com/#!/#{nickname}"
+    when :facebook then fb_url.present? ? fb_url : "http://www.facebook.com/profile.php?id=#{uid}"
+    end
   end
 
 end
