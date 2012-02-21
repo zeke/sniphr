@@ -5,6 +5,16 @@ require File.expand_path('../config/application', __FILE__)
 require 'rake'
 require 'open-uri'
 
+begin
+  require 'rspec/core/rake_task'
+  desc "Run all examples"
+  RSpec::Core::RakeTask.new('spec')
+  task :default => :spec
+rescue LoadError
+end
+
+include Rake::DSL
+
 Sniphr::Application.load_tasks
 
 task :preso => :environment do  
