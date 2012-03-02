@@ -30,3 +30,4 @@ config/secrets.yml
 config/environments/development.rb
 config/development.rb
 public/*/cache/*
+solr
