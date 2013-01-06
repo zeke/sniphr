@@ -1,0 +1,47 @@
+{
+  "manifest_version": 1,
+  "version": 1,
+  "domain": "sniphr.com",
+  "name": "Sniphr",
+  "description": "A minimalist tool for saving snippets of text as you browse the web.",
+  "keywords": [
+    "browser",
+    "chrome",
+    "text",
+    "clipboard",
+    "research",
+    "copy",
+    "paste",
+    "productivity",
+    "shortcut",
+    "notes",
+    "bookmarking"
+  ],
+  "maintainers": [
+    {
+      "name": "Zeke Sikelianos",
+      "email": "zeke@sikelianos.com",
+      "twitter": "zeke",
+      "github": "zeke",
+      "website": "http://zeke.sikelianos.com"
+    }
+  ],
+  "bugs": {
+    "mail": "zeke@sikelianos.com",
+    "web": "https://github.com/zeke/sniphr/issues"
+  },
+  "github_repo_url": "https://github.com/zeke/sniphr",
+  "license": {
+    "type": "MIT",
+    "url": "http://en.wikipedia.org/wiki/MIT_License"
+  },
+  "media": {
+    "icon_16": "/media/icon-16.png",
+    "icon_32": "/media/icon-32.png",
+    "icon_64": "/media/icon-64.png",
+    "icon_128": "/media/icon-128.png",
+    "icon_256": "/media/icon-256.png",
+    "logo_svg": "/media/logo.svg",
+    "monogram_svg": "/media/monogram.svg"
+  }
+}
