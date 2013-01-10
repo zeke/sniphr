@@ -1,7 +1,6 @@
 source 'http://rubygems.org'
 
 gem "rails", "~> 3.2.11"
-gem "psych"
 gem 'compass', '0.10.6'
 gem 'haml', '3.1.7'
 gem 'configatron', '2.6.4'
@@ -19,7 +18,10 @@ gem "slideshow"
 gem 'hoptoad_notifier'
 gem 'pg'
 gem 'activerecord-postgresql-adapter'
-# gem 'pg_search'
+
+group :development do
+  gem "psych"
+end
 
 group :test do
   gem 'rspec-rails', '2.8.1'
