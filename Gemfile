@@ -1,21 +1,24 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.0.10'
-gem 'mysql2', '0.2.6'
+gem "rails", "~> 3.2.11"
+gem "psych"
 gem 'compass', '0.10.6'
-gem 'haml', '3.0.25'
+gem 'haml', '3.1.7'
 gem 'configatron', '2.6.4'
 gem 'wordnik_ruby_helpers', '0.1.8'
 gem 'headjs-rails', '0.3.0'
 gem 'jquery-rails', '>= 0.2.6'
 gem 'formtastic', '1.2.3'
 gem "will_paginate", "~> 3.0.pre2"
-gem "omniauth", "~>0.3.2"
+gem "omniauth", "~> 1.1.1"
+gem "omniauth-twitter"
+gem "omniauth-facebook"
 gem 'acts-as-taggable-on', "~>2.2.2"
 gem 'httparty'
 gem "slideshow"
 gem 'hoptoad_notifier'
-# gem 'pg'
+gem 'pg'
+gem 'activerecord-postgresql-adapter'
 # gem 'pg_search'
 
 group :test do

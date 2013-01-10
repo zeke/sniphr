@@ -17,8 +17,8 @@ ActiveRecord::Schema.define(:version => 20120221064544) do
     t.string   "q"
     t.string   "ip"
     t.integer  "num_results"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
     t.integer  "user_id"
   end
 
@@ -30,8 +30,8 @@ ActiveRecord::Schema.define(:version => 20120221064544) do
   create_table "sessions", :force => true do |t|
     t.string   "session_id", :null => false
     t.text     "data"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   add_index "sessions", ["session_id"], :name => "index_sessions_on_session_id"
@@ -40,8 +40,8 @@ ActiveRecord::Schema.define(:version => 20120221064544) do
   create_table "sniphs", :force => true do |t|
     t.string   "url"
     t.text     "content"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                                  :null => false
+    t.datetime "updated_at",                                  :null => false
     t.string   "title"
     t.boolean  "publique",                  :default => true
     t.integer  "user_id"
@@ -86,8 +86,8 @@ ActiveRecord::Schema.define(:version => 20120221064544) do
     t.string   "location"
     t.string   "image"
     t.string   "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at",                        :null => false
+    t.datetime "updated_at",                        :null => false
     t.string   "mode",        :default => "public"
     t.string   "email"
     t.string   "fb_url"

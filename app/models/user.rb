@@ -7,19 +7,19 @@ class User < ActiveRecord::Base
     create! do |user|
       user.provider = auth["provider"]
       user.uid = auth["uid"]
-      user.name = auth["user_info"]["name"]
-      user.image = auth["user_info"]["image"]
+      user.name = auth["info"]["name"]
+      user.image = auth["info"]["image"]
       
       case user.provider.to_sym
       when :twitter
-        user.nickname = auth["user_info"]["nickname"]
-        user.location = auth["user_info"]["location"]
-        user.description = auth["user_info"]["description"]
+        user.nickname = auth["info"]["nickname"]
+        user.location = auth["info"]["location"]
+        user.description = auth["info"]["description"]
       when :facebook
-        user.nickname = auth["user_info"]["name"]
+        user.nickname = auth["info"]["name"]
         user.description = auth["extra"]["user_hash"]["bio"]
-        user.email = auth["user_info"]["email"]
-        user.fb_url = auth["user_info"]["urls"]["Facebook"]
+        user.email = auth["info"]["email"]
+        user.fb_url = auth["info"]["urls"]["Facebook"]
       end
       
     end
