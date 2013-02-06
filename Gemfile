@@ -18,6 +18,7 @@ gem "slideshow"
 gem 'hoptoad_notifier'
 gem 'pg'
 gem 'activerecord-postgresql-adapter'
+gem 'thin'
 
 group :development do
   gem "psych"
